@@ -756,7 +756,7 @@ $slider_size: 15px;
 
   .popup-separator-menu-item-separator {
     height: 1px; //not really the whole box
-    background-color: lighten($bg_color, 10%);
+    background-color: $selected_borders_color;
   }
 
   .popup-menu-ornament {
@@ -776,7 +776,7 @@ $slider_size: 15px;
     }
 
     .popup-separator-menu-item-separator {
-      background-color: lighten($bg_color, 13%);
+      background-color: $selected_borders_color;
     }
   }
 }
@@ -882,7 +882,7 @@ $slider_size: 15px;
 
 .switcher-list .separator {
   width: 1px;
-  background: $selected_bg_color;
+  background: $selected_borders_color;
 }
 
 .switcher-arrow {
@@ -1791,7 +1791,7 @@ $slider_size: 15px;
 
 .search-section-separator {
   height: 1px;
-  background-color: $selected_bg_color;
+  background-color: $selected_borders_color;
 }
 
 .list-search-result-content {
@@ -1843,6 +1843,7 @@ $slider_size: 15px;
   color: $fg_color;
   background-color: $bg_color;
   text-align: center;
+  border-color: $selected_borders_color;
   -x-offset: 8px;
 }
 

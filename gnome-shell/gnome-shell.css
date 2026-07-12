@@ -598,7 +598,7 @@ StScrollBar {
     margin-left: 6px; }
   .popup-separator-menu-item .popup-separator-menu-item-separator {
     height: 1px;
-    background-color: #222226; }
+    background-color: #b90056; }
   .popup-separator-menu-item .popup-menu-ornament {
     width: 0 !important; }
   .popup-sub-menu .popup-separator-menu-item {
@@ -608,7 +608,7 @@ StScrollBar {
     .popup-sub-menu .popup-separator-menu-item:rtl {
       margin-left: 2.5em; }
     .popup-sub-menu .popup-separator-menu-item .popup-separator-menu-item-separator {
-      background-color: #2a2a2e; }
+      background-color: #b90056; }
 
 .background-menu {
   -boxpointer-gap: 4px;
@@ -683,7 +683,7 @@ StScrollBar {
 
 .switcher-list .separator {
   width: 1px;
-  background: #ec006e; }
+  background: #b90056; }
 
 .switcher-arrow {
   border-color: rgba(0, 0, 0, 0);
@@ -1350,7 +1350,7 @@ StScrollBar {
 
 .search-section-separator {
   height: 1px;
-  background-color: #ec006e; }
+  background-color: #b90056; }
 
 .list-search-result-content {
   spacing: 30px; }
@@ -1388,6 +1388,7 @@ StScrollBar {
   color: #fefefe;
   background-color: #0a0a0b;
   text-align: center;
+  border-color: #b90056;
   -x-offset: 8px; }
 
 /* App Vault/Grid */
