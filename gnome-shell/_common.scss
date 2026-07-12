@@ -9,14 +9,11 @@ $quick-settings-buttons-radius: 12px;
 $_bubble_bg_color: $osd_bg_color;
 $_bubble_fg_color: $fg_color;
 $_bubble_borders_color: $fg_color;
-$_bubble_transparent: transparentize($osd_bg_color, 0.17);
 
 stage {
   @include fontsize($font-size);
   color: $fg_color;
 }
-
-/* WIDGETS */
 
 /* Buttons */
 .button,
@@ -218,9 +215,9 @@ $slider_size: 15px;
 
 /* links */
 .shell-link {
-  color: $link_color;
+  color: $selected_bg_color;
   &:hover {
-    color: lighten($link_color, 10%);
+    color: lighten($selected_bg_color, 10%);
   }
 }
 
@@ -2334,13 +2331,13 @@ $slider_size: 15px;
 
   // non-character keys
   &.default-key {
-    @include button(normal, $c: darken(mix($bg_color, $base_color, 15%), 5%));
+    @include button(normal, $c: darken(mix($bg_color, $bg_color, 15%), 5%));
     &:hover,
     &:checked {
-      @include button(hover, $c: $base_color);
+      @include button(hover, $c: $bg_color);
     }
     &:active {
-      @include button(active, $c: $base_color);
+      @include button(active, $c: $bg_color);
     }
   }
 
