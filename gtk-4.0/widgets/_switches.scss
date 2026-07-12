@@ -1,7 +1,7 @@
 /**********
  * Switch *
  **********/
- switch {
+switch {
   font-size: 1px;
   min-width: 41px;
   min-height: 25px;
@@ -9,26 +9,42 @@
   background-color: transparent;
   background-repeat: no-repeat;
   background-position: center center;
-  background-image: -gtk-scaled(url("../assets/switch-off.svg"),url("../assets/switch-off.svg"));
+  background-image: -gtk-scaled(
+    url("file:///home/artem-g/.themes/Andromeda-gtk/assets/switch-off.svg"),
+    url("file:///home/artem-g/.themes/Andromeda-gtk/assets/switch-off.svg")
+  );
 
   &:disabled {
-    background-image: -gtk-scaled(url("../assets/switch-insensitive.svg"),url("../assets/switch-insensitive.svg"));
+    background-image: -gtk-scaled(
+      url("file:///home/artem-g/.themes/Andromeda-gtk/assets/switch-insensitive.svg"),
+      url("file:///home/artem-g/.themes/Andromeda-gtk/assets/switch-insensitive.svg")
+    );
     slider {
-      background-image: -gtk-scaled(url("../assets/switch-slider-insensitive.svg"),url("../assets/switch-slider-insensitive@2.png"));
+      background-image: -gtk-scaled(
+        url("file:///home/artem-g/.themes/Andromeda-gtk/assets/switch-slider-insensitive.svg"),
+        url("file:///home/artem-g/.themes/Andromeda-gtk/assets/switch-slider-insensitive@2.png")
+      );
     }
   }
 
-  &, & slider {
+  &,
+  & slider {
     outline-color: transparent;
     color: transparent;
     border: none;
-    box-shadow: none; 
+    box-shadow: none;
   }
-  
+
   &:checked {
-    background-image: -gtk-scaled(url("../assets/switch-on.svg"),url("../assets/switch-on.svg"));
+    background-image: -gtk-scaled(
+      url("file:///home/artem-g/.themes/Andromeda-gtk/assets/switch-on.svg"),
+      url("file:///home/artem-g/.themes/Andromeda-gtk/assets/switch-on.svg")
+    );
     slider {
-      background-image: -gtk-scaled(url("../assets/switch-slider-on.svg"),url("../assets/switch-slider-on@2.png"));
+      background-image: -gtk-scaled(
+        url("file:///home/artem-g/.themes/Andromeda-gtk/assets/switch-slider-on.svg"),
+        url("file:///home/artem-g/.themes/Andromeda-gtk/assets/switch-slider-on@2.png")
+      );
     }
   }
 
@@ -39,6 +55,9 @@
     background-repeat: no-repeat;
     background-position: left center;
     background-color: transparent;
-    background-image: -gtk-scaled(url("../assets/switch-slider-off.svg"),url("../assets/switch-slider-off@2.png"));
+    background-image: -gtk-scaled(
+      url("file:///home/artem-g/.themes/Andromeda-gtk/assets/switch-slider-off.svg"),
+      url("file:///home/artem-g/.themes/Andromeda-gtk/assets/switch-slider-off@2.png")
+    );
   }
 }

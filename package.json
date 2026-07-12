@@ -4,7 +4,7 @@
   "description": "An elegant dark theme for gnome",
   "main": "index.js",
   "scripts": {
-    "build": "git push && sh install.sh"
+    "watch-shell": "find /home/artem-g/Repositories/Andromeda-gtk/gnome-shell -name '*.scss' | entr /home/artem-g/Repositories/Andromeda-gtk/scripts/build-shell.sh"
   },
   "repository": {
     "type": "git",

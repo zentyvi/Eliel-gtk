@@ -1,8 +1,12 @@
 /*********
  * Lists *
  *********/
-list, listview {
-  &, label { color: $text_color; }
+list,
+listview {
+  &,
+  label {
+    color: $text_color;
+  }
   background-color: $base_color;
   border-color: $borders_color;
 
@@ -21,33 +25,57 @@ list, listview {
 }
 
 row {
-
-  &:hover { transition: none; }
-
-  &:backdrop { transition: $backdrop_transition; }
-
-  &.activatable {
-    &.has-open-popup, // this is for indicathing which row generated a popover see https://bugzilla.gnome.org/show_bug.cgi?id=754411
-
-    &:hover { background-color: if(variant == light, transparentize($fg_color, 0.9), transparentize($fg_color, 0.95)); }
-
-    &:active { box-shadow: inset 0 2px 2px -2px transparentize(black, 0.8); }
-
-    &:backdrop:hover { background-color: transparent; }
-
-    &:selected {
-      &:active { box-shadow: inset 0 2px 3px -1px transparentize(black, 0.5); }
-
-      &.has-open-popup,
-      &:hover { background-color: transparentize($selected_bg_color, 0.5); }
-
-      &:backdrop { background-color: $backdrop_selected_bg_color; }
-    }
-
-    &.button { @include button(normal); }
+  &:hover {
+    transition: none;
   }
 
-  &:selected { @extend %selected_items; }
+  &:backdrop {
+    transition: $backdrop_transition;
+  }
+
+  &.activatable {
+    margin: 4px 10px;
+    &.has-open-popup, // this is for indicathing which row generated a popover see https://bugzilla.gnome.org/show_bug.cgi?id=754411
+
+    &:hover {
+      background-color: if(
+        variant == light,
+        transparentize($fg_color, 0.9),
+        transparentize($fg_color, 0.95)
+      );
+    }
+
+    &:active {
+      box-shadow: inset 0 2px 2px -2px transparentize(black, 0.8);
+    }
+
+    &:backdrop:hover {
+      background-color: transparent;
+    }
+
+    &:selected {
+      &:active {
+        box-shadow: inset 0 2px 3px -1px transparentize(black, 0.5);
+      }
+
+      &.has-open-popup,
+      &:hover {
+        background-color: transparentize($selected_bg_color, 0.5);
+      }
+
+      &:backdrop {
+        background-color: $backdrop_selected_bg_color;
+      }
+    }
+
+    &.button {
+      @include button(normal);
+    }
+  }
+
+  &:selected {
+    @extend %selected_items;
+  }
 }
 
 columnview {
@@ -110,8 +138,8 @@ columnview row:not(:selected) cell editablelabel.editing text selection {
  * https://gitlab.gnome.org/GNOME/gtk/-/issues/3073    *
  *******************************************************/
 
-
-.rich-list { /* rich lists usually containing other widgets than just labels/text */
+.rich-list {
+  /* rich lists usually containing other widgets than just labels/text */
   & > row {
     padding: 8px 12px;
     min-height: 32px; /* should be tall even when only containing a label */
@@ -130,10 +158,10 @@ columnview row:not(:selected) cell editablelabel.editing text selection {
 
 columnview.complex {
   > listview > row > cell {
-      padding: 0;
-      > * {
-        padding: 8px 6px;
-      }
+    padding: 0;
+    > * {
+      padding: 8px 6px;
+    }
   }
 
   // shrink vertically for .data-table
@@ -146,4 +174,6 @@ columnview.complex {
   }
 }
 
-.boxed-list-separate { background-color: transparent; }
+.boxed-list-separate {
+  background-color: transparent;
+}
