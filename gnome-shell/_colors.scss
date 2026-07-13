@@ -6,7 +6,7 @@ $fg_color: #fefefe;
 
 $primary: #ec006e;
 $primary_dark: darken($primary, 10%);
-$primary_glow: transperetize($primary, 0.6);
+$primary_glow: lighten($primary, 10%);
 
 $orange: #f39c12;
 $yellow: #f3d56e;
@@ -19,8 +19,9 @@ $teal: #34eceb;
 $g1: #3b82f6;
 $g2: $primary;
 
-$selected_bg_color: $primary;
-$selected_borders_color: $primary_dark;
+$selected_glow_color: transparentize($primary_glow, 0.65);
+$selected_bg_color: lighten($primary, 10%);
+$selected_borders_color: lighten($primary_dark, 10%);
 $borders_color: darken($main_dark, 3%);
 $borders_edge: transparentize(white, 0.9);
 

@@ -5135,7 +5135,7 @@ treeview.view > header > button:active {
 window {
   border: none;
   border: 1px solid #ff077a;
-  box-shadow: 0 0 8px 3px rgba(236, 0, 110, 0.45); }
+  box-shadow: 0 0 8px 3px rgba(255, 32, 136, 0.4); }
   window.csd {
     margin: 0; }
     window.csd:backdrop, label:backdrop selection.csd, progressbar:backdrop trough.csd, progressbar:backdrop progress.csd {
