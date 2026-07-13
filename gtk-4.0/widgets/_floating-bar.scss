@@ -10,7 +10,6 @@
   box-shadow: none;
 
   &.bottom {
-
     &.left {
       border-left-style: none;
       border-top-left-radius: 0;
@@ -23,7 +22,7 @@
   }
 
   > button {
-    padding:4px;
+    padding: 4px;
   }
 
   &:backdrop {

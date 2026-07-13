@@ -1,29 +1,36 @@
 /***********
  * Dialogs *
  ***********/
- messagedialog, .messagedialog, .dialog { // Message Dialog styling
-
-  background-color: $main_dark_color;
+messagedialog,
+.messagedialog,
+.dialog {
+  // Message Dialog styling
+  @if $window-border {
+    border: 2px solid $selected_borders_color;
+    box-shadow: 0 0 6px 2px $selected_glow_color;
+  }
+  background-color: $bg_color;
   .titlebar:not(headerbar) {
-    background-color: transparentize(if($variant=='light', $headerbar_color, $bg_color), 0.05);
+    background-color: transparentize($bg_color, 0.05);
   }
   .titlebar {
     min-height: 20px;
     background-image: none;
-    background-color: transparentize(if($variant=='light', $headerbar_color, $bg_color), 0.05);
+    background-color: transparentize($bg_color, 0.05);
     border-style: none;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
   }
 
-  &.csd { // rounded bottom border styling for csd version
+  &.csd {
+    // rounded bottom border styling for csd version
     &.background {
-      background-color: transparentize(if($variant=='light', $headerbar_color, darken($main_dark_color, 5%)), 0.05);
-      color: if($variant=='light', $headerbar_fg_color, $fg_color);
+      background-color: transparentize($bg_color, 0.05);
+      color: $fg_color;
 
       // bigger radius for better antialiasing
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
     }
   }
 }
@@ -39,10 +46,14 @@ filechooser {
   .dialog-action-box {
     border-top: 1px solid $borders_color;
 
-    &:backdrop { border-top-color: $backdrop_borders_color; }
+    &:backdrop {
+      border-top-color: $backdrop_borders_color;
+    }
   }
 
-  #pathbarbox { border-bottom: 1px solid $bg_color; }
+  #pathbarbox {
+    border-bottom: 1px solid $bg_color;
+  }
 }
 
 filechooserbutton:drop(active) {

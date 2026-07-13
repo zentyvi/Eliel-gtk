@@ -26,6 +26,10 @@ switch {
       );
     }
   }
+  &:focus-visible,
+  *:focus-visible {
+    box-shadow: 0 0 0 1px $selected_borders_color;
+  }
 
   &,
   & slider {

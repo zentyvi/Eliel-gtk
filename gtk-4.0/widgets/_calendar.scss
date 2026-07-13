@@ -7,7 +7,7 @@ calendar {
   font-feature-settings: "tnum";
 
   > header {
-    border-bottom: 1px solid $borders_color;
+    border-bottom: 1px solid lighten($borders_color, 10%);
 
     > button {
       border: none;
@@ -21,12 +21,6 @@ calendar {
   }
 
   > grid {
-    > label.day-name {
-    }
-
-    > label.week-number {
-    }
-
     > label.today {
       box-shadow: inset 0px -2px $selected_bg_color;
 
@@ -35,7 +29,7 @@ calendar {
       }
     }
 
-    > label:focus {
+    > label:focus-visible {
       outline-color: $selected_bg_color;
       outline-offset: -2px;
       outline-width: 2px;
@@ -45,7 +39,7 @@ calendar {
     > label.day-number {
       padding: 4px;
 
-      &:selected{
+      &:selected {
         @extend %selected_items;
         border-radius: 3px;
       }

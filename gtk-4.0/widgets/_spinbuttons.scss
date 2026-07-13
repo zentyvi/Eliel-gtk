@@ -19,7 +19,9 @@ spinbutton {
       box-shadow: none;
       padding: 6px;
 
-      &:backdrop:disabled { background-color: transparent; }
+      &:backdrop:disabled {
+        background-color: transparent;
+      }
     }
 
     > text {
@@ -33,7 +35,7 @@ spinbutton {
       margin: 0;
       padding-bottom: 0;
       padding-top: 0;
-      color: mix($fg_color, $base_color, 90%);
+      color: mix($fg_color, $bg_color, 90%);
       background-image: none;
       border-style: none none none solid;
       border-color: transparentize($borders_color, 0.7);
@@ -41,7 +43,9 @@ spinbutton {
       box-shadow: none;
       background-color: transparent;
 
-      &:dir(rtl) { border-style: none solid none none; }
+      &:dir(rtl) {
+        border-style: none solid none none;
+      }
 
       &:hover {
         color: $fg_color;
@@ -58,9 +62,13 @@ spinbutton {
         box-shadow: none;
       }
 
-      &:dir(ltr):last-child { border-radius: 0 6px 6px 0; }
+      &:dir(ltr):last-child {
+        border-radius: 0 6px 6px 0;
+      }
 
-      &:dir(rtl):first-child { border-radius: 6px 0 0 6px; }
+      &:dir(rtl):first-child {
+        border-radius: 6px 0 0 6px;
+      }
     }
   }
 
@@ -81,14 +89,16 @@ spinbutton {
       box-shadow: none;
       -gtk-icon-shadow: 0 1px black;
 
-      &:dir(rtl) { border-style: none solid none none; }
+      &:dir(rtl) {
+        border-style: none solid none none;
+      }
 
       &:hover {
         @include button(undecorated);
 
         color: $osd_fg_color;
         border-color: transparentize(opacify($osd_borders_color, 1), 0.5);
-        background-color: darken($osd_bg_color,10%);
+        background-color: darken($osd_bg_color, 10%);
         -gtk-icon-shadow: 0 1px black;
         box-shadow: none;
       }
@@ -102,9 +112,13 @@ spinbutton {
         box-shadow: none;
       }
 
-      &:dir(ltr):last-child { border-radius: 0 6px 6px 0; }
+      &:dir(ltr):last-child {
+        border-radius: 0 6px 6px 0;
+      }
 
-      &:dir(rtl):first-child { border-radius: 6px 0 0 6px; }
+      &:dir(rtl):first-child {
+        border-radius: 6px 0 0 6px;
+      }
     }
   }
 
@@ -116,7 +130,9 @@ spinbutton {
 
     // FIXME: this should not be set at all, but otherwise it gets the wrong
     // color
-    &:disabled { color: $insensitive_fg_color; }
+    &:disabled {
+      color: $insensitive_fg_color;
+    }
 
     &:drop(active) {
       border-color: transparent;
@@ -138,7 +154,9 @@ spinbutton {
           color: $fg_color;
         }
       }
-      > block-cursor { @include entry(block_cursor); }
+      > block-cursor {
+        @include entry(block_cursor);
+      }
     }
 
     > button {
@@ -146,9 +164,13 @@ spinbutton {
       min-width: 32px;
       padding: 0;
 
-      &.up { @extend %top_button; }
+      &.up {
+        @extend %top_button;
+      }
 
-      &.down { @extend %bottom_button; }
+      &.down {
+        @extend %bottom_button;
+      }
     }
 
     %top_button {
@@ -168,11 +190,17 @@ spinbutton {
   .osd &.vertical > button:first-child {
     @include button(osd);
 
-    &:hover { @include button(osd-hover);}
+    &:hover {
+      @include button(osd-hover);
+    }
 
-    &:active { @include button(osd-active); }
+    &:active {
+      @include button(osd-active);
+    }
 
-    &:disabled { @include button(osd-insensitive); }
+    &:disabled {
+      @include button(osd-insensitive);
+    }
   }
 
   // Misc

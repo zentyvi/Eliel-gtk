@@ -6,11 +6,11 @@
   @return unquote("alpha(#{$c},#{$a})");
 }
 
-$window-border: false;
+$window-border: true;
 $ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 $asset_suffix: if($variant== "dark", "-dark", "");
-$backdrop_transition: 200ms ease-out;
-$button_transition: all 200ms $ease-out-quad;
+$backdrop_transition: 300ms ease-out;
+$button_transition: all 300ms $ease-out-quad;
 
 * {
   padding: 0;
@@ -24,11 +24,4 @@ $button_transition: all 200ms $ease-out-quad;
   outline-width: 0px;
 
   -gtk-secondary-caret-color: $selected_bg_color;
-}
-
-VteTerminal,
-TerminalScreen,
-vte-terminal {
-  padding: 10px;
-  -vteterminal-inner-border: 10px;
 }

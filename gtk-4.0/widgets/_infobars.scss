@@ -6,19 +6,18 @@ infobar {
   text-shadow: none;
   color: $fg_color;
   background-color: $bg_color;
-  border-bottom:1px solid darken($bg_color,10%);
-  box-shadow: 0 1px 0 0 transparentize(black, 0.95),
-              0 1px 2px 0 transparentize(black, 0.85);
-
+  border-bottom: 1px solid darken($bg_color, 10%);
+  box-shadow:
+    0 1px 0 0 transparentize(black, 0.95),
+    0 1px 2px 0 transparentize(black, 0.85);
 }
 
 %color_infobar {
-
   @extend %infobar;
 
   text-shadow: none;
   color: $selected_fg_color;
-  border:none;
+  border: none;
 
   .label {
     color: $selected_fg_color;
@@ -62,11 +61,11 @@ infobar {
       color: transparentize($fg_color, 0.5);
       box-shadow: none;
 
-        &:backdrop {
-          background: transparentize($base_color, 0.5);
-          color: transparentize($fg_color, 0.5);
-          box-shadow: none;
-        }
+      &:backdrop {
+        background: transparentize($base_color, 0.5);
+        color: transparentize($fg_color, 0.5);
+        box-shadow: none;
+      }
     }
 
     &:backdrop {
@@ -79,8 +78,9 @@ infobar {
 
 .info {
   @extend %color_infobar;
-  
-  &, &:backdrop {
+
+  &,
+  &:backdrop {
     color: $info_color;
     background-color: transparent;
   }
@@ -89,7 +89,8 @@ infobar {
 .warning {
   @extend %color_infobar;
 
-  &, &:backdrop {
+  &,
+  &:backdrop {
     color: $warning_color;
     background-color: transparent;
   }
@@ -98,17 +99,18 @@ infobar {
 .question {
   @extend %color_infobar;
 
-  &, &:backdrop {
+  &,
+  &:backdrop {
     color: $question_color;
     background-color: transparent;
   }
-
 }
 
 .error {
   @extend %color_infobar;
 
-  &, &:backdrop {
+  &,
+  &:backdrop {
     color: $error_color;
     background-color: transparent;
   }
@@ -122,7 +124,8 @@ banner revealer widget {
   button.suggested-action {
     @include button(undecorated);
     background-color: transparentize(#000, 0.8);
-    &:hover, &:active {
+    &:hover,
+    &:active {
       background-color: transparentize(#000, 0.6);
     }
     &:backdrop {

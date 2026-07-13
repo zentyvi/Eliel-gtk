@@ -93,7 +93,7 @@
   @if $t==normal {
     color: $text_color;
     border-color: $borders_color;
-    background-color: mix($bg_color, lighten($base_color, 5%), 15%);
+    background-color: lighten($bg_color, 8%);
     // for the transition to work the number of shadows in different states needs to match, hence the transparent shadow here.
   }
   @if $t==focus {
@@ -247,6 +247,7 @@
     }
     border-radius: 6px;
     background: $suggested_bg_color;
+    box-shadow: 0 0 10px 2px transparentize($suggested_bg_color, 0.7);
   }
 
   @if $t==rounded-red {
@@ -258,6 +259,7 @@
     }
     border-radius: 6px;
     background: $destructive_bg_color;
+    box-shadow: 0 0 8px 2px transparentize($destructive_bg_color, 0.7);
   }
 
   @if $t==normal {
@@ -266,18 +268,41 @@
     //
     font-weight: normal;
     color: $tc;
-    // outline-color: transparentize($tc, 0.7);
-    background-color: mix($bg_color, lighten($base_color, 5%), 15%);
+    background-color: lighten($bg_color, 10%);
+    border: 1px solid $borders_color;
     text-shadow: none;
   } @else if $t==hover {
     //
     // hovered button
     //
     color: $tc;
-    outline-color: transparentize($tc, 0.7);
-    background-color: $c;
+    box-shadow: 0 0 8px 2px transparentize($c, 0.7);
+
+    background-color: transparentize($c, 0.3);
     text-shadow: none;
     //@include _shadows(inset 0px 1px 0px 0px $top_highlight,inset 0px -1px 0px 0px $bottom_highlight);
+  }
+
+  @if $t==checked {
+    //
+    // checked button
+    //
+    color: $tc;
+    box-shadow: 0 0 8px 2px transparentize($c, 0.5);
+
+    background-color: $c;
+    text-shadow: none;
+  }
+
+  @if $t==checked-hover {
+    //
+    // checked hover button
+    //
+    color: $tc;
+    box-shadow: 0 0 8px 2px transparentize($c, 0.6);
+
+    background-color: transparentize($c, 0.3);
+    text-shadow: none;
   }
 
   @if $t==normal-header {
@@ -296,7 +321,8 @@
     //
     color: if($tc==$text_color, $selected_bg_color, $tc);
     text-shadow: none;
-    background-color: transparentize($c, 0.3);
+    background-color: transparentize($c, 0.25);
+    box-shadow: 0 0 8px 2px transparentize($c, 0.6);
   } @else if $t==backdrop-header {
     //
     // backdrop button headerbar look
@@ -310,17 +336,19 @@
     // pushed button
     //
     color: $tc;
-    outline-color: transparentize($tc, 0.7);
-    background-color: $selected_bg_color;
+    box-shadow: 0 0 10px 2px transparentize($c, 0.5);
+
+    background-color: darken($c, 0.2);
     text-shadow: none;
+
     // @include _shadows(inset 0px 1px 0px 0px $top_highlight,inset 0px -1px 0px 0px $bottom_highlight);
   } @else if $t==active-header {
     //
     // pushed button
     //
     color: $tc;
-    outline-color: transparentize($tc, 0.7);
-    background: linear-gradient(to right, #882ae9, $selected_bg_color)
+
+    background: linear-gradient(to right, $primary_dark, #3b82f6)
       left
       bottom
       lighten($headerbar_color, 12%)
@@ -334,37 +362,36 @@
     //
     color: if($tc==$text_color, $backdrop_text_color, $tc);
     border-color: $insensitive_borders_color;
-    background-color: if($c==$base_color, $insensitive_bg_color, $c);
+    background-color: $insensitive_bg_color;
     text-shadow: none;
   } @else if $t==insensitive-active {
     //
     // insensitive pushed button
     //
-    color: transparentize($selected_fg_color, 0.3);
-    outline-color: transparentize($tc, 0.7);
-    background-color: if($c==$base_color, $selected_bg_color, $c);
+    color: transparentize($fg_color, 0.3);
+    background-color: $selected_bg_color;
     text-shadow: none;
     label {
-      color: transparentize($selected_fg_color, 0.3);
+      color: transparentize($fg_color, 0.3);
     }
   } @else if $t==backdrop {
     //
     // backdrop button
     //
     color: if($tc==$text_color, $backdrop_text_color, transparentize($tc, 0.6));
-    outline-color: transparentize($tc, 0.7);
-    background-color: if($c==$base_color, $backdrop_base_color, $c);
+    background-color: $backdrop_base_color;
     text-shadow: none;
+    box-shadow: none;
   } @else if $t==backdrop-active {
     //
     // backdrop pushed button FIXME no colors here!
     //
-    color: transparentize($selected_fg_color, 0.3);
-    outline-color: transparentize($tc, 0.7);
+    color: transparentize($fg_color, 0.3);
     background-color: $selected_bg_color;
     text-shadow: none;
+    box-shadow: none;
     label {
-      color: transparentize($selected_fg_color, 0.3);
+      color: transparentize($fg_color, 0.3);
     }
   } @else if $t==backdrop-insensitive {
     //
@@ -378,8 +405,7 @@
     //
     // backdrop insensitive pushed button
     //
-    color: transparentize($selected_fg_color, 0.3);
-    outline-color: transparentize($tc, 0.7);
+    color: transparentize($fg_color, 0.3);
     background-color: $selected_bg_color;
     text-shadow: none;
   } @else if $t==osd {
@@ -394,7 +420,6 @@
     background-clip: padding-box;
     text-shadow: 0 1px black;
     -gtk-icon-shadow: 0 1px black;
-    outline-color: transparentize($osd_fg_color, 0.7);
   } @else if $t==osd-hover {
     //
     // active osd button
@@ -411,7 +436,6 @@
     background-clip: padding-box;
     text-shadow: 0 1px black;
     -gtk-icon-shadow: 0 1px black;
-    outline-color: transparentize($osd_fg_color, 0.7);
   } @else if $t==osd-active {
     //
     // active osd button
@@ -424,7 +448,6 @@
     background-clip: padding-box;
     text-shadow: none;
     -gtk-icon-shadow: none;
-    outline-color: transparentize($osd_fg_color, 0.7);
   } @else if $t==osd-insensitive {
     //
     // insensitive osd button

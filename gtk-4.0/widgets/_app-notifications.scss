@@ -8,8 +8,11 @@
   padding: 10px;
   border-radius: 0 0 5px 5px;
   background-color: $osd_bg_color;
-  background-image: linear-gradient(to bottom, transparentize(black, 0.8),
-                                               transparent 2px);
+  background-image: linear-gradient(
+    to bottom,
+    transparentize(black, 0.8),
+    transparent 2px
+  );
   background-clip: padding-box;
 
   &:backdrop {
@@ -17,15 +20,18 @@
     transition: $backdrop_transition;
   }
 
-  button { @extend %osd_button; }
+  button {
+    @extend %osd_button;
+  }
 
-  border { border: none; }
+  border {
+    border: none;
+  }
 }
 
 toast {
- 
   padding: 5px;
-  background-color: lighten($base_color, 7%);
+  background-color: lighten($bg_color, 7%);
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.822);
   color: $fg_color;
 
@@ -34,11 +40,15 @@ toast {
     transition: $backdrop_transition;
   }
 
-  button { padding: 2px; }
+  button {
+    padding: 2px;
+  }
 
   //close button
-  button.circular.flat.image-button { 
+  button.circular.flat.image-button {
     padding: 2px;
-    &:hover { @include button(hover, $red, $selected_fg_color); } 
+    &:hover {
+      @include button(hover, $selected_bg_color, $fg_color);
+    }
   }
 }

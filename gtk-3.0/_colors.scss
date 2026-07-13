@@ -2,15 +2,19 @@
 // it gets @if ed depending on $variant
 
 // Main definitions
-$base_color: #23262e;
+$base_color: #0a0a0b;
 $text_color: #d8dee9;
-$bg_color: #1a1d23;
+$bg_color: #0a0a0b;
 $fg_color: #d8dee9;
 $switch_bg: if($variant == "light", #ffffff, transparentize(black, 1));
 $shadow_color: rgba(162, 162, 165, 0.21);
 
 $main_dark_color: darken($bg_color, 2%);
-$_sidebar_color: darken($main_dark_color, 0%);
+$_sidebar_color: lighten($bg_color, 5%);
+
+$primary: #ec006e;
+$primary_dark: darken($primary, 10%);
+$primary_glow: lighten($primary, 10%);
 
 // Primary colors
 $lime: #84ff39;
@@ -24,18 +28,18 @@ $blue: #7cb7ff;
 $slider: #7b7bbd;
 $teal: #34eceb;
 
-$selected_fg_color: #fff;
-$selected_bg_color: darken($teal, 20%);
-/*$selected_bg_color: #00e8c6;06d6a0*/
-$selected_borders_color: $selected_bg_color;
-$borders_color: darken($main_dark_color, 5%);
+$selected_glow_color: transparentize($primary_glow, 0.6);
+$selected_fg_color: $fg_color;
+$selected_bg_color: lighten($primary, 10%);
+$selected_borders_color: lighten($primary_dark, 10%);
+$borders_color: lighten(darken($main_dark_color, 5%), 10%);
 $borders_edge: if(
   $variant == "light",
   transparentize(white, 0.8),
   transparentize(white, 0.9)
 );
-$link_color: $blue;
-$link_visited_color: transparentize($link_color, 0.5);
+$link_color: lighten($primary, 10%);
+$link_visited_color: transparentize($link_color, 0.2);
 $top_highlight: if(
   $variant == "light",
   transparentize(white, 0.8),
@@ -47,7 +51,7 @@ $bottom_highlight: if(
   transparentize(black, 0.9)
 );
 $dark_fill: mix($borders_color, $bg_color, 35%);
-$headerbar_color: mix($base_color, darken($bg_color, 8%), 30%);
+$headerbar_color: lighten($bg_color, 5%);
 $headerbar_fg_color: $text_color;
 $menu_color: if(
   $variant == "light",
@@ -60,15 +64,15 @@ $popover_hover_color: lighten($bg_color, 5%);
 $scrollbar_bg_color: mix($base_color, $bg_color, 50%);
 $scrollbar_slider_color: mix($fg_color, $bg_color, 60%);
 $scrollbar_slider_hover_color: mix($fg_color, $bg_color, 80%);
-$scrollbar_slider_active_color: if(
-  $variant== "light",
-  darken($selected_bg_color, 10%),
-  lighten($selected_bg_color, 10%)
-);
+$scrollbar_slider_active_color: $selected_bg_color;
 
 $warning_color: if($variant == "light", $orange, darken($orange, 10%));
 $error_color: if($variant == "light", $red, darken($red, 5%));
-$success_color: if($variant == "light", $cyan, darken($cyan, 10%));
+$success_color: if(
+  $variant == "light",
+  $selected_bg_color,
+  darken($selected_bg_color, 10%)
+);
 $destructive_color: if(
   $variant == "light",
   darken($red, 5%),
@@ -105,11 +109,11 @@ $text_shadow_color: if(
 );
 $icon_shadow_color: $text_shadow_color;
 
-$drop_target_color: $teal;
+$drop_target_color: $selected_bg_color;
 
 // Infobar colors
 $info_color: $lime;
-$question_color: $cyan;
+$question_color: $selected_bg_color;
 
 // Panel colors
 $panel_bg_color: transparentize($main_dark_color, 0);
@@ -128,7 +132,7 @@ $backdrop_base_color: if(
   darken($base_color, 1%),
   lighten($base_color, 1%)
 );
-$backdrop_text_color: mix($text_color, $backdrop_base_color, 80%);
+$backdrop_text_color: mix($fg_color, $backdrop_base_color, 80%);
 $backdrop_bg_color: $bg_color;
 $backdrop_headerbar_bg_color: $headerbar_color;
 $backdrop_headerbar_fg_color: if(
@@ -175,7 +179,7 @@ $scale_disabled_bg: if(
   transparentize(black, 0.94),
   transparentize(white, 0.94)
 );
-$suggested_bg_color: $cyan;
+$suggested_bg_color: $selected_bg_color;
 $destructive_bg_color: $red;
 $menu_shadow_color: if(
   $variant == "light",

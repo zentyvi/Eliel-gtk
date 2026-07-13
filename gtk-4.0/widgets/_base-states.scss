@@ -31,7 +31,7 @@
 
   &:active {
     color: $fg_color;
-    background-color: darken($bg_color, 10%);
+    background-color: lighten($bg_color, 15%);
   }
 
   &:disabled {
@@ -40,7 +40,7 @@
   }
 
   &:selected {
-    color: $selected_fg_color;
+    color: $fg_color;
     background-color: $selected_bg_color;
   }
 }
@@ -48,16 +48,17 @@
 .history-view,
 .view,
 %view {
-  color: $text_color;
-  background-color: $base_color;
+  color: $fg_color;
+  background-color: $bg_color;
 
   &:backdrop {
-    color: $backdrop_text_color;
-    background-color: $backdrop_base_color;
+    color: $backdrop_fg_color;
+    background-color: $backdrop_bg_color;
   }
 
   &:selected {
-    &:focus, & {
+    &:focus-visible,
+    & {
       @extend %selected_items;
 
       border-radius: 3px;
@@ -69,22 +70,33 @@ textview {
   > text {
     @extend %view;
     background-color: transparent;
-    selection { &:focus, & { @extend %selected_items; }}
+    selection {
+      &:focus-visible,
+      & {
+        @extend %selected_items;
+      }
+    }
   }
 }
 
-textview border { background-color: mix($bg_color, $base_color, 50%); }
+textview border {
+  background-color: $borders_color;
+}
 
-iconview { @extend .view; }
+iconview {
+  @extend .view;
+}
 
 .rubberband,
 rubberband {
-  border: 1px solid darken($selected_bg_color, 10%);
-  background-color: transparentize(darken($selected_bg_color, 10%), 0.8);
+  border: 1px solid $selected_bg_color;
+  background-color: transparentize($selected_bg_color, 0.8);
 }
 
 flowbox {
-  rubberband { @extend rubberband; }
+  rubberband {
+    @extend rubberband;
+  }
 
   flowboxchild {
     padding: 3px;
@@ -103,7 +115,8 @@ gridview {
   padding: 10px;
   > child {
     padding: 7px;
-    box { //cells
+    box {
+      //cells
       border-spacing: 5px; //label separation
     }
   }
@@ -117,29 +130,39 @@ label {
 
     color: $fg_color;
 
-    &:backdrop { color: $backdrop_fg_color; }
+    &:backdrop {
+      color: $backdrop_fg_color;
+    }
   }
 
   row:selected &,
-  &:selected { @extend %nobg_selected_items; }
+  &:selected {
+    @extend %nobg_selected_items;
+  }
 
   selection {
     background-color: $selected_bg_color;
-    color: $selected_fg_color;
+    color: $fg_color;
   }
 
   &:disabled {
     color: $insensitive_fg_color;
 
-    selection { @extend %selected_items:disabled; }
+    selection {
+      @extend %selected_items:disabled;
+    }
 
-    &:backdrop { color: $backdrop_insensitive_color; }
+    &:backdrop {
+      color: $backdrop_insensitive_color;
+    }
   }
 
   &:backdrop {
     color: $backdrop_fg_color;
 
-    selection { @extend %selected_items:backdrop; }
+    selection {
+      @extend %selected_items:backdrop;
+    }
   }
 }
 
@@ -159,13 +182,17 @@ window.assistant {
     }
   }
 
-  &.csd .sidebar { border-top-style: none; }
+  &.csd .sidebar {
+    border-top-style: none;
+  }
 
-  .sidebar label { padding: 6px 12px; }
+  .sidebar label {
+    padding: 6px 12px;
+  }
 
-  .sidebar label.highlight { 
+  .sidebar label.highlight {
     background-color: $selected_bg_color;
-    color: $selected_fg_color; 
+    color: $fg_color;
   }
 }
 
@@ -173,7 +200,8 @@ window.aboutdialog image.large-icons {
   -gtk-icon-size: 128px;
 }
 
-%osd, .osd {
+%osd,
+.osd {
   color: $osd_fg_color;
   border: none;
   background-color: $osd_bg_color;

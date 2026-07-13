@@ -10,7 +10,7 @@ headerbar {
   border-radius: 0;
   &:backdrop {
     border-color: $backdrop_borders_color;
-   // background-image: none;
+    // background-image: none;
 
     transition: $backdrop_transition;
   }
@@ -28,22 +28,26 @@ headerbar {
 
     @extend .dim-label;
   }
- 
-  entry { min-height: 24px;}  
-  
+
+  entry {
+    min-height: 24px;
+  }
+
   button {
     @include button(normal-header);
     min-height: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
     box-shadow: none;
-    &.image-button{
-       padding: 3px 4px;
+    &.image-button {
+      padding: 3px 4px;
     }
-      
-    &.appmenu{
+
+    &.appmenu {
       background: transparent;
-      &:backdrop{background: transparent;}
+      &:backdrop {
+        background: transparent;
+      }
     }
     &:hover {
       @include button(hover-header, $selected_bg_color, #fff);
@@ -56,19 +60,28 @@ headerbar {
     &:backdrop,
     &:disabled,
     &:backdrop:disabled {
-      @include button(backdrop-header, $main_dark_color, transparentize($headerbar_fg_color, 0.8));
+      @include button(
+        backdrop-header,
+        $main_dark_color,
+        transparentize($headerbar_fg_color, 0.8)
+      );
     }
 
     &:backdrop {
       &:hover,
       &:active,
       &:checked {
-        @include button(backdrop-header, $backdrop_selected_bg_color, $selected_bg_color);
+        @include button(
+          backdrop-header,
+          $backdrop_selected_bg_color,
+          $selected_bg_color
+        );
       }
     }
 
-    @each $b_type, $b_color in (suggested-action, $cyan),
-                               (destructive-action, $destructive_color) {
+    @each $b_type, $b_color in (suggested-action, $selected_bg_color),
+      (destructive-action, $destructive_color)
+    {
       &.#{$b_type} {
         font-weight: bold;
         min-height: 14px;
@@ -78,13 +91,19 @@ headerbar {
         @include button(rounded, $b_color, white);
         box-shadow: none;
 
-        &:hover { @include button(hover, $b_color, white); }
+        &:hover {
+          @include button(hover, $b_color, white);
+        }
 
-        &:active { @include button(active, $b_color, white); }
+        &:active {
+          @include button(active, $b_color, white);
+        }
 
         &:disabled {
           @include button(insensitive, $b_color, white);
-          label {color: transparentize(white,0.5);}
+          label {
+            color: transparentize(white, 0.5);
+          }
         }
 
         &:backdrop {
@@ -92,8 +111,9 @@ headerbar {
           border-radius: 3px;
         }
 
-        &:backdrop:disabled { @include button(backdrop-insensitive, $b_color, white); }
-
+        &:backdrop:disabled {
+          @include button(backdrop-insensitive, $b_color, white);
+        }
       }
     }
 
@@ -108,7 +128,8 @@ headerbar {
       &:active,
       &:checked,
       &:backdrop,
-      &:backdrop:hover,* {
+      &:backdrop:hover,
+      * {
         color: transparent;
         box-shadow: none;
         background-color: transparent;
@@ -139,15 +160,21 @@ headerbar {
   }
   %linked-button {
     @extend %linked-header;
-    &:active:backdrop, &:checked:backdrop {
-      &, label { color: $backdrop_selected_fg_color; }
+    &:active:backdrop,
+    &:checked:backdrop {
+      &,
+      label {
+        color: $backdrop_selected_fg_color;
+      }
     }
   }
   .linked > button {
     @extend %linked-button;
   }
   .linked > button:hover,
-  .linked > button:backdrop { @extend %linked-header; }
+  .linked > button:backdrop {
+    @extend %linked-header;
+  }
   // End reset style
 
   .path-bar-box {
@@ -160,31 +187,34 @@ headerbar {
       &:last-child {
         margin-left: -1px;
         border-radius: 0px;
-        &:active, &:checked {
+        &:active,
+        &:checked {
           border-radius: 0px 6px 6px 0px;
         }
       }
       &:first-child {
         border-radius: 6px 0px 0px 6px;
-        &:active, &:checked {
+        &:active,
+        &:checked {
           border-radius: 6px;
         }
       }
     }
-    widget > .text-button:last-child{
+    widget > .text-button:last-child {
       border-radius: 0px 6px 6px 0px;
       @include button(active-header);
-      &:backdrop, &:backdrop label {
+      &:backdrop,
+      &:backdrop label {
         color: $backdrop_selected_fg_color;
       }
-      &:only-child{
+      &:only-child {
         border-radius: 6px;
-      } 
+      }
     }
   }
 
-   // Gnome 42 path-bar
-   .path-buttons-box {
+  // Gnome 42 path-bar
+  .path-buttons-box {
     background-color: $bg_color;
     border: 1px solid $borders_color;
     min-height: 20px;
@@ -196,7 +226,7 @@ headerbar {
     .dim-label {
       color: transparent;
       margin-right: -5px;
-   }
+    }
 
     //Buttons before current path
     button > .horizontal > .dim-label {
@@ -206,8 +236,8 @@ headerbar {
       border-right: 1px solid $borders_color;
     }
 
-    button > .horizontal > image.dim-label { 
-      padding: 3px 0px 3px 12px; 
+    button > .horizontal > image.dim-label {
+      padding: 3px 0px 3px 12px;
       border-right: none;
     }
 
@@ -218,19 +248,14 @@ headerbar {
       padding: 0;
     }
 
-    .current-dir  {
-      label { 
-        @include button(active-header); 
-        padding: 3px 12px; 
+    .current-dir {
+      label {
+        @include button(active-header);
+        padding: 3px 12px;
       }
 
-      image { 
-        background:
-       #882ae9
-        left 
-        bottom
-        lighten($headerbar_color, 12%)
-        no-repeat; 
+      image {
+        background: #882ae9 left bottom lighten($headerbar_color, 12%) no-repeat;
         background-size: 100% 1.5px;
       }
     }
@@ -247,32 +272,38 @@ headerbar {
   &.selection-mode {
     button {
       &:backdrop {
-        &.flat, & {
+        &.flat,
+        & {
           &:active,
           &:checked {
             //@include button(backdrop-active, $selected_bg_color, $selected_fg_color);
-            label{
-              color:$backdrop_selected_bg_color;
+            label {
+              color: $backdrop_selected_bg_color;
             }
             border-color: $selected_borders_color;
           }
         }
       }
     }
-
   }
 
   .tiled &,
   .maximized & {
     &.titlebar {
-      @if $variant == 'light' { box-shadow: none; }
-      @else { box-shadow: inset 0 -1px $bottom_highlight; }
+      @if $variant == "light" {
+        box-shadow: none;
+      } @else {
+        box-shadow: inset 0 -1px $bottom_highlight;
+      }
     }
-    &:backdrop, & { border-radius: 0; }
+    &:backdrop,
+    & {
+      border-radius: 0;
+    }
   } // squared corners when the window is maximized or tiled
 
   &.default-decoration {
-    padding: 5px 4px; 
+    padding: 5px 4px;
     min-height: 20px;
 
     button.titlebutton {
@@ -296,24 +327,36 @@ headerbar {
     margin-top: 10px;
     margin-bottom: 10px;
   }
-  separator { background: transparent; }
+  separator {
+    background: transparent;
+  }
 
-  viewswitcher, switcher {
+  viewswitcher,
+  switcher {
     > box.horizontal {
       > button.radio {
-        image { margin-left: 7px; }
-        label { margin-right: 7px; }
+        image {
+          margin-left: 7px;
+        }
+        label {
+          margin-right: 7px;
+        }
         margin: 0;
         padding: 0;
         border-radius: 0;
       }
     }
-  } 
+  }
 }
 
 .background:not(.tiled):not(.maximized) .titlebar {
-  @if $variant == 'light' { box-shadow: inset 0 1px $top_highlight; }
-  @else { box-shadow: inset 0 1px $top_highlight,inset 0 -1px $bottom_highlight; }
+  @if $variant == "light" {
+    box-shadow: inset 0 1px $top_highlight;
+  } @else {
+    box-shadow:
+      inset 0 1px $top_highlight,
+      inset 0 -1px $bottom_highlight;
+  }
 }
 
 // headerbar {
@@ -341,6 +384,6 @@ headerbar {
   @extend %titlebar;
 }
 
-.titlebar{
+.titlebar {
   @extend %titlebar;
 }
