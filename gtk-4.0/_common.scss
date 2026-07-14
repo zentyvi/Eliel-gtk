@@ -7,9 +7,6 @@
 }
 
 $window-border: false;
-$window-glowing: 0 0 8px 3px $selected_glow_color;
-$popup-glowing: 0 0 7px 2px $selected_glow_color;
-$button-glowing: 0 0 4px 2px $selected_glow_color;
 $ease-out-quad: cubic-bezier(0.25, 0.46, 0.45, 0.94);
 $asset_suffix: if($variant== "dark", "-dark", "");
 $backdrop_transition: 300ms ease-out;

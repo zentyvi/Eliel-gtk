@@ -38,6 +38,11 @@ $borders_edge: if(
   transparentize(white, 0.8),
   transparentize(white, 0.9)
 );
+
+$window-glowing: 0 0 8px 3px $selected_glow_color;
+$popup-glowing: 0 0 7px 2px $selected_glow_color;
+$button-glowing: 0 0 4px 2px $selected_glow_color;
+
 $link_color: lighten($primary, 10%);
 $link_visited_color: transparentize($link_color, 0.2);
 $top_highlight: if(

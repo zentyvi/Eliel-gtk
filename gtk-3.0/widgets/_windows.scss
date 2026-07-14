@@ -1,6 +1,7 @@
 /**********************
  * Window Decorations *
  *********************/
+
 decoration {
   // lamefun trick to get rounded borders regardless of CSD use
   border-width: 0px;
@@ -18,13 +19,22 @@ decoration {
     transparentize($borders_color, 0.1)
   );
 
+  $window-shadow: 2px 4px 8px 2px transparentize(rgb(15, 4, 6), 0.3);
+  $window-backdrop-shadow: 2px 4px 8px 2px transparentize(rgb(15, 4, 6), 0.65);
+
   // lamefun trick to get rounded borders regardless of CSD use
   border-width: 0px;
 
-  box-shadow: 0 4px 10px 2px transparentize(#252525, 0.3);
-  // FIXME rationalize shadows
+  @if $window-border {
+    box-shadow:
+      $window-glowing,
+      0 0 0 1px $selected_borders_color;
+  } @else {
+    box-shadow:
+      $window-shadow,
+      0 0 0 1px lighten($borders_color, 10%);
+  }
 
-  // this is used for the resize cursor area
   margin: 10px;
 
   &:backdrop {
@@ -32,14 +42,24 @@ decoration {
     // change when we go to backdrop, to prevent jumping windows.
     // The biggest shadow should be in the same order then in the active state
     // or the jumping will happen during the transition.
-    box-shadow: 0 4px 10px 2px transparentize(#211a1e, 0.8);
     transition: $backdrop_transition;
+    @if $window-border {
+      box-shadow:
+        2px 4px 8px 2px transparentize(rgb(15, 4, 6), 0.65),
+        0 0 0 1px transparentize($selected_borders_color, 0.3);
+    } @else {
+      box-shadow:
+        $window-backdrop-shadow,
+        0 0 0 1px transparentize(lighten($borders_color, 10%), 0.3);
+    }
   }
 
   .maximized &,
   .fullscreen &,
   .tiled & {
     border-radius: 0;
+    border: none;
+    box-shadow: none;
   }
 
   .popup & {

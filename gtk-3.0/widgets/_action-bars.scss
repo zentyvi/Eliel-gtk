@@ -3,14 +3,14 @@
 ***************/
 
 .action-bar {
-  background-color: darken($bg_color, 10%);
+  background-color: lighten($bg_color, 5%);
   border: solid $borders_color;
   border-width: 1px 0 0 0;
   color: $fg_color;
   box-shadow: none;
 
   &:backdrop {
-    background-color: darken($backdrop_bg_color, 10%);
+    background-color: lighten($backdrop_bg_color, 10%);
     box-shadow: none;
     -gtk-icon-effect: dim;
   }
