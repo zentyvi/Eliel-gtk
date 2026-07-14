@@ -9,6 +9,7 @@ window {
     box-shadow: $window-glowing;
   } @else {
     box-shadow: 0 0 6px 1px rgba(16, 3, 8, 0.705);
+    border: 1px solid lighten($borders_color, 13%);
   }
 
   // this needs to be transparent

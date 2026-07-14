@@ -199,8 +199,7 @@ actionbar > revealer > box {
     border: none; }
 
 toast {
-  border: 1px solid #ff2088;
-  box-shadow: 0 0 7px 2px rgba(255, 32, 136, 0.45);
+  border: 1px solid #38383d;
   padding: 5px;
   background-color: #1b1b1e;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.822);
@@ -1949,8 +1948,7 @@ combobox:drop(active) {
 messagedialog,
 .messagedialog,
 .dialog {
-  border: 1px solid #ff2088;
-  box-shadow: 0 0 8px 3px rgba(255, 32, 136, 0.45);
+  border: 1px solid #38383d;
   background-color: #0a0a0b; }
   messagedialog .titlebar:not(headerbar),
   .messagedialog .titlebar:not(headerbar),
@@ -1977,22 +1975,6 @@ messagedialog,
   .messagedialog.csd .dialog-content,
   .dialog.csd .dialog-content {
     padding: 12px; }
-  messagedialog .messagedialog .message-area,
-  messagedialog .messagedialog .response-area,
-  messagedialog .dialog .dialog-action-area,
-  messagedialog .alert.floating .response-area,
-  messagedialog .alert.floating .body-scrolled-window,
-  .messagedialog .messagedialog .message-area,
-  .messagedialog .messagedialog .response-area,
-  .messagedialog .dialog .dialog-action-area,
-  .messagedialog .alert.floating .response-area,
-  .messagedialog .alert.floating .body-scrolled-window,
-  .dialog .messagedialog .message-area,
-  .dialog .messagedialog .response-area,
-  .dialog .dialog .dialog-action-area,
-  .dialog .alert.floating .response-area,
-  .dialog .alert.floating .body-scrolled-window {
-    padding: 26px; }
   messagedialog filechooser .dialog-action-box,
   .messagedialog filechooser .dialog-action-box,
   .dialog filechooser .dialog-action-box {
@@ -2022,6 +2004,13 @@ messagedialog,
   .dialog filechooserbutton:drop(active) {
     box-shadow: none;
     border-color: transparent; }
+
+.messagedialog .message-area,
+.messagedialog .response-area,
+.dialog .dialog-action-area,
+.alert.floating .response-area,
+.alert.floating .body-scrolled-window {
+  padding: 20px; }
 
 /****************
  * Text Entries *
@@ -2298,8 +2287,7 @@ filechooser listview.view > row.activatable {
   border-color: #18181b;
   border-radius: 3px 3px 0 0;
   box-shadow: none;
-  border: 1px solid #ff2088;
-  box-shadow: 0 0 7px 2px rgba(255, 32, 136, 0.45); }
+  border: 1px solid #38383d; }
   .floating-bar.bottom.left {
     border-left-style: none;
     border-top-left-radius: 0; }
@@ -3786,7 +3774,8 @@ popover.background {
     background-color: #0a0a0b;
     padding: 4px;
     border-radius: 12px;
-    box-shadow: 0 0 7px 2px rgba(255, 32, 136, 0.45), 0 0 0 1px #ff2088; }
+    box-shadow: 0 6px 12px #0f070a;
+    border: 1px solid #38383d; }
     popover.background > contents list,
     popover.background > contents .view,
     popover.background > contents iconview,
@@ -4905,7 +4894,7 @@ tooltip {
   tooltip.background {
     background-color: rgba(0, 0, 0, 0.93);
     background-clip: padding-box;
-    border: 1px solid #ff2088; }
+    border: 1px solid #38383d; }
   tooltip decoration {
     background-color: transparent; }
   tooltip *, tooltip button:link,
@@ -5066,8 +5055,8 @@ treeview.view > header > button:active {
  *********************/
 window {
   border: none;
-  border: 1px solid #ff2088;
-  box-shadow: 0 0 8px 3px rgba(255, 32, 136, 0.45); }
+  box-shadow: 0 0 6px 1px rgba(16, 3, 8, 0.705);
+  border: 1px solid #38383d; }
   window.csd {
     margin: 0; }
     window.csd:backdrop, label:backdrop selection.csd, progressbar:backdrop trough.csd, progressbar:backdrop progress.csd {
@@ -6075,10 +6064,6 @@ window.background.budgie-settings-window.csd > box.horizontal > stack > scrolled
       border-style: solid;
       border-top-width: 1px;
       border-left-width: 1px; }
-  .nautilus-window .floating-bar {
-    border-radius: 4px;
-    border: 1px solid #ff2088;
-    box-shadow: 0 0 7px 2px rgba(255, 32, 136, 0.45); }
   .nautilus-window .navigation-sidebar {
     border: 0; }
   .nautilus-window .nautilus-list-view {
@@ -6284,8 +6269,7 @@ popover .calendars-list {
   border-bottom-width: 1px; }
 
 sheet.background {
-  border: 1px solid #ff2088;
-  box-shadow: 0 0 7px 2px rgba(255, 32, 136, 0.45); }
+  border: 1px solid #38383d; }
 
 gridview.view > .activatable:backdrop, label:backdrop gridview.view > selection.activatable, progressbar:backdrop gridview.view > trough.activatable, progressbar:backdrop gridview.view > progress.activatable {
   opacity: 0.8; }

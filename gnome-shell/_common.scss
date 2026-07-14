@@ -4,6 +4,7 @@ $corner-radius: 2px;
 $floating-panel-popup-top-margin: 6px;
 $floating-panel: false;
 $panel-border: true;
+$glowing: 0 0 8px 1px $selected_glow_color;
 $font-size: 11;
 $quick-settings-buttons-radius: 12px;
 $_bubble_bg_color: $osd_bg_color;
@@ -237,6 +238,8 @@ $slider_size: 15px;
   @if $panel-border {
     border: 1px solid $selected_borders_color;
     box-shadow: $glowing;
+  } @else {
+    border: 1px solid lighten($borders_color, 20%);
   }
   border-radius: 12px;
   color: $osd_fg_color;
@@ -319,6 +322,8 @@ $slider_size: 15px;
   @if $panel-border {
     border: 1px solid $selected_borders_color;
     box-shadow: $glowing;
+  } @else {
+    border: 1px solid lighten($borders_color, 20%);
   }
   & .modal-dialog-linked-button,
   & .modal-dialog-button {
@@ -492,6 +497,8 @@ $slider_size: 15px;
   @if $panel-border {
     border: 1px solid $selected_borders_color;
     box-shadow: $glowing;
+  } @else {
+    border: 1px solid lighten($borders_color, 20%);
   }
   border-radius: 10px;
   background-color: $bg_color;
@@ -688,6 +695,8 @@ $slider_size: 15px;
   @if $panel-border {
     border: 1px solid $selected_borders_color;
     box-shadow: $glowing;
+  } @else {
+    border: 1px solid lighten($borders_color, 20%);
   }
 }
 
@@ -865,7 +874,7 @@ $slider_size: 15px;
 
 .switcher-list .item-box:outlined {
   padding: 6px;
-  border: 2px solid darken($borders_color, 10%);
+  border: 1px solid ligten($borders_color, 10%);
 }
 
 .switcher-list .item-box:selected {
@@ -954,6 +963,8 @@ $slider_size: 15px;
   @if $panel-border {
     border: 1px solid $selected_borders_color;
     box-shadow: $glowing;
+  } @else {
+    border: 1px solid lighten($borders_color, 20%);
   }
   background-color: $_bubble_bg_color;
   border-radius: 999px;
@@ -964,7 +975,11 @@ $slider_size: 15px;
 /* Tiled window previews */
 .tile-preview {
   background-color: transparentize($selected_bg_color, 0.5);
-  border: 1px solid $selected_borders_color;
+  @if $panel-border {
+    border: 1px solid $selected_borders_color;
+  } @else {
+    border: 1px solid lighten($borders_color, 10%);
+  }
 }
 
 .tile-preview-left.on-primary {
@@ -985,6 +1000,8 @@ $slider_size: 15px;
   @if $panel-border {
     border: 1px solid $selected_borders_color;
     box-shadow: $glowing;
+  } @else {
+    border: 1px solid lighten($borders_color, 20%);
   }
 }
 
@@ -1584,7 +1601,7 @@ $slider_size: 15px;
   height: 30px;
   width: 30px;
   transition-duration: 0.3s;
-  box-shadow: 0px 0px 10px $borders_color;
+  box-shadow: 0px 0px 10px $bg_color;
 
   & StIcon {
     icon-size: 23px;
@@ -1609,6 +1626,8 @@ $slider_size: 15px;
   @if $panel-border {
     border: 1px solid $selected_borders_color;
     box-shadow: $glowing;
+  } @else {
+    border: 1px solid lighten($borders_color, 20%);
   }
   max-height: 34em;
   min-height: 31em;
@@ -1638,7 +1657,7 @@ $slider_size: 15px;
   icon-size: 32px;
 }
 .nm-dialog-scroll-view {
-  border: 2px solid $borders_color;
+  border: 1px solid $borders_color;
   background: $bg_color;
 }
 .nm-dialog-header {
@@ -1708,8 +1727,12 @@ $slider_size: 15px;
   spacing: 20px;
   color: $fg_color;
   background-color: transparentize($osd_bg_color, 0.2);
-  border-radius: 2px;
-  border-color: $selected_borders_color;
+  border-radius: 8px;
+  @if $panel-border {
+    border-color: $selected_borders_color;
+  } @else {
+    border-color: lighten($borders_color, 10%);
+  }
   padding: 4px 8px;
 }
 
@@ -1823,6 +1846,8 @@ $slider_size: 15px;
   @if $panel-border {
     border: 1px solid $selected_borders_color;
     box-shadow: $glowing;
+  } @else {
+    border: 1px solid lighten($borders_color, 20%);
   }
   background-color: $bg_color;
 }
@@ -1834,12 +1859,16 @@ $slider_size: 15px;
 
 .dash-label {
   //osd tooltip
-  border-radius: 7px;
+  border-radius: 8px;
   padding: 4px 12px;
   color: $fg_color;
-  background-color: $bg_color;
+  background-color: transparentize($bg_color, 0.3);
   text-align: center;
-  border-color: $selected_borders_color;
+  @if $panel-border {
+    border-color: $selected_borders_color;
+  } @else {
+    border-color: lighten($borders_color, 10%);
+  }
   -x-offset: 8px;
 }
 
@@ -1966,6 +1995,8 @@ $slider_size: 15px;
   @if $panel-border {
     border: 1px solid $selected_borders_color;
     box-shadow: $glowing;
+  } @else {
+    border: 1px solid lighten($borders_color, 20%);
   }
 
   & .folder-name-label {
@@ -2118,7 +2149,10 @@ $slider_size: 15px;
   @if $panel-border {
     border: 1px solid $selected_borders_color;
     box-shadow: $glowing;
+  } @else {
+    border: 1px solid lighten($borders_color, 20%);
   }
+
   box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.342);
   &:hover,
   &:focus {
@@ -2792,11 +2826,11 @@ $base_padding: 6px;
 
 .quick-toggle {
   border-radius: $quick-settings-buttons-radius;
-  border: 1px solid lighten($borders_color, 15%);
+  border: 1px solid lighten($borders_color, 10%);
 
   &:checked {
-    background-color: lighten($bg_color, 10%) !important;
-    border-color: lighten($borders-color, 22%);
+    background-color: lighten($bg_color, 13%) !important;
+    border-color: lighten($borders-color, 20%);
   }
 
   &:focus,
@@ -2831,6 +2865,7 @@ $base_padding: 6px;
 
 .quick-menu-toggle,
 .quick-toggle-has-menu {
+  background-color: lighten($bg_color, 5%);
   &:ltr > StBoxLayout {
     padding-right: 0;
   }
@@ -2863,11 +2898,11 @@ $base_padding: 6px;
   & .quick-toggle-menu-button {
     background-color: lighten($bg_color, 5%);
     padding: $base_padding $base_padding * 1.75;
-    border: 1px solid lighten($borders_color, 15%);
+    border: 1px solid lighten($borders_color, 10%);
     border-left-width: 0;
     &:checked {
-      background-color: lighten($bg_color, 10%) !important;
-      border-color: lighten($borders-color, 22%);
+      background-color: lighten($bg_color, 13%);
+      border-color: lighten($borders-color, 20%);
     }
     &:focus,
     &:hover {
@@ -2894,7 +2929,10 @@ $base_padding: 6px;
   @if $panel-border {
     border: 1px solid $selected_borders_color;
     box-shadow: $glowing;
+  } @else {
+    border: 1px solid lighten($borders_color, 20%);
   }
+
   background-color: lighten($bg_color, 2%) !important;
   border-radius: 12px;
   padding: $base_padding * 2;
@@ -2966,7 +3004,7 @@ $base_padding: 6px;
 .screenshot-ui-window-selector-window {
   &:hover {
     .screenshot-ui-window-selector-window-border {
-      border-color: darken($selected_borders_color, 15%);
+      border-color: darken($selected_borders_color, 20%);
     }
   }
   &:checked {
@@ -2986,5 +3024,7 @@ $base_padding: 6px;
   @if $panel-border {
     border: 1px solid $selected_borders_color;
     box-shadow: $glowing;
+  } @else {
+    border: 1px solid lighten($borders_color, 20%);
   }
 }

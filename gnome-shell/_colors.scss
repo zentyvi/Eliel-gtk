@@ -22,9 +22,8 @@ $g2: $primary;
 $selected_glow_color: transparentize($primary_glow, 0.6);
 $selected_bg_color: lighten($primary, 10%);
 $selected_borders_color: lighten($primary, 10%);
-$borders_color: darken($main_dark, 3%);
+$borders_color: $bg_color;
 $borders_edge: transparentize(white, 0.9);
-$glowing: 0 0 8px 1px $selected_glow_color;
 
 $warning_color: darken($orange, 10%);
 $error_color: darken($red, 5%);
