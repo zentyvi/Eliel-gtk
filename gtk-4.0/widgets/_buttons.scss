@@ -40,16 +40,12 @@ button {
     padding: 4px 6px;
     border: 1px solid $borders_color;
     border-radius: 6px;
-    // transition: $button_transition;
+    transition: $button_transition;
 
     @include button(normal);
 
     &.flat {
       @include button(undecorated);
-      // to avoid adiacent buttons borders clashing when transitioning, the transition on the normal state is set
-      // to none, while it's added back in the hover state, so the button decoration will fade in on hover, but
-      // it won't fade out when the pointer leave the button allocation area. To make the transition more evident
-      // in this case the duration is increased.
       &:focus-visible,
       &:hover {
         transition-duration: 500ms;
@@ -127,7 +123,6 @@ button {
     &.image-button.sidebar-button {
       padding: 6px 4px;
       border-radius: 50px;
-      box-shadow: none;
     }
 
     &.text-button {
@@ -185,10 +180,7 @@ button {
 
     color: $osd_fg_color;
     border-radius: 5px;
-    outline-color: transparentize(
-      $osd_fg_color,
-      0.7
-    ); //FIXME: define a color var?
+    outline-color: transparentize($osd_fg_color, 0.7);
 
     @include button(osd);
 
@@ -197,17 +189,11 @@ button {
     &:focus-visible,
     &:hover {
       @include button(osd-hover);
-
-      border: none;
-      box-shadow: none;
     }
 
     &:active,
     &:checked {
       @include button(osd-active);
-
-      border: none;
-      box-shadow: none;
     }
 
     &:disabled {
@@ -295,9 +281,7 @@ button {
       }
 
       &.flat {
-        // @include button(undecorated);
         @include button(rounded, $b_color, $fg_color);
-        //color: $b_color; //FIXME: does it work on the dark variant?
       }
       &:focus-visible,
       &:hover,
@@ -676,13 +660,9 @@ list,
 .view,
 popover {
   button {
-    box-shadow: none;
     &:backdrop {
       box-shadow: none;
     }
-  }
-  .linked > button {
-    box-shadow: none;
   }
 }
 
@@ -715,7 +695,7 @@ button.color-button {
     min-width: 24px;
     padding: 3px;
     border-radius: 100%;
-    background: $selected_bg_color;
+    background: transparentize($selected_bg_color, 0.4);
     outline: none;
     background-clip: content-box;
     box-shadow: none;
@@ -723,15 +703,15 @@ button.color-button {
   }
   &:focus-visible,
   &:hover {
-    box-shadow: 0 0 0 3px lighten($base_color, 5%);
+    box-shadow: 0 0 4px 1px lighten($selected_glow_color, 5%);
     background-color: $selected_bg_color;
   }
 
   &:checked {
     &,
     &:backdrop {
-      box-shadow: 0 0 0 3px $selected_bg_color;
-      background-color: $selected_bg_color;
+      box-shadow: none;
+      background-color: transparentize($selected_bg_color, 0.4);
     }
   }
 }

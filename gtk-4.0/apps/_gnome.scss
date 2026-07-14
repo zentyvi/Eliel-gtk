@@ -7,59 +7,26 @@
   &:backdrop {
     background-color: lighten($bg_color, 5%);
   }
-  // .frame {
-  //   *:selected,
-  //   *:selected:backdrop {
-  //     background: transparent;
-  //     color: $selected_bg_color;
-  //     label {
-  //       color: $selected_bg_color;
-  //     }
-  //   }
-  // }
-
-  // scrolledwindow > .view {
-  // }
 
   .nautilus-grid-view {
     background-color: transparent;
 
     gridview.view {
       background-color: $bg_color;
-      border-top-left-radius: 42px;
+      border-top-left-radius: 36px;
+      border-top-right-radius: 36px;
       border-color: lighten($borders_color, 10%);
       border-style: solid;
       border-top-width: 1px;
       border-left-width: 1px;
-      > .activatable {
-        &:backdrop {
-          opacity: 0.8;
-        }
-
-        &:active {
-          background-color: lighten($bg_color, 7%);
-        }
-
-        &:selected {
-          &:backdrop {
-            box-shadow:
-              inset 0 0 0 1px transparentize($selected_borders_color, 0.5),
-              0 0 6px 1px transparentize($selected_glow_color, 0.3);
-            background-color: $backdrop_bg_color;
-          }
-          box-shadow:
-            inset 0 0 0 1px $selected_borders_color,
-            0 0 6px 1px $selected_glow_color;
-          background-color: lighten($bg_color, 3%);
-        }
-      }
     }
   }
 
-  floating-sheet sheet.background {
+  .floating-bar {
+    border-radius: 4px;
     @if $window-border {
       border: 1px solid $selected_borders_color;
-      box-shadow: 0 0 6px 2px $selected_glow_color;
+      box-shadow: 0 0 4px 1px $selected_glow_color;
     }
   }
 
@@ -68,15 +35,32 @@
   }
 
   .nautilus-list-view {
+    background-color: $bg_color;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
     border-color: lighten($borders_color, 10%);
     border-style: solid;
     border-top-width: 1px;
     border-left-width: 1px;
+
+    header {
+      padding: 12px;
+      background-color: transparent;
+      border: none;
+      > button {
+        border: none;
+        background-color: transparent;
+      }
+    }
+
     .view {
       border-radius: 0;
     }
-    listview.view {
-      padding: 12px;
+    columnview.view {
+      background-color: transparent;
+      box-shadow: none;
+      padding: 0 12px;
+      padding-bottom: unset;
     }
   }
 
@@ -310,4 +294,49 @@ popover {
 #gnome-system-monitor .loadgraph {
   background: $bg_color;
   color: $text_color;
+}
+
+.org-gnome-TextEditor {
+  .top-bar:nth-last-child(2) {
+    padding: 0;
+  }
+
+  tabbox {
+    border-style: solid;
+    border-color: lighten($borders_color, 10%);
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+  }
+}
+
+sheet.background {
+  @if $window-border {
+    border: 1px solid $selected_borders_color;
+    box-shadow: 0 0 6px 2px $selected_glow_color;
+  }
+}
+
+gridview.view {
+  > .activatable {
+    &:backdrop {
+      opacity: 0.8;
+    }
+
+    &:active {
+      background-color: lighten($bg_color, 7%);
+    }
+
+    &:selected {
+      &:backdrop {
+        box-shadow:
+          inset 0 0 0 1px transparentize($selected_borders_color, 0.5),
+          0 0 6px 1px transparentize($selected_glow_color, 0.3);
+        background-color: $backdrop_bg_color;
+      }
+      box-shadow:
+        inset 0 0 0 1px $selected_borders_color,
+        0 0 6px 1px $selected_glow_color;
+      background-color: lighten($bg_color, 3%);
+    }
+  }
 }

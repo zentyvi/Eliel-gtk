@@ -4,7 +4,6 @@
 // draw regular check and radio items using our PNG assets
 // all assets are rendered from assets.svg. never add pngs directly
 
-// unchecked
 @each $s, $un in ("", "-unchecked"), (":hover", "-unchecked-hover"),
   (":active", "-unchecked-active"), (":backdrop", "-unchecked-backdrop"),
   (":disabled", "-unchecked-insensitive"),

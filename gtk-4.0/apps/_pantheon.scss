@@ -161,25 +161,11 @@ PantheonCalculatorMainWindow {
 
 .card {
   background-color: lighten($bg_color, 5%);
-  border: none;
+  border: 1px solid lighten($borders_color, 10%);
   box-shadow:
     0 0 0 1px transparentize(black, 0.95),
     0 3px 3px transparentize(black, 0.8);
   transition: all 150ms ease-in-out;
-
-  &:hover {
-    background-color: lighten($bg_color, 7%);
-    box-shadow:
-      0 0 0 1px $selected_borders_color,
-      0 0 6px 2px $selected_glow_color;
-  }
-}
-
-.card.collapsed {
-  background-color: darken($base_color, 5%);
-  box-shadow:
-    0 0 0 1px transparentize(black, 0.95),
-    0 1px 2px transparentize(black, 0.8);
 }
 
 /*********

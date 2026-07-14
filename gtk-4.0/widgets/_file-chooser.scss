@@ -2,7 +2,8 @@
  * File chooser *
  ****************/
 
-window.filechooser {
+.filechooser,
+filechooser {
   gridview.view {
     > .activatable {
       &:backdrop {

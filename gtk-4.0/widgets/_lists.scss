@@ -50,7 +50,7 @@ row {
         transparentize(darken($primary_dark, 15%), 0.75)
       );
 
-      & * {
+      * {
         border-color: transparent;
       }
     }

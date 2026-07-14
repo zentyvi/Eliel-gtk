@@ -8,7 +8,7 @@ window {
     border: 1px solid lighten($selected_borders_color, 5%);
     box-shadow: 0 0 8px 3px $selected_glow_color;
   } @else {
-    box-shadow: 0 0 0 1px $primary_glow;
+    box-shadow: 0 0 6px 1px rgba(16, 3, 8, 0.705);
   }
 
   // this needs to be transparent
@@ -27,7 +27,6 @@ window {
   $_menu_radius: 7px;
 
   &.csd {
-    // box-shadow: 0 0 0 1px $_wm_border; //doing borders with box-shadow
     margin: 0;
     &:backdrop {
       // the transparent shadow here is to enforce that the shadow extents don't
@@ -189,10 +188,6 @@ windowcontrols {
       );
     }
   }
-}
-
-headbar {
-  background-color: red;
 }
 
 headerbar.selection-mode button.titlebutton,

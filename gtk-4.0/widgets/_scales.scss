@@ -29,13 +29,12 @@
 
   &:disabled {
     border: none;
-    background-color: $scale_bg;
+    background-color: lighten($scale_bg, 5%);
   }
 
   &:backdrop,
   &:active:backdrop {
-    border-color: lighten($selected_bg_color, 5%);
-    background-color: lighten($selected_bg_color, 5%);
+    background-color: transparentize($selected_bg_color, 0.4);
     &:disabled {
       background-color: $scale_disabled_bg;
     }

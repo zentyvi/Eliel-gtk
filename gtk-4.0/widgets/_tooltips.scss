@@ -7,12 +7,13 @@ tooltip {
     // see https://bugzilla.gnome.org/show_bug.cgi?id=736155 for details.
     background-color: $osd_bg_color;
     background-clip: padding-box;
-    border: 1px solid $selected_borders_color;
+    @if $window-border {
+      border: 1px solid $selected_borders_color;
+    }
   }
 
   padding: 4px; /* not working */
   border-radius: 5px;
-  box-shadow: none; // otherwise it gets inherited by windowframe.csd
   text-shadow: 0 1px black;
 
   // FIXME: we need a border or tooltips vanish on black background.

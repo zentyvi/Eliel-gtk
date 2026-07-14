@@ -21,7 +21,6 @@ toolbar {
     padding: 13px;
     border: none;
     border-radius: 5px;
-    // background-color: $osd_bg_color;
 
     &.left,
     &.right,
@@ -74,8 +73,6 @@ searchbar > revealer > box {
 %darkbar {
   border-style: solid;
   border-color: $borders_color;
-  // $_bg: mix($bg_color, $borders_color, 70%);
-  // background-color: $_bg;
 
   &:backdrop {
     border-color: $backdrop_borders_color;
@@ -84,7 +81,3 @@ searchbar > revealer > box {
     transition: $backdrop_transition;
   }
 }
-
-// searchbar {
-//   // background: lighten($bg_color, 10%);
-// }

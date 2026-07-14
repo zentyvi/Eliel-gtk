@@ -353,24 +353,22 @@ tabbar {
 
     > tab,
     > tabboxchild > tab {
-      background-color: lighten($bg_color, 10%);
-      border: 1px solid transparent;
+      background-color: transparent;
       button.flat {
         padding: 0;
         margin: 4px;
         min-width: 20px;
         min-height: 20px;
         border-radius: 10px;
-        &:hover {
-          background-color: $selected_bg_color;
-        }
       }
-      &:hover {
-        background-color: lighten($bg_color, 12%);
-      }
+
       &:checked,
       &:selected {
-        border-color: $selected_borders_color;
+        background: linear-gradient(
+          to right bottom,
+          transparentize(lighten($primary, 5%), 0.75),
+          transparentize(darken($primary_dark, 15%), 0.75)
+        );
       }
     }
   }

@@ -2117,7 +2117,7 @@ $slider_size: 15px;
   background-color: $bg_color;
   @if $panel-border {
     border: 1px solid $selected_borders_color;
-    box-shadow: 0 0 8px 1px $selected_glow_color;
+    box-shadow: 0 0 8px 2px $selected_glow_color;
   }
   box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.342);
   &:hover,
