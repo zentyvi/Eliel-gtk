@@ -23,7 +23,7 @@ filechooser {
         }
         box-shadow:
           inset 0 0 0 1px $selected_borders_color,
-          0 0 6px 1px $selected_glow_color;
+          $popup-glowing;
         background-color: lighten($bg_color, 3%);
       }
     }

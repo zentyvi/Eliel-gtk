@@ -32,7 +32,7 @@
 toast {
   @if $window-border {
     border: 1px solid $selected_borders_color;
-    box-shadow: 0 0 6px 2px $selected_glow_color;
+    box-shadow: $popup-glowing;
   }
 
   padding: 5px;

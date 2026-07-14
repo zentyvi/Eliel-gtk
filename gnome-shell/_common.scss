@@ -236,7 +236,7 @@ $slider_size: 15px;
 .modal-dialog {
   @if $panel-border {
     border: 1px solid $selected_borders_color;
-    box-shadow: 0 0 8px 1px $selected_glow_color;
+    box-shadow: $glowing;
   }
   border-radius: 12px;
   color: $osd_fg_color;
@@ -318,7 +318,7 @@ $slider_size: 15px;
   background-color: $bg_color;
   @if $panel-border {
     border: 1px solid $selected_borders_color;
-    box-shadow: 0 0 8px 1px $selected_glow_color;
+    box-shadow: $glowing;
   }
   & .modal-dialog-linked-button,
   & .modal-dialog-button {
@@ -491,7 +491,7 @@ $slider_size: 15px;
   width: 28em;
   @if $panel-border {
     border: 1px solid $selected_borders_color;
-    box-shadow: 0 0 8px 1px $selected_glow_color;
+    box-shadow: $glowing;
   }
   border-radius: 10px;
   background-color: $bg_color;
@@ -687,7 +687,7 @@ $slider_size: 15px;
   border-radius: 14px;
   @if $panel-border {
     border: 1px solid $selected_borders_color;
-    box-shadow: 0 0 8px 1px $selected_glow_color;
+    box-shadow: $glowing;
   }
 }
 
@@ -953,7 +953,7 @@ $slider_size: 15px;
   color: $_bubble_fg_color;
   @if $panel-border {
     border: 1px solid $selected_borders_color;
-    box-shadow: 0 0 8px 1px $selected_glow_color;
+    box-shadow: $glowing;
   }
   background-color: $_bubble_bg_color;
   border-radius: 999px;
@@ -984,7 +984,7 @@ $slider_size: 15px;
 .dashtopanelMainPanel {
   @if $panel-border {
     border: 1px solid $selected_borders_color;
-    box-shadow: 0 0 8px 1px $selected_glow_color;
+    box-shadow: $glowing;
   }
 }
 
@@ -1608,7 +1608,7 @@ $slider_size: 15px;
 .nm-dialog {
   @if $panel-border {
     border: 1px solid $selected_borders_color;
-    box-shadow: 0 0 8px 1px $selected_glow_color;
+    box-shadow: $glowing;
   }
   max-height: 34em;
   min-height: 31em;
@@ -1822,7 +1822,7 @@ $slider_size: 15px;
 .dash-background {
   @if $panel-border {
     border: 1px solid $selected_borders_color;
-    box-shadow: 0 0 8px 1px $selected_glow_color;
+    box-shadow: $glowing;
   }
   background-color: $bg_color;
 }
@@ -1965,7 +1965,7 @@ $slider_size: 15px;
   border: none;
   @if $panel-border {
     border: 1px solid $selected_borders_color;
-    box-shadow: 0 0 8px 1px $selected_glow_color;
+    box-shadow: $glowing;
   }
 
   & .folder-name-label {
@@ -2117,7 +2117,7 @@ $slider_size: 15px;
   background-color: $bg_color;
   @if $panel-border {
     border: 1px solid $selected_borders_color;
-    box-shadow: 0 0 8px 2px $selected_glow_color;
+    box-shadow: $glowing;
   }
   box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.342);
   &:hover,
@@ -2893,7 +2893,7 @@ $base_padding: 6px;
 .quick-toggle-menu {
   @if $panel-border {
     border: 1px solid $selected_borders_color;
-    box-shadow: 0 0 8px 1px $selected_glow_color;
+    box-shadow: $glowing;
   }
   background-color: lighten($bg_color, 2%) !important;
   border-radius: 12px;
@@ -2985,6 +2985,6 @@ $base_padding: 6px;
 %theme_dialogs {
   @if $panel-border {
     border: 1px solid $selected_borders_color;
-    box-shadow: 0 0 8px 1px $selected_glow_color;
+    box-shadow: $glowing;
   }
 }

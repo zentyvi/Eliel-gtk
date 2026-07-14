@@ -24,7 +24,7 @@ popover.background {
     border-radius: 12px;
     @if $window-border {
       box-shadow:
-        0 0 6px 2px $selected_glow_color,
+        $popup-glowing,
         0 0 0 1px $selected_borders_color;
     } @else {
       box-shadow: 0 6px 12px #0f070a;

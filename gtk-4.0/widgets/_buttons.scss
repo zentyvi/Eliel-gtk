@@ -703,7 +703,7 @@ button.color-button {
   }
   &:focus-visible,
   &:hover {
-    box-shadow: 0 0 4px 1px lighten($selected_glow_color, 5%);
+    box-shadow: $button-glowing;
     background-color: $selected_bg_color;
   }
 

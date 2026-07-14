@@ -7,7 +7,7 @@ messagedialog,
   // Message Dialog styling
   @if $window-border {
     border: 1px solid $selected_borders_color;
-    box-shadow: 0 0 8px 3px $selected_glow_color;
+    box-shadow: $window-glowing;
   }
   background-color: $bg_color;
   .titlebar:not(headerbar) {

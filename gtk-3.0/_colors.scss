@@ -28,10 +28,10 @@ $blue: #7cb7ff;
 $slider: #7b7bbd;
 $teal: #34eceb;
 
-$selected_glow_color: transparentize($primary_glow, 0.6);
+$selected_glow_color: transparentize($primary_glow, 0.55);
 $selected_fg_color: $fg_color;
-$selected_bg_color: lighten($primary, 10%);
-$selected_borders_color: lighten($primary_dark, 10%);
+$selected_bg_color: lighten($primary, 15%);
+$selected_borders_color: lighten($primary, 10%);
 $borders_color: lighten(darken($main_dark_color, 5%), 10%);
 $borders_edge: if(
   $variant == "light",
