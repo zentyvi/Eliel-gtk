@@ -1,13 +1,3 @@
 # Dependency directories
 node_modules/
-
-# Sass
-.sass-cache/
-*.css.map
-
-_gnome-shell/
-kde/
-
-install.sh
-*blue.*
-
+dist/
