@@ -376,7 +376,7 @@
     // insensitive pushed button
     //
     color: transparentize($fg_color, 0.3);
-    background-color: $selected_bg_color;
+    background-color: transparentize($selected_bg_color, 0.1);
     border-color: $insensitive_borders_color;
     box-shadow: none;
     text-shadow: none;

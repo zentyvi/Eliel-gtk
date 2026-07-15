@@ -20,16 +20,15 @@ menubar,
 
 .titlebar,
 .top-bar {
-  padding: 6px 10px;
   background-color: $headerbar_color;
 }
 
 menu,
 .menu,
 .context-menu {
-  padding: 200px;
+  padding: 12px;
   background: $headerbar_color;
-  border-radius: 5px;
+  border-radius: 8px;
   font: initial;
 
   .csd & {

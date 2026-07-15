@@ -3,8 +3,8 @@
  ************/
 
 GraniteWidgetsPopOver {
-  border: 1px solid $base_color;
-  background: $base_color;
+  border: 1px solid lighten($borders_color, 10%);
+  background: $bg_color;
   color: $fg_color;
 
   .button {
@@ -33,9 +33,9 @@ GraniteWidgetsStaticNotebook .frame {
 }
 
 .popover_bg {
-  background-color: $base_color;
+  background-color: $bg_color;
   background-image: none;
-  border: 1px solid $base_color;
+  border: 1px solid lighten($borders_color, 10%);
   color: $fg_color;
 }
 
@@ -44,7 +44,7 @@ GraniteWidgetsStaticNotebook .frame {
  **********/
 
 GraniteWidgetsWelcome {
-  background-color: $base_color;
+  background-color: $bg_color;
 
   GtkLabel {
     color: $fg_color;
@@ -62,7 +62,7 @@ GraniteWidgetsWelcome {
 
 .source-list {
   background-color: $bg_color;
-  border: solid $borders_color;
+  border: solid lighten($borders_color, 10%);
   color: $fg_color;
   border-right-width: 1px;
 
@@ -72,7 +72,7 @@ GraniteWidgetsWelcome {
 
   .badge {
     background-image: none;
-    background-color: transparentize(black, 0.6);
+    background-color: transparentize($bg_color, 0.6);
     color: $bg_color;
     border-radius: 10px;
     padding: 0 6px;
@@ -81,7 +81,7 @@ GraniteWidgetsWelcome {
 
     &:selected:backdrop,
     &:selected:hover:backdrop {
-      background-color: transparentize(black, 0.8);
+      background-color: transparentize($bg_color, 0.8);
       color: darken($bg_color, 5%);
     }
   }

@@ -536,7 +536,7 @@ button row.activatable:hover {
   border-color: transparent;
   background-color: transparent; }
 
-header > tabs > arrow, combobox:drop(active) button.combo, .selection-mode windowcontrols button,
+header > tabs > arrow, combobox:drop(active) button.combo, combobox, .selection-mode windowcontrols button,
 button {
   min-height: 22px;
   min-width: 16px;
@@ -550,14 +550,14 @@ button {
   border: 1px solid #2c2c30;
   text-shadow: none;
   box-shadow: none; }
-  header > tabs > arrow.flat, header > tabs > arrow, combobox:drop(active) button.flat.combo, combobox:drop(active) .selection-mode windowcontrols button.combo, .selection-mode windowcontrols combobox:drop(active) button.combo, .selection-mode windowcontrols button,
+  header > tabs > arrow.flat, header > tabs > arrow, combobox:drop(active) button.flat.combo, combobox:drop(active) .selection-mode windowcontrols button.combo, .selection-mode windowcontrols combobox:drop(active) button.combo, combobox.flat, .selection-mode windowcontrols button,
   button.flat {
     border-color: transparent;
     background-color: transparent;
     background-image: none;
     text-shadow: none;
     -gtk-icon-shadow: none; }
-    header > tabs > arrow:focus-visible, combobox:drop(active) button.flat.combo:focus-visible, combobox:drop(active) .selection-mode windowcontrols button.combo:focus-visible, .selection-mode windowcontrols combobox:drop(active) button.combo:focus-visible, header > tabs > arrow:hover, combobox:drop(active) button.flat.combo:hover, combobox:drop(active) .selection-mode windowcontrols button.combo:hover, .selection-mode windowcontrols combobox:drop(active) button.combo:hover,
+    header > tabs > arrow:focus-visible, combobox:drop(active) button.flat.combo:focus-visible, combobox.flat:focus-visible, header > tabs > arrow:hover, combobox:drop(active) button.flat.combo:hover, combobox.flat:hover,
     button.flat:focus-visible,
     .selection-mode windowcontrols button:focus-visible,
     button.flat:hover,
@@ -568,7 +568,7 @@ button {
       border-color: transparent;
       background-color: rgba(255, 58, 150, 0.8);
       text-shadow: none; }
-      header > tabs > arrow:focus-visible:active, combobox:drop(active) button.flat.combo:focus-visible:active, header > tabs > arrow:hover:active, combobox:drop(active) button.flat.combo:hover:active,
+      header > tabs > arrow:focus-visible:active, combobox.flat:focus-visible:active, header > tabs > arrow:hover:active, combobox.flat:hover:active,
       button.flat:focus-visible:active,
       .selection-mode windowcontrols button:focus-visible:active,
       button.flat:hover:active,
@@ -578,7 +578,7 @@ button {
         border-color: transparent;
         background-color: #ff3895;
         text-shadow: none; }
-  header > tabs > arrow:focus-visible, combobox:drop(active) button.combo:focus-visible, header > tabs > arrow:hover, combobox:drop(active) button.combo:hover, .selection-mode windowcontrols button:focus-visible, .selection-mode windowcontrols button:hover,
+  header > tabs > arrow:focus-visible, combobox:drop(active) button.combo:focus-visible, combobox:focus-visible, header > tabs > arrow:hover, combobox:drop(active) button.combo:hover, combobox:hover, .selection-mode windowcontrols button:focus-visible, .selection-mode windowcontrols button:hover,
   button:focus-visible,
   button:hover {
     color: #d8dee9;
@@ -587,28 +587,28 @@ button {
     background-color: rgba(255, 58, 150, 0.8);
     text-shadow: none;
     -gtk-icon-filter: brightness(1.2); }
-  header > tabs > arrow:active, combobox:drop(active) button.combo:active, .selection-mode windowcontrols button:active,
+  header > tabs > arrow:active, combobox:drop(active) button.combo:active, combobox:active, .selection-mode windowcontrols button:active,
   button:active {
     color: #d8dee9;
     box-shadow: 0 0 8px 1px rgba(255, 58, 150, 0.5);
     border-color: transparent;
     background-color: #ff3895;
     text-shadow: none; }
-  header > tabs > arrow:checked, combobox:drop(active) button.combo:checked, .selection-mode windowcontrols button:checked,
+  header > tabs > arrow:checked, combobox:drop(active) button.combo:checked, combobox:checked, .selection-mode windowcontrols button:checked,
   button:checked {
     color: #d8dee9;
     box-shadow: 0 0 6px 1px rgba(255, 58, 150, 0.4);
     border-color: transparent;
     background-color: #ff3a96;
     text-shadow: none; }
-  header > tabs > arrow:checked:hover, combobox:drop(active) button.combo:checked:hover,
+  header > tabs > arrow:checked:hover, combobox:drop(active) button.combo:checked:hover, combobox:checked:hover,
   button:checked:hover {
     color: #d8dee9;
     box-shadow: 0 0 6px 1px rgba(255, 58, 150, 0.4);
     border-color: transparent;
     background-color: rgba(255, 58, 150, 0.8);
     text-shadow: none; }
-  .selection-mode windowcontrols button:backdrop, header > tabs > arrow:backdrop, combobox:drop(active) button.combo:backdrop, combobox:drop(active) progressbar:backdrop progress.combo, progressbar:backdrop combobox:drop(active) progress.combo, combobox:drop(active) progressbar:backdrop trough.combo, progressbar:backdrop combobox:drop(active) trough.combo,
+  .selection-mode windowcontrols button:backdrop, header > tabs > arrow:backdrop, combobox:drop(active) button.combo:backdrop, combobox:drop(active) progressbar:backdrop progress.combo, progressbar:backdrop combobox:drop(active) progress.combo, combobox:drop(active) progressbar:backdrop trough.combo, progressbar:backdrop combobox:drop(active) trough.combo, combobox:backdrop,
   button:backdrop.flat,
   button:backdrop {
     color: rgba(216, 222, 233, 0.7);
@@ -617,7 +617,7 @@ button {
     text-shadow: none;
     box-shadow: none;
     -gtk-icon-filter: none; }
-    header > tabs > arrow:backdrop:active, combobox:drop(active) button.combo:backdrop:active, combobox:drop(active) progressbar:backdrop progress.combo:active, progressbar:backdrop combobox:drop(active) progress.combo:active, combobox:drop(active) progressbar:backdrop trough.combo:active, progressbar:backdrop combobox:drop(active) trough.combo:active, header > tabs > arrow:backdrop:checked, combobox:drop(active) button.combo:backdrop:checked, combobox:drop(active) progressbar:backdrop progress.combo:checked, progressbar:backdrop combobox:drop(active) progress.combo:checked, combobox:drop(active) progressbar:backdrop trough.combo:checked, progressbar:backdrop combobox:drop(active) trough.combo:checked,
+    header > tabs > arrow:backdrop:active, combobox:drop(active) button.combo:backdrop:active, combobox:drop(active) progressbar:backdrop progress.combo:active, progressbar:backdrop combobox:drop(active) progress.combo:active, combobox:drop(active) progressbar:backdrop trough.combo:active, progressbar:backdrop combobox:drop(active) trough.combo:active, combobox:backdrop:active, header > tabs > arrow:backdrop:checked, combobox:drop(active) button.combo:backdrop:checked, combobox:drop(active) progressbar:backdrop progress.combo:checked, progressbar:backdrop combobox:drop(active) progress.combo:checked, combobox:drop(active) progressbar:backdrop trough.combo:checked, progressbar:backdrop combobox:drop(active) trough.combo:checked, combobox:backdrop:checked,
     button:backdrop.flat:active,
     button:backdrop.flat:checked,
     button:backdrop:active,
@@ -626,20 +626,20 @@ button {
       background-color: rgba(255, 58, 150, 0.7);
       text-shadow: none;
       box-shadow: none; }
-      header > tabs > arrow:backdrop:active label, combobox:drop(active) button.combo:backdrop:active label, combobox:drop(active) progressbar:backdrop progress.combo:active label, progressbar:backdrop combobox:drop(active) progress.combo:active label, combobox:drop(active) progressbar:backdrop trough.combo:active label, progressbar:backdrop combobox:drop(active) trough.combo:active label, header > tabs > arrow:backdrop:checked label, combobox:drop(active) button.combo:backdrop:checked label, combobox:drop(active) progressbar:backdrop progress.combo:checked label, progressbar:backdrop combobox:drop(active) progress.combo:checked label, combobox:drop(active) progressbar:backdrop trough.combo:checked label, progressbar:backdrop combobox:drop(active) trough.combo:checked label,
+      header > tabs > arrow:backdrop:active label, combobox:backdrop:active label, header > tabs > arrow:backdrop:checked label, combobox:backdrop:checked label,
       button:backdrop.flat:active label,
       button:backdrop.flat:checked label,
       button:backdrop:active label,
       button:backdrop:checked label {
         color: rgba(216, 222, 233, 0.7); }
-    header > tabs > arrow:backdrop:disabled, combobox:drop(active) button.combo:backdrop:disabled, combobox:drop(active) progressbar:backdrop progress.combo:disabled, progressbar:backdrop combobox:drop(active) progress.combo:disabled, combobox:drop(active) progressbar:backdrop trough.combo:disabled, progressbar:backdrop combobox:drop(active) trough.combo:disabled,
+    header > tabs > arrow:backdrop:disabled, combobox:drop(active) button.combo:backdrop:disabled, combobox:drop(active) progressbar:backdrop progress.combo:disabled, progressbar:backdrop combobox:drop(active) progress.combo:disabled, combobox:drop(active) progressbar:backdrop trough.combo:disabled, progressbar:backdrop combobox:drop(active) trough.combo:disabled, combobox:backdrop:disabled,
     button:backdrop.flat:disabled,
     button:backdrop:disabled {
       color: #afb4bd;
       border-color: rgba(49, 49, 53, 0.8);
       background-color: rgba(34, 34, 38, 0.7);
       text-shadow: none; }
-      header > tabs > arrow:backdrop:disabled:active, combobox:drop(active) button.combo:backdrop:disabled:active, combobox:drop(active) progressbar:backdrop progress.combo:disabled:active, progressbar:backdrop combobox:drop(active) progress.combo:disabled:active, combobox:drop(active) progressbar:backdrop trough.combo:disabled:active, progressbar:backdrop combobox:drop(active) trough.combo:disabled:active, header > tabs > arrow:backdrop:disabled:checked, combobox:drop(active) button.combo:backdrop:disabled:checked, combobox:drop(active) progressbar:backdrop progress.combo:disabled:checked, progressbar:backdrop combobox:drop(active) progress.combo:disabled:checked, combobox:drop(active) progressbar:backdrop trough.combo:disabled:checked, progressbar:backdrop combobox:drop(active) trough.combo:disabled:checked,
+      header > tabs > arrow:backdrop:disabled:active, combobox:backdrop:disabled:active, header > tabs > arrow:backdrop:disabled:checked, combobox:backdrop:disabled:checked,
       button:backdrop.flat:disabled:active,
       button:backdrop.flat:disabled:checked,
       button:backdrop:disabled:active,
@@ -647,7 +647,7 @@ button {
         color: rgba(216, 222, 233, 0.7);
         background-color: #ff3a96;
         text-shadow: none; }
-  progressbar:backdrop progress.flat, progressbar:backdrop trough.flat, header > tabs > arrow:backdrop, combobox:drop(active) button.flat.combo:backdrop, combobox:drop(active) .selection-mode windowcontrols button.combo:backdrop, .selection-mode windowcontrols combobox:drop(active) button.combo:backdrop, combobox:drop(active) progressbar:backdrop progress.combo, progressbar:backdrop combobox:drop(active) progress.combo, combobox:drop(active) progressbar:backdrop trough.combo, progressbar:backdrop combobox:drop(active) trough.combo, label:backdrop selection.flat, header > tabs > arrow:disabled, combobox:drop(active) button.flat.combo:disabled, combobox:drop(active) .selection-mode windowcontrols button.combo:disabled, .selection-mode windowcontrols combobox:drop(active) button.combo:disabled, label:disabled selection.flat,
+  progressbar:backdrop progress.flat, progressbar:backdrop trough.flat, header > tabs > arrow:backdrop, combobox:drop(active) button.flat.combo:backdrop, combobox:drop(active) progressbar:backdrop progress.combo, progressbar:backdrop combobox:drop(active) progress.combo, combobox:drop(active) progressbar:backdrop trough.combo, progressbar:backdrop combobox:drop(active) trough.combo, combobox.flat:backdrop, label:backdrop selection.flat, header > tabs > arrow:disabled, combobox:drop(active) button.flat.combo:disabled, combobox.flat:disabled, label:disabled selection.flat,
   button.flat:backdrop,
   .selection-mode windowcontrols button:backdrop,
   button.flat:disabled,
@@ -658,51 +658,50 @@ button {
     background-image: none;
     text-shadow: none;
     -gtk-icon-shadow: none; }
-  header > tabs > arrow:disabled, combobox:drop(active) button.combo:disabled, .selection-mode windowcontrols button:disabled,
+  header > tabs > arrow:disabled, combobox:drop(active) button.combo:disabled, combobox:disabled, .selection-mode windowcontrols button:disabled,
   button:disabled {
     color: #afb4bd;
     border-color: rgba(49, 49, 53, 0.8);
     background-color: rgba(34, 34, 38, 0.7);
     text-shadow: none;
     box-shadow: none; }
-    header > tabs > arrow:disabled:active, combobox:drop(active) button.combo:disabled:active, header > tabs > arrow:disabled:checked, combobox:drop(active) button.combo:disabled:checked,
+    header > tabs > arrow:disabled:active, combobox:drop(active) button.combo:disabled:active, combobox:disabled:active, header > tabs > arrow:disabled:checked, combobox:drop(active) button.combo:disabled:checked, combobox:disabled:checked,
     button:disabled:active,
     button:disabled:checked {
       color: rgba(216, 222, 233, 0.7);
-      background-color: #ff3a96;
+      background-color: rgba(255, 58, 150, 0.9);
       border-color: rgba(49, 49, 53, 0.8);
       box-shadow: none;
       text-shadow: none; }
-      header > tabs > arrow:disabled:active label, combobox:drop(active) button.combo:disabled:active label, header > tabs > arrow:disabled:checked label, combobox:drop(active) button.combo:disabled:checked label,
+      header > tabs > arrow:disabled:active label, combobox:disabled:active label, header > tabs > arrow:disabled:checked label, combobox:disabled:checked label,
       button:disabled:active label,
       button:disabled:checked label {
         color: rgba(216, 222, 233, 0.7); }
-  header > tabs > arrow.image-button, combobox:drop(active) button.image-button.combo, .selection-mode windowcontrols button.image-button,
+  header > tabs > arrow.image-button, combobox:drop(active) button.image-button.combo, combobox.image-button, .selection-mode windowcontrols button.image-button,
   button.image-button {
     min-width: 24px;
     padding-left: 4px;
     padding-right: 4px; }
-  header > tabs > arrow.image-button.circular, combobox:drop(active) button.image-button.circular.combo, header > tabs > arrow.image-button.sidebar-button, combobox:drop(active) button.image-button.sidebar-button.combo,
+  header > tabs > arrow.image-button.circular, combobox:drop(active) button.image-button.circular.combo, combobox.image-button.circular, header > tabs > arrow.image-button.sidebar-button, combobox:drop(active) button.image-button.sidebar-button.combo, combobox.image-button.sidebar-button,
   button.image-button.circular,
   button.image-button.sidebar-button {
     padding: 6px 4px;
     border-radius: 50px; }
-  header > tabs > arrow.text-button, combobox:drop(active) button.text-button.combo, .selection-mode windowcontrols button.text-button,
+  header > tabs > arrow.text-button, combobox:drop(active) button.text-button.combo, combobox.text-button, .selection-mode windowcontrols button.text-button,
   button.text-button {
     padding-left: 16px;
     padding-right: 16px; }
-  header > tabs > arrow.text-button.image-button, combobox:drop(active) button.text-button.image-button.combo,
+  header > tabs > arrow.text-button.image-button, combobox:drop(active) button.text-button.image-button.combo, combobox.text-button.image-button,
   button.text-button.image-button {
     padding-left: 8px;
     padding-right: 8px;
     border-radius: 6px; }
-    header > tabs > arrow.text-button.image-button label, combobox:drop(active) button.text-button.image-button.combo label,
+    header > tabs > arrow.text-button.image-button label, combobox.text-button.image-button label,
     button.text-button.image-button label {
       padding-left: 8px;
       padding-right: 8px; }
-  header > tabs > arrow:drop(active), combobox:drop(active) button.combo:drop(active), combobox:drop(active) button.combo, .selection-mode windowcontrols button:drop(active), combobox:drop(active) .selection-mode windowcontrols button.combo, .selection-mode windowcontrols combobox:drop(active) button.combo,
-  button:drop(active),
-  combobox:drop(active) button.combo {
+  header > tabs > arrow:drop(active), combobox:drop(active) button.combo, combobox:drop(active), .selection-mode windowcontrols button:drop(active),
+  button:drop(active) {
     color: #ff3a96;
     border-color: #ff3a96;
     box-shadow: inset 0 0 0 1px #ff3a96; }
@@ -952,7 +951,7 @@ button.suggested-action {
     button.suggested-action:disabled:checked,
     .selection-mode windowcontrols button:disabled:checked {
       color: rgba(216, 222, 233, 0.7);
-      background-color: #ff3a96;
+      background-color: rgba(255, 58, 150, 0.9);
       border-color: rgba(49, 49, 53, 0.8);
       box-shadow: none;
       text-shadow: none; }
@@ -1095,7 +1094,7 @@ button.destructive-action {
     button.destructive-action:disabled:active,
     button.destructive-action:disabled:checked {
       color: rgba(216, 222, 233, 0.7);
-      background-color: #ff3a96;
+      background-color: rgba(255, 58, 150, 0.9);
       border-color: rgba(49, 49, 53, 0.8);
       box-shadow: none;
       text-shadow: none; }
@@ -2454,7 +2453,7 @@ separator {
  * Popovers *
  ************/
 GraniteWidgetsPopOver {
-  border: 1px solid #0a0a0b;
+  border: 1px solid #313135;
   background: #0a0a0b;
   color: #d8dee9; }
   GraniteWidgetsPopOver .button {
@@ -2475,7 +2474,7 @@ GraniteWidgetsStaticNotebook .frame {
 .popover_bg {
   background-color: #0a0a0b;
   background-image: none;
-  border: 1px solid #0a0a0b;
+  border: 1px solid #313135;
   color: #d8dee9; }
 
 /***********
@@ -2494,21 +2493,21 @@ GraniteWidgetsWelcome {
 ***************/
 .source-list {
   background-color: #0a0a0b;
-  border: solid #18181b;
+  border: solid #313135;
   color: #d8dee9;
   border-right-width: 1px; }
   .source-list .category-expander {
     color: transparent; }
   .source-list .badge {
     background-image: none;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(10, 10, 11, 0.4);
     color: #0a0a0b;
     border-radius: 10px;
     padding: 0 6px;
     margin: 0 3px;
     border-width: 0; }
     .source-list .badge:selected:backdrop, .source-list progressbar:backdrop progress:selected, progressbar:backdrop .source-list progress:selected, .source-list progressbar:backdrop trough:selected, progressbar:backdrop .source-list trough:selected, .source-list label:backdrop selection:selected, label:backdrop .source-list selection:selected, .source-list .badge:selected:hover:backdrop, .source-list progressbar:backdrop progress:hover, progressbar:backdrop .source-list progress:hover, .source-list progressbar:backdrop trough:hover, progressbar:backdrop .source-list trough:hover, .source-list label:backdrop selection:hover, label:backdrop .source-list selection:hover {
-      background-color: rgba(0, 0, 0, 0.2);
+      background-color: rgba(10, 10, 11, 0.2);
       color: black; }
   .source-list row,
   .source-list .list-row {
@@ -2587,7 +2586,7 @@ GraniteWidgetsWelcome {
 .titlebar, .titlebar:not(headerbar),
 headerbar {
   padding: 0 6px;
-  min-height: 38px;
+  min-height: 34px;
   background: #161618;
   color: #d8dee9;
   border-radius: 0; }
@@ -2951,7 +2950,7 @@ infobar {
   text-shadow: none;
   color: #d8dee9;
   background-color: #0a0a0b;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid #313135;
   box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.05), 0 1px 2px 0 rgba(0, 0, 0, 0.15); }
 
 .error, .question, .warning, .info {
@@ -3025,6 +3024,9 @@ banner revealer widget {
     banner revealer widget button.suggested-action:backdrop, banner revealer widget .selection-mode windowcontrols button:backdrop, .selection-mode windowcontrols banner revealer widget button:backdrop, banner revealer widget progressbar:backdrop progress.suggested-action, progressbar:backdrop banner revealer widget progress.suggested-action, banner revealer widget progressbar:backdrop trough.suggested-action, progressbar:backdrop banner revealer widget trough.suggested-action, banner revealer widget label:backdrop selection.suggested-action, label:backdrop banner revealer widget selection.suggested-action {
       background-color: rgba(0, 0, 0, 0.3); }
 
+/*************
+ * Level Bar *
+ *************/
 levelbar.horizontal trough > block {
   min-height: 5px;
   border-radius: 5px; }
@@ -3150,15 +3152,14 @@ menubar,
 
 .titlebar,
 .top-bar {
-  padding: 6px 10px;
   background-color: #161618; }
 
 menu,
 .menu,
 .context-menu {
-  padding: 200px;
+  padding: 12px;
   background: #161618;
-  border-radius: 5px;
+  border-radius: 8px;
   font: initial; }
   .csd menu, .csd .menu, .csd .context-menu {
     border: none; }
@@ -3303,7 +3304,7 @@ assistant {
   border-bottom-right-radius: 6px; }
   assistant .sidebar {
     background-color: #161618;
-    border-top: 1px solid #18181b;
+    border-top: 1px solid #313135;
     border-bottom-left-radius: 6px; }
     assistant .sidebar:backdrop, assistant progressbar:backdrop progress.sidebar, progressbar:backdrop assistant progress.sidebar, assistant progressbar:backdrop trough.sidebar, progressbar:backdrop assistant trough.sidebar, assistant label:backdrop selection.sidebar, label:backdrop assistant selection.sidebar {
       background-color: #0c0c0e;
@@ -3320,181 +3321,192 @@ assistant {
 /*************
  * Notebooks *
  *************/
-header {
-  padding: 0px;
-  border-color: #18181b;
-  border-width: 1px;
-  border-style: solid;
-  background-color: #1b1b1e; }
-  header:backdrop {
-    border-color: #171719;
-    background-color: #0a0a0b; }
-  header tabs {
-    margin: 0px; }
-  header .top {
-    border-bottom-style: solid; }
-    header .top > tabs > tab:backdrop {
-      box-shadow: none; }
-    header .top > tabs > tab:checked {
+header:backdrop {
+  border-color: #171719;
+  background-color: #0a0a0b; }
+
+header tabs {
+  margin: 0px; }
+
+header .top {
+  border-bottom-style: solid; }
+  header .top > tabs > tab:backdrop {
+    box-shadow: none; }
+  header .top > tabs > tab:checked {
+    background-color: #222226; }
+    header .top > tabs > tab:checked:hover {
       background-color: #222226; }
-      header .top > tabs > tab:checked:hover {
-        background-color: #222226; }
-  header .bottom {
-    border-top-style: solid; }
-    header .bottom > tabs {
-      margin-top: -2px; }
-      header .bottom > tabs > tab:backdrop {
-        box-shadow: none; }
-      header .bottom > tabs > tab:checked {
-        background-color: #222226;
-        box-shadow: -1px 0 0 #18181b, 0px 1px 0 #18181b, 1px 0 0 #18181b; }
-  header .left {
-    border-right-style: solid; }
-    header .left > tabs {
-      margin-right: -2px; }
-      header .left > tabs > tab:backdrop {
-        box-shadow: none; }
-      header .left > tabs > tab:checked {
-        background-color: #222226;
-        box-shadow: 0px 1px 0 #18181b, 0px -1px 0 #18181b, 0px 1px 0 #18181b; }
-  header .right {
-    border-left-style: solid; }
-    header .right > tabs {
-      margin-left: -2px; }
-      header .right > tabs > tab:backdrop {
-        box-shadow: none; }
-      header .right > tabs > tab:checked {
-        background-color: #222226;
-        box-shadow: 0px 1px 0 #18181b, 0px -1px 0 #18181b, 1px 0 0 #18181b; }
-  header .top > tabs > arrow {
-    border-top-style: none; }
-  header .bottom > tabs > arrow {
-    border-bottom-style: none; }
-  header .top > tabs > arrow, header .bottom > tabs > arrow {
-    margin-left: -5px;
-    margin-right: -5px;
-    padding-left: 4px;
-    padding-right: 4px; }
-    header .top > tabs > arrow .down, header .bottom > tabs > arrow .down {
-      -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
-    header .top > tabs > arrow .up, header .bottom > tabs > arrow .up {
-      -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
-  header .left > tabs > arrow {
-    border-left-style: none; }
-  header .right > tabs > arrow {
-    border-right-style: none; }
-  header .left > tabs > arrow, header .right > tabs > arrow {
-    margin-top: -5px;
-    margin-bottom: -5px;
-    padding-top: 4px;
-    padding-bottom: 4px; }
-    header .left > tabs > arrow .down, header .right > tabs > arrow .down {
-      -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
-    header .left > tabs > arrow .up, header .right > tabs > arrow .up {
-      -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
-  header > tabs > arrow {
-    min-height: 14px;
-    min-width: 14px;
-    border-radius: 0; }
-    header > tabs > arrow:hover:not(:active):not(:backdrop) {
-      background-clip: padding-box;
-      background-image: none;
-      background-color: rgba(255, 255, 255, 0.3);
-      border-color: transparent;
+
+header .bottom {
+  border-top-style: solid; }
+  header .bottom > tabs {
+    margin-top: -2px; }
+    header .bottom > tabs > tab:backdrop {
       box-shadow: none; }
-    header > tabs > arrow:disabled {
+    header .bottom > tabs > tab:checked {
+      background-color: #222226;
+      box-shadow: -1px 0 0 #18181b, 0px 1px 0 #18181b, 1px 0 0 #18181b; }
+
+header .left {
+  border-right-style: solid; }
+  header .left > tabs {
+    margin-right: -2px; }
+    header .left > tabs > tab:backdrop {
+      box-shadow: none; }
+    header .left > tabs > tab:checked {
+      background-color: #222226;
+      box-shadow: 0px 1px 0 #18181b, 0px -1px 0 #18181b, 0px 1px 0 #18181b; }
+
+header .right {
+  border-left-style: solid; }
+  header .right > tabs {
+    margin-left: -2px; }
+    header .right > tabs > tab:backdrop {
+      box-shadow: none; }
+    header .right > tabs > tab:checked {
+      background-color: #222226;
+      box-shadow: 0px 1px 0 #18181b, 0px -1px 0 #18181b, 1px 0 0 #18181b; }
+
+header .top > tabs > arrow {
+  border-top-style: none; }
+
+header .bottom > tabs > arrow {
+  border-bottom-style: none; }
+
+header .top > tabs > arrow, header .bottom > tabs > arrow {
+  margin-left: -5px;
+  margin-right: -5px;
+  padding-left: 4px;
+  padding-right: 4px; }
+  header .top > tabs > arrow .down, header .bottom > tabs > arrow .down {
+    -gtk-icon-source: -gtk-icontheme("pan-start-symbolic"); }
+  header .top > tabs > arrow .up, header .bottom > tabs > arrow .up {
+    -gtk-icon-source: -gtk-icontheme("pan-end-symbolic"); }
+
+header .left > tabs > arrow {
+  border-left-style: none; }
+
+header .right > tabs > arrow {
+  border-right-style: none; }
+
+header .left > tabs > arrow, header .right > tabs > arrow {
+  margin-top: -5px;
+  margin-bottom: -5px;
+  padding-top: 4px;
+  padding-bottom: 4px; }
+  header .left > tabs > arrow .down, header .right > tabs > arrow .down {
+    -gtk-icon-source: -gtk-icontheme("pan-up-symbolic"); }
+  header .left > tabs > arrow .up, header .right > tabs > arrow .up {
+    -gtk-icon-source: -gtk-icontheme("pan-down-symbolic"); }
+
+header > tabs > arrow {
+  min-height: 14px;
+  min-width: 14px;
+  border-radius: 0; }
+  header > tabs > arrow:hover:not(:active):not(:backdrop) {
+    background-clip: padding-box;
+    background-image: none;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: transparent;
+    box-shadow: none; }
+  header > tabs > arrow:disabled {
+    border-color: transparent;
+    background-color: transparent;
+    background-image: none;
+    text-shadow: none;
+    -gtk-icon-shadow: none; }
+
+header tab {
+  min-height: 24px;
+  min-width: 24px;
+  padding: 1px 12px;
+  outline-offset: -5px;
+  background-color: rgba(236, 0, 110, 0.6);
+  color: #71747a;
+  font-weight: normal;
+  border-width: 1px;
+  border-color: transparent; }
+  header tab:hover {
+    color: #a5a9b2; }
+    header tab:hover.reorderable-page {
+      border-color: rgba(24, 24, 27, 0.3);
+      background-color: rgba(10, 10, 11, 0.2); }
+  header tab:backdrop {
+    color: #484a4e; }
+    header tab:backdrop.reorderable-page {
       border-color: transparent;
-      background-color: transparent;
-      background-image: none;
-      text-shadow: none;
-      -gtk-icon-shadow: none; }
-  header tab {
-    min-height: 24px;
-    min-width: 24px;
-    padding: 1px 12px;
-    outline-offset: -5px;
-    background-color: rgba(236, 0, 110, 0.6);
-    color: #71747a;
-    font-weight: normal;
-    border-width: 1px;
-    border-color: transparent; }
-    header tab:hover {
-      color: #a5a9b2; }
-      header tab:hover.reorderable-page {
-        border-color: rgba(24, 24, 27, 0.3);
-        background-color: rgba(10, 10, 11, 0.2); }
-    header tab:backdrop {
-      color: #484a4e; }
-      header tab:backdrop.reorderable-page {
-        border-color: transparent;
-        background-color: transparent; }
-    header tab:checked {
-      color: #d8dee9;
-      box-shadow: -1px 0 0 #18181b, 0px -1px 0 #18181b, 1px 0 0 #18181b; }
-      header tab:checked.reorderable-page {
-        border-color: rgba(24, 24, 27, 0.6);
-        background-color: #1b1b1e; }
-        header tab:checked.reorderable-page:hover {
-          background-color: #222226; }
-    header tab:backdrop:checked {
-      color: #71747a; }
-      header tab:backdrop:checked.reorderable-page {
-        border-color: #171719;
-        background-color: #0c0c0e; }
-    header tab button.flat, header tab .selection-mode windowcontrols button, .selection-mode windowcontrols header tab button {
-      padding: 2px;
-      margin-top: 4px;
-      margin-bottom: 4px;
-      min-width: 20px;
-      min-height: 20px; }
-      header tab button.flat:hover, header tab .selection-mode windowcontrols button:hover, .selection-mode windowcontrols header tab button:hover {
-        background-color: #2e2e33;
-        box-shadow: none;
-        color: #d8dee9; }
-      header tab button.flat, header tab .selection-mode windowcontrols button, .selection-mode windowcontrols header tab button, header tab button.flat:backdrop, header tab progressbar:backdrop progress.flat, progressbar:backdrop header tab progress.flat, header tab progressbar:backdrop trough.flat, progressbar:backdrop header tab trough.flat {
-        background: transparent;
-        border: none;
-        color: alpha(currentColor,0.3); }
-      header tab button.flat:last-child, header tab .selection-mode windowcontrols button:last-child, .selection-mode windowcontrols header tab button:last-child {
-        margin-left: 4px;
-        margin-right: -4px; }
-      header tab button.flat:first-child, header tab .selection-mode windowcontrols button:first-child, .selection-mode windowcontrols header tab button:first-child {
-        margin-left: -4px;
-        margin-right: 4px; }
-  header .top tabs, header .bottom tabs {
-    padding-left: 0px;
-    padding-right: 0px; }
-    header .top tabs:not(:only-child), header .bottom tabs:not(:only-child) {
-      margin-left: 0.5px;
-      margin-right: 0.5px; }
-      header .top tabs:not(:only-child):first-child, header .bottom tabs:not(:only-child):first-child {
-        margin-left: -1px; }
-      header .top tabs:not(:only-child):last-child, header .bottom tabs:not(:only-child):last-child {
-        margin-right: -1px; }
-    header .top tabs tab, header .bottom tabs tab {
-      margin-left: 0.5px;
-      margin-right: 0.5px; }
-      header .top tabs tab.reorderable-page, header .bottom tabs tab.reorderable-page {
-        border-style: none solid; }
-  header .left tabs, header .right tabs {
-    padding-top: 4px;
-    padding-bottom: 4px; }
-    header .left tabs:not(:only-child), header .right tabs:not(:only-child) {
-      margin-top: 3px;
-      margin-bottom: 3px; }
-      header .left tabs:not(:only-child):first-child, header .right tabs:not(:only-child):first-child {
-        margin-top: -1px; }
-      header .left tabs:not(:only-child):last-child, header .right tabs:not(:only-child):last-child {
-        margin-bottom: -1px; }
-    header .left tabs tab, header .right tabs tab {
-      margin-top: 4px;
-      margin-bottom: 4px; }
-      header .left tabs tab.reorderable-page, header .right tabs tab.reorderable-page {
-        border-style: solid none; }
-  header .top tab {
-    padding-bottom: 1px; }
-  header .bottom tab {
-    padding-top: 1px; }
+      background-color: transparent; }
+  header tab:checked {
+    color: #d8dee9;
+    box-shadow: -1px 0 0 #18181b, 0px -1px 0 #18181b, 1px 0 0 #18181b; }
+    header tab:checked.reorderable-page {
+      border-color: rgba(24, 24, 27, 0.6);
+      background-color: #1b1b1e; }
+      header tab:checked.reorderable-page:hover {
+        background-color: #222226; }
+  header tab:backdrop:checked {
+    color: #71747a; }
+    header tab:backdrop:checked.reorderable-page {
+      border-color: #171719;
+      background-color: #0c0c0e; }
+  header tab button.flat, header tab .selection-mode windowcontrols button, .selection-mode windowcontrols header tab button {
+    padding: 2px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    min-width: 20px;
+    min-height: 20px; }
+    header tab button.flat:hover, header tab .selection-mode windowcontrols button:hover, .selection-mode windowcontrols header tab button:hover {
+      background-color: #2e2e33;
+      box-shadow: none;
+      color: #d8dee9; }
+    header tab button.flat, header tab .selection-mode windowcontrols button, .selection-mode windowcontrols header tab button, header tab button.flat:backdrop, header tab progressbar:backdrop progress.flat, progressbar:backdrop header tab progress.flat, header tab progressbar:backdrop trough.flat, progressbar:backdrop header tab trough.flat {
+      background: transparent;
+      border: none;
+      color: alpha(currentColor,0.3); }
+    header tab button.flat:last-child, header tab .selection-mode windowcontrols button:last-child, .selection-mode windowcontrols header tab button:last-child {
+      margin-left: 4px;
+      margin-right: -4px; }
+    header tab button.flat:first-child, header tab .selection-mode windowcontrols button:first-child, .selection-mode windowcontrols header tab button:first-child {
+      margin-left: -4px;
+      margin-right: 4px; }
+
+header .top tabs, header .bottom tabs {
+  padding-left: 0px;
+  padding-right: 0px; }
+  header .top tabs:not(:only-child), header .bottom tabs:not(:only-child) {
+    margin-left: 0.5px;
+    margin-right: 0.5px; }
+    header .top tabs:not(:only-child):first-child, header .bottom tabs:not(:only-child):first-child {
+      margin-left: -1px; }
+    header .top tabs:not(:only-child):last-child, header .bottom tabs:not(:only-child):last-child {
+      margin-right: -1px; }
+  header .top tabs tab, header .bottom tabs tab {
+    margin-left: 0.5px;
+    margin-right: 0.5px; }
+    header .top tabs tab.reorderable-page, header .bottom tabs tab.reorderable-page {
+      border-style: none solid; }
+
+header .left tabs, header .right tabs {
+  padding-top: 4px;
+  padding-bottom: 4px; }
+  header .left tabs:not(:only-child), header .right tabs:not(:only-child) {
+    margin-top: 3px;
+    margin-bottom: 3px; }
+    header .left tabs:not(:only-child):first-child, header .right tabs:not(:only-child):first-child {
+      margin-top: -1px; }
+    header .left tabs:not(:only-child):last-child, header .right tabs:not(:only-child):last-child {
+      margin-bottom: -1px; }
+  header .left tabs tab, header .right tabs tab {
+    margin-top: 4px;
+    margin-bottom: 4px; }
+    header .left tabs tab.reorderable-page, header .right tabs tab.reorderable-page {
+      border-style: solid none; }
+
+header .top tab {
+  padding-bottom: 1px; }
+
+header .bottom tab {
+  padding-top: 1px; }
 
 > stack:not(:only-child) {
   background-color: #0a0a0b; }
@@ -5097,8 +5109,11 @@ treeview.view > header > button:active {
  *********************/
 window {
   border: none;
-  border: 1px solid #ff2088;
-  box-shadow: 0 0 12px 3px rgba(255, 32, 136, 0.45); }
+  box-shadow: 0 0 12px 3px rgba(255, 32, 136, 0.45), 0 0 0 1px #ff2088; }
+  window:backdrop {
+    transition: 300ms ease-out;
+    border: 1px solid rgba(255, 32, 136, 0.7);
+    box-shadow: 0 0 12px 3px rgba(255, 32, 136, 0.15); }
   window.csd {
     margin: 0; }
     window.csd:backdrop, label:backdrop selection.csd, progressbar:backdrop trough.csd, progressbar:backdrop progress.csd {

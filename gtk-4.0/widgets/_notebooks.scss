@@ -3,12 +3,6 @@
  *************/
 
 header {
-  padding: 0px;
-  border-color: $borders_color;
-  border-width: 1px;
-  border-style: solid;
-  background-color: lighten($bg_color, 7%);
-
   &:backdrop {
     border-color: $backdrop_borders_color;
     background-color: $backdrop_bg_color;
