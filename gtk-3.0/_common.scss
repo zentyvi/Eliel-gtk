@@ -44,3 +44,9 @@ $button_transition: all 200ms $ease-out-quad;
 
   -gtk-secondary-caret-color: $selected_bg_color;
 }
+
+VteTerminal,
+TerminalScreen,
+vte-terminal {
+  padding: 10px;
+}

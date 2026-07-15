@@ -31,16 +31,20 @@ spinbutton {
       border-style: none none none solid;
       border-color: transparentize($borders_color, 0.7);
       border-radius: 0;
-      box-shadow: inset 1px 0px 0px 0px rgba(0,0,0,0.07);
+      box-shadow: inset 1px 0px 0px 0px rgba(0, 0, 0, 0.07);
 
-      &:dir(rtl) { border-style: none solid none none; }
+      &:dir(rtl) {
+        border-style: none solid none none;
+      }
 
       &:hover {
         color: $fg_color;
         background-color: $base_hover_color;
       }
 
-      &:disabled { color: transparentize($insensitive_fg_color, 0.7); }
+      &:disabled {
+        color: transparentize($insensitive_fg_color, 0.7);
+      }
 
       &:active {
         background-color: transparentize(black, 0.9);
@@ -55,12 +59,14 @@ spinbutton {
       }
 
       &:backdrop:disabled {
-        color: transparentize($backdrop_insensitive_color,0.7);
+        color: transparentize($backdrop_insensitive_color, 0.7);
         background-image: none;
         border-style: none none none solid; // It is needed or it gets overridden
-        box-shadow: inset 1px 0px 0px 0px rgba(0,0,0,0.07);
+        box-shadow: inset 1px 0px 0px 0px rgba(0, 0, 0, 0.07);
 
-        &:dir(rtl) { border-style: none solid none none; }
+        &:dir(rtl) {
+          border-style: none solid none none;
+        }
       }
 
       &:last-child {
@@ -82,7 +88,9 @@ spinbutton {
       box-shadow: none;
       -gtk-icon-shadow: 0 1px black;
 
-      &:dir(rtl) { border-style: none solid none none; }
+      &:dir(rtl) {
+        border-style: none solid none none;
+      }
 
       &:hover {
         @include button(undecorated);
@@ -112,9 +120,13 @@ spinbutton {
         box-shadow: none;
       }
 
-      &:last-child { border-radius: 0 3px 3px 0; }
+      &:last-child {
+        border-radius: 0 3px 3px 0;
+      }
 
-      &:dir(rtl):first-child { border-radius: 3px 0 0 3px; }
+      &:dir(rtl):first-child {
+        border-radius: 3px 0 0 3px;
+      }
     }
   }
 
@@ -126,8 +138,12 @@ spinbutton {
 
     // FIXME: this should not be set at all, but otherwise it gets the wrong
     // color
-    &:disabled { color: $insensitive_fg_color; }
-    &:backdrop:disabled { color: $backdrop_insensitive_color; }
+    &:disabled {
+      color: $insensitive_fg_color;
+    }
+    &:backdrop:disabled {
+      color: $backdrop_insensitive_color;
+    }
 
     &:drop(active) {
       border-color: transparent;
@@ -149,9 +165,13 @@ spinbutton {
       border-color: $borders_color;
       box-shadow: 0 1px $top_highlight;
 
-      &.up { @extend %top_button; }
+      &.up {
+        @extend %top_button;
+      }
 
-      &.down { @extend %bottom_button; }
+      &.down {
+        @extend %bottom_button;
+      }
     }
 
     %top_button {
@@ -169,13 +189,21 @@ spinbutton {
   .osd &.vertical button:first-child {
     @include button(osd);
 
-    &:hover { @include button(osd-hover);}
+    &:hover {
+      @include button(osd-hover);
+    }
 
-    &:active { @include button(osd-active); }
+    &:active {
+      @include button(osd-active);
+    }
 
-    &:disabled { @include button(osd-insensitive); }
+    &:disabled {
+      @include button(osd-insensitive);
+    }
 
-    &:backdrop { @include button(osd-backdrop); }
+    &:backdrop {
+      @include button(osd-backdrop);
+    }
   }
 
   // Misc

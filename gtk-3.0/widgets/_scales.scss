@@ -29,13 +29,12 @@
 
   &:disabled {
     border: none;
-    background-color: $scale_bg;
+    background-color: lighten($scale_bg, 5%);
   }
 
   &:backdrop,
   &:active:backdrop {
-    border-color: lighten($selected_bg_color, 5%);
-    background-color: lighten($selected_bg_color, 5%);
+    background-color: transparentize($selected_bg_color, 0.4);
     &:disabled {
       background-color: $scale_disabled_bg;
     }
@@ -44,7 +43,7 @@
 
 scale {
   // sizing
-  $_marks_lenght: 6px;
+  $_marks_length: 6px;
   $_marks_distance: 6px;
 
   min-height: 16px;
@@ -116,7 +115,6 @@ scale {
     highlight,
     trough {
       border-radius: 5px;
-      -gtk-outline-radius: 7px;
     }
   }
 
@@ -125,7 +123,6 @@ scale {
     @extend %scale_trough;
 
     outline-offset: 2px;
-    -gtk-outline-radius: 5px;
     outline-color: transparent;
   }
 
@@ -260,49 +257,101 @@ scale {
     color: gtkalpha(currentColor, 0.4);
   }
 
-  marks {
-    color: gtkalpha(currentColor, 0.4);
+  &.horizontal {
+    > marks {
+      color: gtkalpha(currentColor, 0.55);
+      &.top {
+        margin-bottom: $_marks_distance;
+      }
+      &.bottom {
+        margin-top: $_marks_distance;
+      }
 
-    @each $marks_class, $marks_pos, $marks_margin in (top, top, bottom),
-      (bottom, bottom, top), (top, left, right), (bottom, right, left)
-    {
-      &.#{$marks_class} {
-        margin-#{$marks_margin}: $_marks_distance;
-        margin-#{$marks_pos}: -($_marks_distance + $_marks_lenght);
+      indicator {
+        background-color: currentColor;
+        min-height: $_marks_length;
+        min-width: 1px;
+      }
+    }
+
+    > value.left {
+      margin-right: 9px;
+    }
+    > value.right {
+      margin-left: 9px;
+    }
+
+    &.fine-tune > marks {
+      &.top {
+        margin-top: 3px;
+      }
+      &.bottom {
+        margin-bottom: 3px;
+      }
+
+      indicator {
+        min-height: ($_marks_length - 3px);
       }
     }
   }
 
-  &.fine-tune marks {
-    @each $marks_class, $marks_pos, $marks_margin in (top, top, bottom),
-      (bottom, bottom, top), (top, left, right), (bottom, right, left)
-    {
-      &.#{$marks_class} {
-        margin-#{$marks_margin}: $_marks_distance;
-        margin-#{$marks_pos}: -($_marks_distance + $_marks_lenght - 3px);
+  &.vertical {
+    > marks {
+      color: gtkalpha(currentColor, 0.55);
+      &.top {
+        margin-right: $_marks_distance;
+      }
+      &.bottom {
+        margin-left: $_marks_distance;
+      }
+
+      indicator {
+        background-color: currentColor;
+        min-height: 1px;
+        min-width: $_marks_length;
+      }
+    }
+
+    > value.top {
+      margin-bottom: 9px;
+    }
+    > value.bottom {
+      margin-top: 9px;
+    }
+
+    &.fine-tune > marks {
+      &.top {
+        margin-left: 3px;
+      }
+      &.bottom {
+        margin-right: 3px;
+      }
+
+      indicator {
+        min-height: ($_marks_length - 3px);
       }
     }
   }
 
   &.horizontal {
     indicator {
-      min-height: $_marks_lenght;
+      min-height: $_marks_length;
       min-width: 1px;
     }
 
     &.fine-tune indicator {
-      min-height: ($_marks_lenght - 3px);
+      min-height: ($_marks_length - 3px);
     }
   }
 
   &.vertical {
     indicator {
       min-height: 1px;
-      min-width: $_marks_lenght;
+      min-width: $_marks_length;
     }
 
     &.fine-tune indicator {
-      min-width: ($_marks_lenght - 3px);
+      min-width: ($_marks_length - 3px);
     }
   }
 

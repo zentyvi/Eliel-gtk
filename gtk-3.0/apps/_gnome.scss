@@ -1,18 +1,65 @@
 /************
  * Nautilus *
  ************/
- .nautilus-window {
-  .frame{
-    *:selected, *:selected:backdrop{
-      background: transparent;
-      color: $selected_bg_color;
-      label {
-        color: $selected_bg_color;
-      }
-    } 
+
+.nautilus-window {
+  background-color: lighten($bg_color, 5%);
+  &:backdrop {
+    background-color: lighten($bg_color, 5%);
   }
+
+  .nautilus-grid-view {
+    background-color: transparent;
+
+    gridview.view {
+      background-color: $bg_color;
+      border-top-left-radius: 36px;
+      border-top-right-radius: 36px;
+      border-color: lighten($borders_color, 10%);
+      border-style: solid;
+      border-top-width: 1px;
+      border-left-width: 1px;
+    }
+  }
+
+  .navigation-sidebar {
+    border: 0;
+  }
+
+  .nautilus-list-view {
+    background-color: $bg_color;
+    border-top-left-radius: 36px;
+    border-top-right-radius: 36px;
+    border-color: lighten($borders_color, 10%);
+    border-style: solid;
+    border-top-width: 1px;
+    border-left-width: 1px;
+
+    header {
+      padding: 12px;
+      background-color: transparent;
+      border: none;
+      > button {
+        border: none;
+        background-color: transparent;
+      }
+    }
+
+    .view {
+      border-radius: 0;
+    }
+    columnview.view {
+      background-color: transparent;
+      box-shadow: none;
+      padding: 0 12px;
+      padding-bottom: unset;
+    }
+  }
+
   paned {
-    > separator { background-image: none; }
+    > separator {
+      background-image: none;
+    }
   }
   .sidebar {
     background-color: transparent;
@@ -26,53 +73,50 @@
     .list-row {
       button {
         border: none;
-        background-color: transparentize(darken($base_color,3%),0.05);
+        color: $fg_color;
+        background-color: transparent;
         &:active {
-          background-color: transparentize($selected_bg_color,0.25);
+          background-color: transparentize($selected_bg_color, 0.35);
         }
       }
 
       &:selected {
-        background-color: transparentize($selected_bg_color,0.25);
+        background-color: transparentize($selected_bg_color, 0.35);
         &:hover {
-          background-color: transparentize($selected_bg_color,0.1);
+          background-color: transparentize($selected_bg_color, 0.4);
         }
       }
 
       &:hover {
-        background-color: transparentize($base_color,0.5);
+        background-color: transparentize($bg_color, 0.5);
         &:active {
-          background-color: transparentize($selected_bg_color,0.1);
+          background-color: transparentize($selected_bg_color, 0.1);
         }
       }
     }
   }
-  &.background {
-    background-color: transparentize(darken($base_color,3%),0.05);
-    &:backdrop {
-      background-color: transparentize(darken($base_color,3%),0.05);
-    }
-  }
 
   notebook {
-    > stack:only-child { // the :not(:only-child) is for "hidden" notebooks
-        background-color: $base_color;
-        &:backdrop { background-color: $backdrop_base_color; }
+    > stack:only-child {
+      // the :not(:only-child) is for "hidden" notebooks
+      background-color: $bg_color;
+      &:backdrop {
+        background-color: $backdrop_base_color;
+      }
     }
   }
 
   searchbar {
     border-top: 1px solid rgba(0, 0, 0, 0.12);
   }
-  
- .searchbar-container {
-    margin-top: -1px;
+
+  .searchbar-container {
+    margin-top: 3px;
   }
 }
 
 .nautilus-circular-button {
   border-radius: 20px;
-  -gtk-outline-radius: 20px;
 }
 
 .disk-space-display {
@@ -84,18 +128,17 @@
   }
 
   .used {
-    background-color: #9FB0B9;
-    border-color: darken(#9FB0B9, 20%);
+    background-color: $selected_bg_color;
+    border-color: darken(#9fb0b9, 20%);
   }
 
   .free {
-    background-color: #D8D8D8;
-    border-color: darken(#D8D8D8, 20%);
+    background-color: #d8d8d8;
+    border-color: darken(#d8d8d8, 20%);
   }
 }
 
 .nautilus-desktop {
-
   color: $fg_color;
 
   .nautilus-canvas-item {
@@ -114,22 +157,21 @@
     }
 
     &:selected {
-      color: $selected_fg_color;
+      color: $fg_color;
       text-shadow: none;
     }
 
     .dim-label {
       &:selected {
-        color: $selected_fg_color;
+        color: $fg_color;
       }
     }
   }
 
   .nautilus-list {
-
     .dim-label {
       &:selected {
-        color: $selected_fg_color;
+        color: $fg_color;
       }
     }
   }
@@ -139,12 +181,11 @@
  * Gedit *
  *********/
 .gedit-search-slider {
-     padding: 4px;
-     border-radius: 0 0 3px 3px;
-     border: 0;
-     background-color: $bg_color;
- }
-
+  padding: 4px;
+  border-radius: 0 0 3px 3px;
+  border: 0;
+  background-color: $bg_color;
+}
 
 /*********
  * Gnucash *
@@ -154,24 +195,142 @@
     background: transparent;
     border: none;
     box-shadow: none;
-  } 
+  }
   .arrow.button.toggle {
     transition: none;
     box-shadow: none;
-    &:hover { border-color: $selected_bg_color; }
-  } 
+    &:hover {
+      border-color: $selected_bg_color;
+    }
+  }
 }
 
 /*******************
  * Calendar events *
 ********************/
 .color-light {
-  &.timed label {
+  &.timed label,
+  .event-popover label {
     color: $fg_color;
     opacity: 1;
   }
-  .week-view &.timed label, & label, .year-view &:not(.timed) label  {
+  & label {
     color: $bg_color;
     opacity: 1;
+  }
+}
+
+/*******************
+ * Calendar sidebar *
+********************/
+datechooser {
+  .circular.day.text-button {
+    padding: 6px;
+    border-radius: 50%;
+    min-height: 22px;
+    min-width: 22px;
+    border: none;
+    &.flat.other-month,
+    &.flat.non-workday {
+      color: $insensitive_fg_color;
+    }
+    &.today {
+      color: $selected_bg_color;
+    }
+    &:active,
+    &:selected {
+      @include button(active, $selected_bg_color, $fg_color);
+      font-weight: bold;
+    }
+  }
+  .weekday,
+  .weeknum {
+    color: $insensitive_fg_color;
+  }
+  .weeknum {
+    background-color: lighten($_sidebar_color, 4%);
+  }
+  .current-week {
+    background-color: transparentize($insensitive_fg_color, 0.9);
+  }
+}
+
+agenda-view list.background {
+  padding: 8px;
+  .caption-heading,
+  .dim-label.no-events {
+    color: $headerbar_fg_color;
+  }
+}
+
+datechooser,
+agenda-view list.background,
+.calendar-list {
+  &,
+  &:backdrop {
+    background-color: $_sidebar_color;
+  }
+}
+
+popover {
+  datechooser,
+  .calendars-list {
+    background-color: transparent;
+  }
+}
+
+/******************************
+ * Gnome system monitor graph *
+******************************/
+
+#gnome-system-monitor .loadgraph {
+  background: $bg_color;
+  color: $text_color;
+}
+
+.org-gnome-TextEditor {
+  .top-bar:nth-last-child(2) {
+    padding: 0;
+  }
+
+  tabbox {
+    border-style: solid;
+    border-color: lighten($borders_color, 10%);
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+  }
+}
+
+sheet.background {
+  @if $window-border {
+    border: 1px solid $selected_borders_color;
+    box-shadow: $popup-glowing;
+  } @else {
+    border: 1px solid lighten($borders_color, 13%);
+  }
+}
+
+gridview.view {
+  > .activatable {
+    &:backdrop {
+      opacity: 0.8;
+    }
+
+    &:active {
+      background-color: lighten($bg_color, 7%);
+    }
+
+    &:selected {
+      &:backdrop {
+        box-shadow:
+          inset 0 0 0 1px transparentize($selected_borders_color, 0.5),
+          0 0 6px 1px transparentize($selected_glow_color, 0.3);
+        background-color: $backdrop_bg_color;
+      }
+      box-shadow:
+        inset 0 0 0 1px $selected_borders_color,
+        $popup-glowing;
+      background-color: lighten($bg_color, 3%);
+    }
   }
 }

@@ -3,15 +3,13 @@
  ***************/
 %titlebar,
 headerbar {
-  padding: 0 13px;
+  padding: 0 6px;
   min-height: 34px;
   background: $headerbar_color;
   color: $headerbar_fg_color;
   border-radius: 0;
   &:backdrop {
     border-color: $backdrop_borders_color;
-    // background-image: none;
-
     transition: $backdrop_transition;
   }
 
@@ -38,7 +36,6 @@ headerbar {
     min-height: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
-    box-shadow: none;
     &.image-button {
       padding: 3px 4px;
     }
@@ -50,32 +47,28 @@ headerbar {
       }
     }
     &:hover {
-      @include button(hover-header, $selected_bg_color, #fff);
+      @include button(hover-header, $selected_bg_color, $fg_color);
     }
     &:active,
     &:checked {
-      @include button(active, transparentize($selected_bg_color, 0.3), #fff);
+      @include button(
+        active,
+        transparentize($selected_bg_color, 0.3),
+        $fg_color
+      );
     }
 
     &:backdrop,
     &:disabled,
     &:backdrop:disabled {
-      @include button(
-        backdrop-header,
-        $main_dark_color,
-        transparentize($headerbar_fg_color, 0.8)
-      );
+      @include button(backdrop-header);
     }
 
     &:backdrop {
       &:hover,
       &:active,
       &:checked {
-        @include button(
-          backdrop-header,
-          $backdrop_selected_bg_color,
-          $selected_bg_color
-        );
+        @include button(insensitive-active);
       }
     }
 
@@ -89,7 +82,6 @@ headerbar {
         margin-bottom: 5px;
         border-radius: 6px;
         @include button(rounded, $b_color, white);
-        box-shadow: none;
 
         &:hover {
           @include button(hover, $b_color, white);
@@ -216,7 +208,7 @@ headerbar {
   // Gnome 42 path-bar
   .path-buttons-box {
     background-color: $bg_color;
-    border: 1px solid $borders_color;
+    border: 1px solid lighten($borders_color, 10%);
     min-height: 20px;
     margin-top: 5px;
     margin-bottom: 5px;
@@ -253,11 +245,6 @@ headerbar {
         @include button(active-header);
         padding: 3px 12px;
       }
-
-      image {
-        background: #882ae9 left bottom lighten($headerbar_color, 12%) no-repeat;
-        background-size: 100% 1.5px;
-      }
     }
 
     button.current-dir:only-child {
@@ -276,7 +263,7 @@ headerbar {
         & {
           &:active,
           &:checked {
-            //@include button(backdrop-active, $selected_bg_color, $selected_fg_color);
+            @include button(backdrop-active);
             label {
               color: $backdrop_selected_bg_color;
             }

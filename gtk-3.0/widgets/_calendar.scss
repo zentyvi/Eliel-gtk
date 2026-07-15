@@ -12,10 +12,12 @@ calendar {
   }
 
   &.header {
-    border-bottom: 1px solid transparentize(black, 0.9);
+    border-bottom: 1px solid lighten($borders_color, 10%);
     border-radius: 0;
 
-    &:backdrop { border-color: transparentize(black, 0.9); }
+    &:backdrop {
+      border-color: transparentize(black, 0.9);
+    }
   }
 
   &.button {
@@ -32,25 +34,26 @@ calendar {
     &:backdrop {
       @extend %undecorated_button;
 
-      color: transparentize($backdrop_fg_color,0.55);
+      color: transparentize($backdrop_fg_color, 0.55);
     }
 
     &:disabled {
       @extend %undecorated_button;
 
-      color:  transparentize($insensitive_fg_color,0.55);
+      color: transparentize($insensitive_fg_color, 0.55);
     }
   }
 
   &:indeterminate,
-  &:indeterminate:backdrop { color: gtkalpha(currentColor, 0.55); }
+  &:indeterminate:backdrop {
+    color: gtkalpha(currentColor, 0.55);
+  }
 
   &.highlight,
   &.highlight:backdrop {
     font-size: smaller;
     color: $fg_color;
   }
-
 
   &:backdrop {
     color: $backdrop_text_color;

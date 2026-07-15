@@ -19,9 +19,6 @@ decoration {
     transparentize($borders_color, 0.1)
   );
 
-  $window-shadow: 2px 4px 8px 2px transparentize(rgb(15, 4, 6), 0.3);
-  $window-backdrop-shadow: 2px 4px 8px 2px transparentize(rgb(15, 4, 6), 0.65);
-
   // lamefun trick to get rounded borders regardless of CSD use
   border-width: 0px;
 
@@ -43,9 +40,10 @@ decoration {
     // The biggest shadow should be in the same order then in the active state
     // or the jumping will happen during the transition.
     transition: $backdrop_transition;
+
     @if $window-border {
       box-shadow:
-        2px 4px 8px 2px transparentize(rgb(15, 4, 6), 0.65),
+        0 0 12px 3px transparent,
         0 0 0 1px transparentize($selected_borders_color, 0.3);
     } @else {
       box-shadow:
@@ -72,9 +70,15 @@ decoration {
   } //just doing borders, wm draws actual shadows
 
   .csd.popup & {
-    border-radius: 7px;
-    box-shadow: 0 4px 8px $menu_shadow_color;
-    border: 1px solid transparentize($borders_color, 0.3);
+    border-radius: 2px;
+    @if $window-border {
+      box-shadow:
+        $popup-glowing,
+        0 0 0 1px $selected_borders_color;
+    } @else {
+      box-shadow: 0 6px 12px #0f070a;
+      border: 1px solid lighten($borders_color, 13%);
+    }
   }
 
   tooltip.csd & {

@@ -1,70 +1,83 @@
 /***********
  * Dialogs *
  ***********/
-messagedialog { // Message Dialog styling
+messagedialog,
+.messagedialog,
+.dialog {
+  // Message Dialog styling
+  transition: all 0.3s;
+  @if $window-border {
+    box-shadow:
+      $window-glowing,
+      0 0 0 1px $selected_borders_color;
+  } @else {
+    box-shadow:
+      $window-backdrop-shadow,
+      0 0 0 1px lighten($borders_color, 10%);
+  }
+
+  &:backdrop {
+    @if $window-border {
+      box-shadow:
+        $window-glowing,
+        0 0 0 1px $selected_borders_color;
+    } @else {
+      box-shadow:
+        $window-shadow,
+        0 0 0 1px lighten($borders_color, 10%);
+    }
+  }
+
+  background-color: $bg_color;
   .titlebar:not(headerbar) {
-    background-color: transparentize(if($variant=='light', $headerbar_color, $bg_color), 0.05);
+    background-color: transparentize($bg_color, 0.05);
   }
   .titlebar {
     min-height: 20px;
     background-image: none;
-    background-color: transparentize(if($variant=='light', $headerbar_color, $bg_color), 0.05);
+    background-color: transparentize($bg_color, 0.05);
+    padding: 8px;
     border-style: none;
-    border-top-left-radius: 4px;
-    border-top-right-radius: 4px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
   }
 
-  &.csd { // rounded bottom border styling for csd version
-    &.background {
-      background-color: transparentize(if($variant=='light', $headerbar_color, $bg_color), 0.05);
-      color: if($variant=='light', $headerbar_fg_color, $fg_color);
-
-      // bigger radius for better antialiasing
-      border-bottom-left-radius: 5px;
-      border-bottom-right-radius: 5px;
+  &.csd {
+    &.dialog {
+      background-color: transparentize($bg_color, 0.05);
+      color: $fg_color;
+      border-bottom-left-radius: 6px;
+      border-bottom-right-radius: 6px;
     }
 
-    .dialog-action-area button {
-      padding: 10px 14px; // labels are not vertically centered on message dialog, this is a workaround
-      border-radius: 0;
-      border-left-style: solid;
-      border-right-style: none;
-      border-bottom-style: none;
-      background-color: transparent;
-      color: if($variant=='light', $headerbar_fg_color, $fg_color);
-      box-shadow: none;
+    .dialog-content {
+      padding: 12px;
+    }
+  }
+  filechooser {
+    .dialog-action-box {
+      border-top: 1px solid $borders_color;
 
-      &:hover {
-        background-color: transparentize($selected_bg_color, 0.1);
-        color: white;
-      }
-
-      &:first-child{
-        border-left-style: none;
-        border-bottom-left-radius: 4px;
-      }
-
-      &:last-child {
-        border-bottom-right-radius: 4px;
-      }
-      &.destructive-action, &.suggested-action{
-        color:white;
+      &:backdrop {
+        border-top-color: $backdrop_borders_color;
       }
     }
+
+    #pathbarbox {
+      border-bottom: 1px solid $bg_color;
+    }
+  }
+
+  filechooserbutton:drop(active) {
+    box-shadow: none;
+    border-color: transparent;
   }
 }
 
-filechooser {
-  .dialog-action-box {
-    border-top: 1px solid $borders_color;
-
-    &:backdrop { border-top-color: $backdrop_borders_color; }
-  }
-
-  #pathbarbox { border-bottom: 1px solid $bg_color; }
-}
-
-filechooserbutton:drop(active) {
-  box-shadow: none;
-  border-color: transparent;
+.messagedialog .message-area,
+.messagedialog .response-area,
+.dialog .dialog-action-area,
+.alert.floating .response-area,
+.alert.floating .body-scrolled-window {
+  padding: 20px;
 }

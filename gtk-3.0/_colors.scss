@@ -40,8 +40,16 @@ $borders_edge: if(
 );
 
 $window-glowing: 0 0 12px 3px $selected_glow_color;
+$window-backdrop-glowing: 0 0 12px 3px transparentize($selected_glow_color, 0.3);
 $popup-glowing: 0 0 9px 2px $selected_glow_color;
+$popup-backdrop-glowing: 0 0 9px 2px transparentize($selected_glow_color, 0.3);
 $button-glowing: 0 0 6px 2px $selected_glow_color;
+$button-backdrop-glowing: 0 0 6px 2px transparentize($selected_glow_color, 0.3);
+
+$window-shadow: 0px 0px 12px 3px transparentize(rgb(15, 4, 6), 0.3);
+$window-backdrop-shadow: 0px 0px 12px 3px transparentize(rgb(15, 4, 6), 0.65);
+$popup-shadow: 0 0 9px 2px transparentize(rgb(15, 4, 6), 0.3);
+$popup-backdrop-shadow: transparentize(rgb(15, 4, 6), 0.65);
 
 $link_color: lighten($primary, 10%);
 $link_visited_color: transparentize($link_color, 0.2);
