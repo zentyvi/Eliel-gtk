@@ -1002,14 +1002,12 @@ $slider_size: 15px;
 .dashtopanelMainPanel {
   @if $panel-border {
     border: 1px solid $selected_borders_color;
-    box-shadow: $glowing;
   } @else {
     border: 1px solid lighten($borders_color, 20%);
   }
 }
 
 #panel {
-  border: none;
   outline: none;
 
   background-gradient-direction: none;
@@ -1848,10 +1846,10 @@ $slider_size: 15px;
 .dash-background {
   @if $panel-border {
     border: 1px solid $selected_borders_color;
-    box-shadow: $glowing;
   } @else {
     border: 1px solid lighten($borders_color, 20%);
   }
+
   background-color: $bg_color;
 }
 

@@ -767,11 +767,9 @@ StScrollBar {
 
 /* TOP BAR */
 .dashtopanelMainPanel {
-  border: 1px solid #ff2088;
-  box-shadow: 0 0 8px 1px rgba(255, 32, 136, 0.4); }
+  border: 1px solid #ff2088; }
 
 #panel {
-  border: none;
   outline: none;
   background-gradient-direction: none;
   background-color: #0a0a0b;
@@ -1383,7 +1381,6 @@ StScrollBar {
 /* DASHBOARD */
 .dash-background {
   border: 1px solid #ff2088;
-  box-shadow: 0 0 8px 1px rgba(255, 32, 136, 0.4);
   background-color: #0a0a0b; }
 
 .dash-separator {
