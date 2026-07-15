@@ -115,8 +115,11 @@ StScrollBar {
   padding: 0;
 
   StScrollView & {
-    min-width: 14px;
-    min-height: 14px;
+    min-width: 5px;
+    min-height: 5px;
+    &:hover {
+      background-color: $selected_bg_color;
+    }
   }
 
   StBin#trough {

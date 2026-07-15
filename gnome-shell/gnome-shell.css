@@ -133,8 +133,10 @@ StScrollView.hfade {
 StScrollBar {
   padding: 0; }
   StScrollView StScrollBar {
-    min-width: 14px;
-    min-height: 14px; }
+    min-width: 5px;
+    min-height: 5px; }
+    StScrollView StScrollBar:hover {
+      background-color: #ff2088; }
   StScrollBar StBin#trough {
     border-radius: 0;
     background-color: transparent; }
@@ -245,7 +247,7 @@ StScrollBar {
     width: 20em;
     margin-bottom: 6px; }
   .modal-dialog .run-dialog-error-box {
-    color: #e6006e;
+    color: #e60036;
     padding-top: 16px;
     spacing: 6px; }
   .modal-dialog .run-dialog-button-box {
@@ -331,7 +333,7 @@ StScrollBar {
   background-size: contain; }
 
 .end-session-dialog-shutdown-icon {
-  color: #e6006e;
+  color: #e60036;
   width: 48px;
   height: 48px; }
 
@@ -436,7 +438,7 @@ StScrollBar {
 .prompt-dialog-error-label {
   font-size: 10pt;
   color: #fefefe;
-  background-color: rgba(230, 0, 110, 0.2);
+  background-color: rgba(230, 0, 54, 0.2);
   padding-bottom: 8px; }
 
 .prompt-dialog-info-label {
@@ -636,7 +638,7 @@ StScrollBar {
     -barlevel-height: 0.4em;
     -barlevel-background-color: #2c3741;
     -barlevel-active-background-color: #ff2088;
-    -barlevel-overdrive-color: #ff007a;
+    -barlevel-overdrive-color: #ff003c;
     -barlevel-overdrive-separator-width: 0.2em; }
   .osd-window .level-bar {
     background-color: #ff2088;
@@ -1047,7 +1049,7 @@ StScrollBar {
   background-color: transparent; }
 
 .message-list-section-close:hover > StIcon, .message-list-section-close:focus > StIcon .message-list-section-close:active > StIcon {
-  color: #ff007a;
+  color: #ff003c;
   background: transparent; }
 
 .message {
@@ -1077,11 +1079,11 @@ StScrollBar {
   background-color: rgba(254, 254, 254, 0.2);
   border-radius: 99px; }
   .message-close-button:hover {
-    background-color: #ff007a; }
+    background-color: #ff003c; }
     .message-close-button:hover > StIcon {
       color: #fefefe; }
   .message-close-button:active {
-    background-color: #ff007a; }
+    background-color: #ff003c; }
     .message-close-button:active > StIcon {
       color: #fefefe; }
 
