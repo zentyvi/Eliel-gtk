@@ -32,6 +32,8 @@ listview {
 }
 
 row {
+  padding: 3px 8px;
+
   &:backdrop {
     transition: $backdrop_transition;
   }

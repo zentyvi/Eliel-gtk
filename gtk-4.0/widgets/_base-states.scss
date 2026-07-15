@@ -66,6 +66,10 @@
   }
 }
 
+navigation-view-page {
+  background-color: $bg_color;
+}
+
 textview {
   > text {
     @extend %view;

@@ -20,14 +20,14 @@ menubar,
 
 .titlebar,
 .top-bar {
-  padding: 4px;
+  padding: 6px 10px;
   background-color: $headerbar_color;
 }
 
 menu,
 .menu,
 .context-menu {
-  padding: 2px 0px;
+  padding: 200px;
   background: $headerbar_color;
   border-radius: 5px;
   font: initial;
@@ -45,11 +45,6 @@ menu,
     min-width: 40px;
     padding: 4px 6px;
     text-shadow: none;
-
-    &:hover {
-      color: $fg_color;
-      background-color: $selected_bg_color;
-    }
 
     &:disabled {
       color: $insensitive_fg_color;
@@ -147,6 +142,6 @@ menuitem {
   }
 }
 
-.csd.popup {
-  background-color: transparent;
-}
+// .csd.popup {
+// background-color: transparent;
+// }

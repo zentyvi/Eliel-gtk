@@ -160,12 +160,18 @@ PantheonCalculatorMainWindow {
 }
 
 .card {
+  padding: 6px;
   background-color: lighten($bg_color, 5%);
   border: 1px solid lighten($borders_color, 10%);
   box-shadow:
     0 0 0 1px transparentize(black, 0.95),
     0 3px 3px transparentize(black, 0.8);
   transition: all 150ms ease-in-out;
+  > * {
+    border: none;
+    background-color: transparent;
+    padding: unset;
+  }
 }
 
 /*********
@@ -410,7 +416,7 @@ radiobutton.color-button {
   }
 
   &.auto radio {
-    background-image: url("assets/color-button-auto.png");
+    // background-image: url("assets/color-button-auto.png");
     background-position: -1px -1px;
     background-repeat: no-repeat;
     background-size: calc(100% + 2px);

@@ -3,13 +3,15 @@
  ************/
 %toolbar {
   padding: 4px;
-  background-color: lighten($bg_color, 7%);
+  background-color: lighten($bg_color, 5%);
 }
 
+.toolbar,
 toolbar {
   @extend %toolbar;
+  background-color: lighten($bg_color, 5%);
 
-  padding: 4px 3px 3px 4px;
+  padding: 4px;
 
   // on OSD
   .osd & {
@@ -31,12 +33,12 @@ toolbar {
   }
 
   // toolbar separators
-  &.horizontal separator {
-    margin: 0 7px 1px 6px;
-  }
-  &.vertical separator {
-    margin: 6px 1px 7px 0;
-  }
+  // &.horizontal separator {
+  //   margin: 0 7px 1px 6px;
+  // }
+  // &.vertical separator {
+  //   margin: 6px 1px 7px 0;
+  // }
 
   &:not(.inline-toolbar):not(.osd) {
     switch,

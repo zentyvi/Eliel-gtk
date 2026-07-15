@@ -14,7 +14,7 @@
 /* text/foreground color of selections */
 @define-color theme_selected_fg_color #fff;
 /* base background color of disabled widgets */
-@define-color insensitive_bg_color #0a0a0b;
+@define-color insensitive_bg_color rgba(34, 34, 38, 0.7);
 /* text foreground color of disabled widgets */
 @define-color insensitive_fg_color #71747a;
 /* disabled text widgets and the like base background color */
@@ -37,7 +37,7 @@
 @define-color unfocused_borders #171719;
 /* these are pretty self explicative */
 @define-color warning_color #c87f0a;
-@define-color error_color #e6006e;
+@define-color error_color #e60036;
 @define-color success_color #ff077a;
 @define-color fg_color #d8dee9;
 @define-color text_color #d8dee9;
@@ -141,7 +141,7 @@ read if you used those and something break with a version upgrade you're on your
 button:visited {
   padding: 0;
   -gtktoolbutton-icon-spacing: 4;
-  -gtktextview-error-underline-color: #e6006e;
+  -gtktextview-error-underline-color: #e60036;
   -gtkscrolledwindow-scrollbar-spacing: 0;
   -gtktoolitemgroup-expander-size: 11;
   -gtkwidget-text-handle-width: 20;
@@ -236,7 +236,7 @@ button:disabled:visited, label:disabled selection {
     background-color: black; }
   .gtkstyle-fallback:disabled, label:disabled selection.gtkstyle-fallback {
     color: #71747a;
-    background-color: #0a0a0b; }
+    background-color: rgba(34, 34, 38, 0.7); }
   .gtkstyle-fallback:selected {
     color: #d8dee9;
     background-color: #ff3a96; }
@@ -320,7 +320,7 @@ assistant .sidebar label.highlight {
 .csd popover.background.osd, popover.background.osd, .csd popover.background.touch-selection, .csd popover.background.magnifier, popover.background.touch-selection, popover.background.magnifier, .osd .scale-popup, .app-notification,
 .app-notification.frame,
 .osd {
-  box-shadow: 0 0 7px 2px rgba(255, 32, 136, 0.45), 0 0 0 1px #ff2088;
+  box-shadow: 0 0 9px 2px rgba(255, 32, 136, 0.45), 0 0 0 1px #ff2088;
   color: #d8dee9;
   border: none;
   background-color: rgba(0, 0, 0, 0.93);
@@ -429,8 +429,8 @@ button {
     button:backdrop.flat:disabled,
     button:backdrop:disabled {
       color: #afb4bd;
-      border-color: rgba(24, 24, 27, 0.3);
-      background-color: #0a0a0b;
+      border-color: rgba(49, 49, 53, 0.8);
+      background-color: rgba(34, 34, 38, 0.7);
       text-shadow: none; }
       popover.background checkbutton:backdrop:disabled:active,
       popover.background radiobutton:backdrop:disabled:active, popover.background checkbutton:backdrop:disabled:checked,
@@ -458,8 +458,8 @@ button {
   notebook > header > tabs > arrow:disabled, combobox:drop(active) button.combo:disabled, .selection-mode button.titlebutton:disabled,
   button:disabled {
     color: #afb4bd;
-    border-color: rgba(24, 24, 27, 0.3);
-    background-color: #0a0a0b;
+    border-color: rgba(49, 49, 53, 0.8);
+    background-color: rgba(34, 34, 38, 0.7);
     text-shadow: none; }
     notebook > header > tabs > arrow:disabled label, combobox:drop(active) button.combo:disabled label, .selection-mode button.titlebutton:disabled label,
     button:disabled label {
@@ -738,7 +738,7 @@ button.suggested-action {
     .selection-mode button.titlebutton:backdrop:disabled,
     button.suggested-action.flat:backdrop:disabled {
       color: white;
-      border-color: rgba(24, 24, 27, 0.3);
+      border-color: rgba(49, 49, 53, 0.8);
       background-color: #ff3a96;
       text-shadow: none; }
       progressbar:backdrop progress.suggested-action:disabled label, progressbar:backdrop trough.suggested-action:disabled label, label:backdrop selection.suggested-action:disabled label, label:disabled selection.suggested-action:backdrop label, label:disabled progressbar:backdrop progress.suggested-action label, progressbar:backdrop label:disabled progress.suggested-action label, label:disabled progressbar:backdrop trough.suggested-action label, progressbar:backdrop label:disabled trough.suggested-action label, label:backdrop label:disabled selection.suggested-action label, label:disabled label:backdrop selection.suggested-action label, progressbar:backdrop progress.flat:disabled label, progressbar:backdrop trough.flat:disabled label, popover.background checkbutton.suggested-action:backdrop:disabled label,
@@ -777,7 +777,7 @@ button.suggested-action {
   button.suggested-action:disabled,
   .selection-mode button.titlebutton:disabled {
     color: rgba(255, 255, 255, 0.5);
-    border-color: rgba(24, 24, 27, 0.3);
+    border-color: rgba(49, 49, 53, 0.8);
     background-color: rgba(255, 58, 150, 0.5);
     text-shadow: none; }
     label:disabled selection.suggested-action label,
@@ -846,7 +846,7 @@ button.destructive-action {
   box-shadow: none;
   color: white;
   border-radius: 6px;
-  background-color: #ff007a; }
+  background-color: #ff003c; }
   .selection-mode button.destructive-action.titlebutton, popover.background checkbutton.destructive-action,
   popover.background radiobutton.destructive-action, notebook > header > tabs > arrow.destructive-action,
   button.destructive-action.flat,
@@ -860,7 +860,7 @@ button.destructive-action {
   button.destructive-action:hover {
     color: white;
     outline-color: rgba(255, 255, 255, 0.3);
-    background-color: #cc0062;
+    background-color: #cc0030;
     text-shadow: none; }
   
   button.destructive-action:active,
@@ -875,7 +875,7 @@ button.destructive-action {
   button.destructive-action.flat:backdrop {
     color: rgba(255, 255, 255, 0.4);
     outline-color: rgba(255, 255, 255, 0.3);
-    background-color: #cc0062;
+    background-color: #cc0030;
     text-shadow: none; }
     progressbar:backdrop progress.destructive-action label, progressbar:backdrop trough.destructive-action label, label:backdrop selection.destructive-action label, progressbar:backdrop progress.flat label, progressbar:backdrop trough.flat label, popover.background checkbutton.destructive-action:backdrop label, popover.background progressbar:backdrop progress.destructive-action label, progressbar:backdrop popover.background progress.destructive-action label, popover.background progressbar:backdrop trough.destructive-action label, progressbar:backdrop popover.background trough.destructive-action label,
     popover.background radiobutton.destructive-action:backdrop label, notebook > header > tabs > arrow.destructive-action:backdrop label, label:backdrop selection.flat label,
@@ -906,8 +906,8 @@ button.destructive-action {
     button.destructive-action:backdrop:disabled,
     button.destructive-action.flat:backdrop:disabled {
       color: white;
-      border-color: rgba(24, 24, 27, 0.3);
-      background-color: #cc0062;
+      border-color: rgba(49, 49, 53, 0.8);
+      background-color: #cc0030;
       text-shadow: none; }
       progressbar:backdrop progress.destructive-action:disabled label, progressbar:backdrop trough.destructive-action:disabled label, label:backdrop selection.destructive-action:disabled label, label:disabled selection.destructive-action:backdrop label, label:disabled progressbar:backdrop progress.destructive-action label, progressbar:backdrop label:disabled progress.destructive-action label, label:disabled progressbar:backdrop trough.destructive-action label, progressbar:backdrop label:disabled trough.destructive-action label, label:backdrop label:disabled selection.destructive-action label, label:disabled label:backdrop selection.destructive-action label, progressbar:backdrop progress.flat:disabled label, progressbar:backdrop trough.flat:disabled label, popover.background checkbutton.destructive-action:backdrop:disabled label,
       popover.background radiobutton.destructive-action:backdrop:disabled label, notebook > header > tabs > arrow.destructive-action:backdrop:disabled label, label:backdrop selection.flat:disabled label, label:disabled selection.flat:backdrop label, label:disabled progressbar:backdrop progress.flat label, progressbar:backdrop label:disabled progress.flat label, label:disabled progressbar:backdrop trough.flat label, progressbar:backdrop label:disabled trough.flat label, label:backdrop label:disabled selection.flat label, label:disabled label:backdrop selection.flat label,
@@ -937,12 +937,12 @@ button.destructive-action {
     box-shadow: inset 0 1px rgba(255, 255, 255, 0);
     text-shadow: none;
     -gtk-icon-shadow: none;
-    color: rgba(204, 0, 98, 0.8); }
+    color: rgba(204, 0, 48, 0.8); }
   label:disabled selection.destructive-action,
   button.destructive-action:disabled {
     color: rgba(255, 255, 255, 0.5);
-    border-color: rgba(24, 24, 27, 0.3);
-    background-color: rgba(204, 0, 98, 0.5);
+    border-color: rgba(49, 49, 53, 0.8);
+    background-color: rgba(204, 0, 48, 0.5);
     text-shadow: none; }
     label:disabled selection.destructive-action label,
     button.destructive-action:disabled label {
@@ -952,7 +952,7 @@ button.destructive-action {
     button.destructive-action:disabled:checked {
       color: rgba(216, 222, 233, 0.7);
       outline-color: rgba(255, 255, 255, 0.3);
-      background-color: #cc0062;
+      background-color: #cc0030;
       text-shadow: none; }
       label:disabled selection.destructive-action:active label, label:disabled selection.destructive-action:checked label,
       button.destructive-action:disabled:active label,
@@ -961,7 +961,7 @@ button.destructive-action {
   .osd button.destructive-action {
     color: #d8dee9;
     border-color: #18181b;
-    background-color: rgba(204, 0, 98, 0.5);
+    background-color: rgba(204, 0, 48, 0.5);
     background-clip: padding-box;
     text-shadow: 0 1px black;
     -gtk-icon-shadow: 0 1px black;
@@ -969,7 +969,7 @@ button.destructive-action {
     .osd button.destructive-action:hover {
       color: white;
       border-color: #18181b;
-      background-image: linear-gradient(to bottom, rgba(204, 0, 98, 0.7), rgba(204, 0, 98, 0.7));
+      background-image: linear-gradient(to bottom, rgba(204, 0, 48, 0.7), rgba(204, 0, 48, 0.7));
       background-clip: padding-box;
       text-shadow: 0 1px black;
       -gtk-icon-shadow: 0 1px black;
@@ -977,7 +977,7 @@ button.destructive-action {
     .osd progressbar:backdrop progress:active, progressbar:backdrop .osd progress:active, .osd progressbar:backdrop trough:active, progressbar:backdrop .osd trough:active, .osd label:backdrop selection:active, label:backdrop .osd selection:active, .osd progressbar:backdrop progress:checked, progressbar:backdrop .osd progress:checked, .osd progressbar:backdrop trough:checked, progressbar:backdrop .osd trough:checked, .osd label:backdrop selection:checked, label:backdrop .osd selection:checked, .osd button.destructive-action:active:backdrop, .osd button.destructive-action:active, .osd button.destructive-action:checked:backdrop, .osd button.destructive-action:checked {
       color: white;
       border-color: #18181b;
-      background-image: linear-gradient(to bottom, #cc0062, #cc0062);
+      background-image: linear-gradient(to bottom, #cc0030, #cc0030);
       background-clip: padding-box;
       text-shadow: none;
       -gtk-icon-shadow: none;
@@ -993,7 +993,7 @@ button.destructive-action {
     .osd progressbar:backdrop progress.destructive-action, progressbar:backdrop .osd progress.destructive-action, .osd progressbar:backdrop trough.destructive-action, progressbar:backdrop .osd trough.destructive-action, .osd label:backdrop selection.destructive-action, label:backdrop .osd selection.destructive-action, .osd button.destructive-action:backdrop {
       color: #d8dee9;
       border-color: #18181b;
-      background-image: linear-gradient(to bottom, rgba(204, 0, 98, 0.5), rgba(204, 0, 98, 0.5));
+      background-image: linear-gradient(to bottom, rgba(204, 0, 48, 0.5), rgba(204, 0, 48, 0.5));
       background-clip: padding-box;
       box-shadow: none;
       text-shadow: none;
@@ -1095,8 +1095,8 @@ toolbar.inline-toolbar toolbutton:backdrop > button.flat:backdrop {
   box-shadow: none; }
   .linked > combobox > box > button.combo:disabled:dir(ltr), .linked > combobox > box > button.combo:disabled:dir(rtl), .linked:not(.vertical) > spinbutton:disabled:not(.vertical), .linked:not(.vertical) > entry:disabled, .linked:not(.vertical) > combobox:only-child > box > button.combo:disabled, .linked:not(.vertical) > combobox:last-child > box > button.combo:disabled, .linked:not(.vertical) > combobox:first-child > box > button.combo:disabled, combobox.linked button:disabled:nth-child(2):dir(rtl), combobox.linked button:disabled:nth-child(2):dir(ltr), .inline-toolbar progressbar:backdrop progress:disabled, progressbar:backdrop .inline-toolbar progress:disabled, .inline-toolbar progressbar:backdrop trough:disabled, progressbar:backdrop .inline-toolbar trough:disabled, .inline-toolbar button:disabled, .inline-toolbar button:disabled:backdrop, .selection-mode .linked > button.titlebutton:disabled, progressbar:backdrop .linked > progress:disabled, progressbar:backdrop .linked > trough:disabled, .linked > button:disabled, .linked > button:disabled:hover, .linked > button:disabled:active, .linked > button:disabled:checked, .linked > button:disabled:backdrop {
     color: #afb4bd;
-    border-color: rgba(24, 24, 27, 0.3);
-    background-color: #0a0a0b;
+    border-color: rgba(49, 49, 53, 0.8);
+    background-color: rgba(34, 34, 38, 0.7);
     text-shadow: none;
     color: #71747a; }
     .linked > combobox > box > button.combo:disabled:dir(ltr) label, .linked > combobox > box > button.combo:disabled:dir(rtl) label, .linked:not(.vertical) > spinbutton:disabled:not(.vertical) label, .linked:not(.vertical) > entry:disabled label, .linked:not(.vertical) > combobox:only-child > box > button.combo:disabled label, .linked:not(.vertical) > combobox:last-child > box > button.combo:disabled label, .linked:not(.vertical) > combobox:first-child > box > button.combo:disabled label, combobox.linked button:disabled:nth-child(2):dir(rtl) label, combobox.linked button:disabled:nth-child(2):dir(ltr) label, .inline-toolbar button:disabled label, .inline-toolbar button:disabled:backdrop label, .inline-toolbar progressbar:backdrop progress:disabled label, progressbar:backdrop .inline-toolbar progress:disabled label, .inline-toolbar progressbar:backdrop trough:disabled label, progressbar:backdrop .inline-toolbar trough:disabled label, .linked > button:disabled label, .linked > button:disabled:hover label, .linked > button:disabled:active label, .linked > button:disabled:checked label, .linked > button:disabled:backdrop label, progressbar:backdrop .linked > progress:disabled label, progressbar:backdrop .linked > trough:disabled label {
@@ -1903,8 +1903,8 @@ entry {
   spinbutton:disabled:not(.vertical),
   entry:disabled {
     color: #71747a;
-    border-color: rgba(24, 24, 27, 0.3);
-    background-color: #0a0a0b;
+    border-color: rgba(49, 49, 53, 0.8);
+    background-color: rgba(34, 34, 38, 0.7);
     box-shadow: none; }
   spinbutton:backdrop:not(.vertical),
   entry:backdrop {
@@ -1916,23 +1916,23 @@ entry {
   spinbutton:backdrop:disabled:not(.vertical),
   entry:backdrop:disabled {
     color: #2e2e33;
-    border-color: rgba(24, 24, 27, 0.3);
-    background-color: #0a0a0b;
+    border-color: rgba(49, 49, 53, 0.8);
+    background-color: rgba(34, 34, 38, 0.7);
     box-shadow: none; }
   spinbutton.error:not(.vertical),
   entry.error {
     color: #d8dee9;
     border-color: #18181b;
     background-color: #141416;
-    color: #e6006e;
-    border-color: #330018; }
+    color: #e60036;
+    border-color: #33000c; }
     spinbutton.error:focus:not(.vertical),
     entry.error:focus {
-      border-color: #330018; }
+      border-color: #33000c; }
     spinbutton.error:selected:not(.vertical),
     entry.error:selected:focus,
     entry.error:selected {
-      background-color: #e6006e; }
+      background-color: #e60036; }
   spinbutton.warning:not(.vertical),
   entry.warning {
     color: #d8dee9;
@@ -2394,7 +2394,7 @@ GraniteWidgetsWelcome {
   .storage-bar .fill-block.audio {
     background-color: #f39c12; }
   .storage-bar .fill-block.photo {
-    background-color: #ff007a; }
+    background-color: #ff003c; }
   .storage-bar .fill-block.video {
     background-color: #c74ded; }
   .storage-bar .fill-block .legend {
@@ -2518,7 +2518,7 @@ headerbar {
       headerbar label:disabled selection.suggested-action,
       label:disabled headerbar selection.suggested-action {
         color: white;
-        border-color: rgba(24, 24, 27, 0.3);
+        border-color: rgba(49, 49, 53, 0.8);
         background-color: #ff3a96;
         text-shadow: none; }
         .titlebar button.suggested-action:disabled label, .titlebar .selection-mode button.titlebutton:disabled label, .selection-mode .titlebar button.titlebutton:disabled label, .titlebar label:disabled selection.suggested-action label, label:disabled .titlebar selection.suggested-action label,
@@ -2575,7 +2575,7 @@ headerbar {
       headerbar label:disabled label:backdrop selection.suggested-action,
       label:disabled label:backdrop headerbar selection.suggested-action {
         color: white;
-        border-color: rgba(24, 24, 27, 0.3);
+        border-color: rgba(49, 49, 53, 0.8);
         background-color: #ff3a96;
         text-shadow: none; }
     .titlebar button.destructive-action,
@@ -2594,7 +2594,7 @@ headerbar {
       headerbar button.destructive-action:hover {
         color: white;
         outline-color: rgba(255, 255, 255, 0.3);
-        background-color: #cc0062;
+        background-color: #cc0030;
         text-shadow: none; }
       .titlebar button.destructive-action:active,
       headerbar button.destructive-action:active {
@@ -2607,8 +2607,8 @@ headerbar {
       headerbar label:disabled selection.destructive-action,
       label:disabled headerbar selection.destructive-action {
         color: white;
-        border-color: rgba(24, 24, 27, 0.3);
-        background-color: #cc0062;
+        border-color: rgba(49, 49, 53, 0.8);
+        background-color: #cc0030;
         text-shadow: none; }
         .titlebar button.destructive-action:disabled label, .titlebar label:disabled selection.destructive-action label, label:disabled .titlebar selection.destructive-action label,
         headerbar button.destructive-action:disabled label,
@@ -2630,7 +2630,7 @@ headerbar {
       label:backdrop headerbar selection.destructive-action {
         color: rgba(255, 255, 255, 0.4);
         outline-color: rgba(255, 255, 255, 0.3);
-        background-color: #cc0062;
+        background-color: #cc0030;
         text-shadow: none;
         border-radius: 3px; }
       .titlebar button.destructive-action:backdrop:disabled, .titlebar progressbar:backdrop progress.destructive-action:disabled, progressbar:backdrop .titlebar progress.destructive-action:disabled, .titlebar progressbar:backdrop trough.destructive-action:disabled, progressbar:backdrop .titlebar trough.destructive-action:disabled, .titlebar label:backdrop selection.destructive-action:disabled, label:backdrop .titlebar selection.destructive-action:disabled, .titlebar label:disabled selection.destructive-action:backdrop, .titlebar label:disabled progressbar:backdrop progress.destructive-action, progressbar:backdrop .titlebar label:disabled progress.destructive-action, .titlebar label:disabled progressbar:backdrop trough.destructive-action, progressbar:backdrop .titlebar label:disabled trough.destructive-action, label:disabled .titlebar selection.destructive-action:backdrop, label:disabled .titlebar progressbar:backdrop progress.destructive-action, progressbar:backdrop label:disabled .titlebar progress.destructive-action, label:disabled .titlebar progressbar:backdrop trough.destructive-action, progressbar:backdrop label:disabled .titlebar trough.destructive-action, .titlebar label:backdrop label:disabled selection.destructive-action, label:backdrop label:disabled .titlebar selection.destructive-action, .titlebar label:disabled label:backdrop selection.destructive-action, label:disabled label:backdrop .titlebar selection.destructive-action,
@@ -2656,8 +2656,8 @@ headerbar {
       headerbar label:disabled label:backdrop selection.destructive-action,
       label:disabled label:backdrop headerbar selection.destructive-action {
         color: white;
-        border-color: rgba(24, 24, 27, 0.3);
-        background-color: #cc0062;
+        border-color: rgba(49, 49, 53, 0.8);
+        background-color: #cc0030;
         text-shadow: none; }
     .titlebar button.titlebutton,
     headerbar button.titlebutton {
@@ -3138,9 +3138,9 @@ infobar {
     color: rgba(216, 222, 233, 0.5); }
 
 .error {
-  background-color: #e6006e; }
+  background-color: #e60036; }
   .error:backdrop, progressbar:backdrop progress.error, progressbar:backdrop trough.error, label:backdrop selection.error {
-    background-color: #ff1a87;
+    background-color: #ff1a50;
     color: rgba(216, 222, 233, 0.5); }
 
 /*************
@@ -3575,7 +3575,7 @@ notebook > header {
       notebook > header tab button.flat:hover, notebook > header tab .selection-mode button.titlebutton:hover, .selection-mode notebook > header tab button.titlebutton:hover {
         background: transparent;
         box-shadow: none;
-        color: #ff007a; }
+        color: #ff003c; }
       notebook > header tab button.flat, notebook > header tab .selection-mode button.titlebutton, .selection-mode notebook > header tab button.titlebutton, notebook > header tab button.flat:backdrop, notebook > header tab progressbar:backdrop progress.flat, progressbar:backdrop notebook > header tab progress.flat, notebook > header tab progressbar:backdrop trough.flat, progressbar:backdrop notebook > header tab trough.flat {
         background: transparent;
         border: none;
@@ -3815,7 +3815,7 @@ scale {
     scale slider:active {
       background-color: #ff3a96; }
       scale slider:active:disabled, scale label:disabled selection:active, label:disabled scale selection:active {
-        background-color: #0a0a0b;
+        background-color: rgba(34, 34, 38, 0.7);
         box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), 0px 0px 1px 1px rgba(0, 0, 0, 0.05); }
   scale.fine-tune.horizontal {
     padding-top: 9px;
@@ -4944,7 +4944,7 @@ treeview.view header button, treeview.view header button:hover, treeview.view he
 decoration {
   border-width: 0px;
   border-width: 0px;
-  box-shadow: 0 0 8px 3px rgba(255, 32, 136, 0.45), 0 0 0 1px #ff2088;
+  box-shadow: 0 0 12px 3px rgba(255, 32, 136, 0.45), 0 0 0 1px #ff2088;
   margin: 10px; }
   decoration:backdrop {
     transition: 200ms ease-out;
@@ -5329,7 +5329,7 @@ button.raven-trigger {
   border: none;
   transition: all 150ms ease-in; }
   .budgie-panel .alert {
-    color: #ff007a; }
+    color: #ff003c; }
   .budgie-panel:backdrop, label:backdrop selection.budgie-panel, progressbar:backdrop trough.budgie-panel, progressbar:backdrop progress.budgie-panel {
     color: #d8dee9;
     background-color: #13161a; }
@@ -5600,11 +5600,11 @@ button.raven-trigger {
       .raven .powerstrip button.image-button:first-child:active, .raven .powerstrip combobox.linked button.image-button:active:nth-child(2):dir(rtl), combobox.linked .raven .powerstrip button.image-button:active:nth-child(2):dir(rtl), .raven .powerstrip .linked:not(.vertical) > combobox:first-child > box > button.image-button.combo:active, .raven .powerstrip .linked.vertical > combobox:first-child > box > button.image-button.combo:active {
         background: #ff3a96; }
     .raven .powerstrip button.image-button:last-child, .raven .powerstrip combobox.linked button.image-button:nth-child(2):dir(ltr), combobox.linked .raven .powerstrip button.image-button:nth-child(2):dir(ltr), .raven .powerstrip .linked:not(.vertical) > combobox:last-child > box > button.image-button.combo, .raven .powerstrip .linked.vertical > combobox:last-child > box > button.image-button.combo {
-      background: #ff007a; }
+      background: #ff003c; }
       .raven .powerstrip button.image-button:last-child:hover, .raven .powerstrip combobox.linked button.image-button:hover:nth-child(2):dir(ltr), combobox.linked .raven .powerstrip button.image-button:hover:nth-child(2):dir(ltr), .raven .powerstrip .linked:not(.vertical) > combobox:last-child > box > button.image-button.combo:hover, .raven .powerstrip .linked.vertical > combobox:last-child > box > button.image-button.combo:hover {
-        background: rgba(255, 0, 122, 0.85); }
+        background: rgba(255, 0, 60, 0.85); }
       .raven .powerstrip button.image-button:last-child:active, .raven .powerstrip combobox.linked button.image-button:active:nth-child(2):dir(ltr), combobox.linked .raven .powerstrip button.image-button:active:nth-child(2):dir(ltr), .raven .powerstrip .linked:not(.vertical) > combobox:last-child > box > button.image-button.combo:active, .raven .powerstrip .linked.vertical > combobox:last-child > box > button.image-button.combo:active {
-        background: #ff007a; }
+        background: #ff003c; }
   .raven .option-subtitle {
     font-size: 13px; }
 
@@ -5684,11 +5684,11 @@ calendar.raven-calendar {
   color: #d8dee9; }
   .budgie-notification button:hover, .budgie-switcher button:hover, .budgie-osd button:hover {
     background-color: transparent;
-    color: #ff007a;
+    color: #ff003c;
     box-shadow: none; }
   .budgie-notification button:active, .budgie-switcher button:active, .budgie-osd button:active, .budgie-notification button:checked, .budgie-switcher button:checked, .budgie-osd button:checked {
     background-color: transparent;
-    color: #e6006e; }
+    color: #e60036; }
 
 .drop-shadow, .budgie-session-dialog.background, .background.budgie-run-dialog, .background.budgie-polkit-dialog {
   color: #d8dee9;
@@ -5757,11 +5757,11 @@ calendar.raven-calendar {
       .budgie-session-dialog .linked.horizontal > button.suggested-action:active, .budgie-run-dialog .linked.horizontal > button.suggested-action:active, .budgie-polkit-dialog .linked.horizontal > button.suggested-action:active, .budgie-session-dialog .selection-mode .linked.horizontal > button.titlebutton:active, .budgie-run-dialog .selection-mode .linked.horizontal > button.titlebutton:active, .budgie-polkit-dialog .selection-mode .linked.horizontal > button.titlebutton:active, .selection-mode .budgie-session-dialog .linked.horizontal > button.titlebutton:active, .selection-mode .budgie-run-dialog .linked.horizontal > button.titlebutton:active, .selection-mode .budgie-polkit-dialog .linked.horizontal > button.titlebutton:active, .budgie-session-dialog .linked.horizontal > button.suggested-action:checked, .budgie-run-dialog .linked.horizontal > button.suggested-action:checked, .budgie-polkit-dialog .linked.horizontal > button.suggested-action:checked, .budgie-session-dialog .selection-mode .linked.horizontal > button.titlebutton:checked, .budgie-run-dialog .selection-mode .linked.horizontal > button.titlebutton:checked, .budgie-polkit-dialog .selection-mode .linked.horizontal > button.titlebutton:checked, .selection-mode .budgie-session-dialog .linked.horizontal > button.titlebutton:checked, .selection-mode .budgie-run-dialog .linked.horizontal > button.titlebutton:checked, .selection-mode .budgie-polkit-dialog .linked.horizontal > button.titlebutton:checked {
         background-color: rgba(255, 83, 163, 0.9); }
     .budgie-session-dialog .linked.horizontal > button.destructive-action, .budgie-run-dialog .linked.horizontal > button.destructive-action, .budgie-polkit-dialog .linked.horizontal > button.destructive-action {
-      background-color: rgba(204, 0, 98, 0.9); }
+      background-color: rgba(204, 0, 48, 0.9); }
       .budgie-session-dialog .linked.horizontal > button.destructive-action:hover, .budgie-run-dialog .linked.horizontal > button.destructive-action:hover, .budgie-polkit-dialog .linked.horizontal > button.destructive-action:hover {
-        background-color: rgba(230, 0, 110, 0.9); }
+        background-color: rgba(230, 0, 54, 0.9); }
       .budgie-session-dialog .linked.horizontal > button.destructive-action:active, .budgie-run-dialog .linked.horizontal > button.destructive-action:active, .budgie-polkit-dialog .linked.horizontal > button.destructive-action:active, .budgie-session-dialog .linked.horizontal > button.destructive-action:checked, .budgie-run-dialog .linked.horizontal > button.destructive-action:checked, .budgie-polkit-dialog .linked.horizontal > button.destructive-action:checked {
-        background-color: rgba(230, 0, 110, 0.9); }
+        background-color: rgba(230, 0, 54, 0.9); }
   .budgie-session-dialog entry, .budgie-run-dialog entry, .budgie-polkit-dialog entry {
     background-color: #505359;
     color: #d8dee9; }
@@ -5774,7 +5774,7 @@ calendar.raven-calendar {
   color: rgba(216, 222, 233, 0.7); }
 
 .budgie-polkit-dialog .failure {
-  color: #ff007a; }
+  color: #ff003c; }
 
 .budgie-run-dialog entry.search, .budgie-run-dialog entry.search:focus {
   font-size: 120%;
@@ -6584,8 +6584,8 @@ menubar,
     text-shadow: none; }
   #content_frame button:disabled {
     color: #afb4bd;
-    border-color: rgba(24, 24, 27, 0.3);
-    background-color: #0a0a0b;
+    border-color: rgba(49, 49, 53, 0.8);
+    background-color: rgba(34, 34, 38, 0.7);
     text-shadow: none; }
     #content_frame button:disabled label {
       color: #afb4bd; }

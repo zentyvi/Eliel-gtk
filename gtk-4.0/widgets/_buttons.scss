@@ -2,11 +2,8 @@
  * Buttons *
  ***********/
 // stuff for .needs-attention
-$_dot_color: if(
-  $variant== "light",
-  $selected_bg_color,
-  lighten($selected_bg_color, 15%)
-);
+$_dot_color: $selected_bg_color;
+
 @keyframes needs_attention {
   from {
     background-image: radial-gradient(
@@ -83,7 +80,7 @@ button {
 
         &:active,
         &:checked {
-          @include button(backdrop-active);
+          @include button(backdrop-active, $selected_bg_color);
         }
 
         &:disabled {
@@ -147,27 +144,27 @@ button {
     }
   }
 
-  @at-root %button_selected,
-    & {
-    row:selected & {
-      @if $variant == "light" {
-        border-color: $selected_borders_color;
-      }
+  // @at-root %button_selected,
+  //   & {
+  //   row:selected & {
+  //     @if $variant == "light" {
+  //       border-color: $selected_borders_color;
+  //     }
 
-      &.flat:not(:active):not(:checked):not(:hover):not(disabled) {
-        color: $fg_color;
-        border-color: transparent;
+  //     &.flat:not(:active):not(:checked):not(:hover):not(disabled) {
+  //       color: $fg_color;
+  //       border-color: transparent;
 
-        &:backdrop {
-          color: if(
-            $variant== "light",
-            $backdrop_base_color,
-            $backdrop_fg_color
-          );
-        }
-      }
-    }
-  }
+  //       &:backdrop {
+  //         color: if(
+  //           $variant== "light",
+  //           $backdrop_base_color,
+  //           $backdrop_fg_color
+  //         );
+  //       }
+  //     }
+  //   }
+  // }
 
   // big standalone buttons like in Documents pager
   &.osd {

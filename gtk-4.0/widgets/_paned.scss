@@ -12,21 +12,27 @@ paned {
     background-image: image($borders_color);
     background-size: 1px 1px;
 
-    &:selected { background-image: image($selected_bg_color); } // FIXME is this needed?
+    &:selected {
+      background-image: image($selected_bg_color);
+    } // FIXME is this needed?
 
-    &:backdrop { background-image: image($backdrop_borders_color); }
+    &:backdrop {
+      background-image: image($backdrop_borders_color);
+    }
 
     &.wide {
       min-width: 5px;
       min-height: 5px;
       background-color: $bg_color;
       background-image: image($borders_color), image($borders_color);
-      background-size: 1px 1px, 1px 1px;
+      background-size:
+        1px 1px,
+        1px 1px;
 
       &:backdrop {
         background-color: $backdrop_bg_color;
-        background-image: image($backdrop_borders_color),
-                          image($backdrop_borders_color);
+        background-image:
+          image($backdrop_borders_color), image($backdrop_borders_color);
       }
     }
   }

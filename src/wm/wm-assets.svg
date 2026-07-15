@@ -2,26 +2,26 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    inkscape:export-ydpi="90"
    inkscape:export-xdpi="90"
    width="240"
    height="240"
    id="svg11300"
    sodipodi:version="0.32"
-   inkscape:version="0.92.4 (unknown)"
+   inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)"
    sodipodi:docname="wm-assets.svg"
    inkscape:output_extension="org.inkscape.output.svg.inkscape"
    version="1.0"
    style="display:inline;enable-background:new"
-   inkscape:export-filename="/home/sam/Projects/Paper/gtk-theme-wm-assets.png">
+   inkscape:export-filename="/home/sam/Projects/Paper/gtk-theme-wm-assets.png"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <title
      id="title3004">Moka Icon Theme Template</title>
   <sodipodi:namedview
@@ -33,18 +33,18 @@
      borderopacity="0.25490196"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.2202523"
-     inkscape:cx="173.0806"
-     inkscape:cy="7.6882093"
-     inkscape:current-layer="layer4"
+     inkscape:zoom="3.4513947"
+     inkscape:cx="79.533065"
+     inkscape:cy="116.47465"
+     inkscape:current-layer="g3389"
      showgrid="true"
      inkscape:grid-bbox="true"
      inkscape:document-units="px"
      inkscape:showpageshadow="false"
-     inkscape:window-width="1366"
-     inkscape:window-height="715"
+     inkscape:window-width="1920"
+     inkscape:window-height="1006"
      inkscape:window-x="0"
-     inkscape:window-y="24"
+     inkscape:window-y="0"
      width="400px"
      height="300px"
      inkscape:snap-nodes="true"
@@ -58,7 +58,9 @@
      inkscape:bbox-paths="true"
      inkscape:snap-bbox-edge-midpoints="true"
      inkscape:snap-bbox-midpoints="true"
-     inkscape:bbox-nodes="true">
+     inkscape:bbox-nodes="true"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1">
     <inkscape:grid
        spacingy="1"
        spacingx="1"
@@ -69,7 +71,8 @@
        empspacing="4"
        snapvisiblegridlinesonly="true"
        originx="0"
-       originy="0" />
+       originy="0"
+       units="px" />
     <inkscape:grid
        type="xygrid"
        id="grid11592"
@@ -84,7 +87,8 @@
        empopacity="0.25098039"
        snapvisiblegridlinesonly="true"
        originx="0"
-       originy="0" />
+       originy="0"
+       units="px" />
     <sodipodi:guide
        position="22,31"
        orientation="1,0"
@@ -2864,7 +2868,7 @@
        inkscape:export-ydpi="96" />
     <path
        id="path4096-6"
-       style="fill:#ff007a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.01265625"
+       style="fill:#ec006e;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.01265625"
        d="m 29.936201,276.54632 c 3.589781,0 6.499933,-2.91022 6.499933,-6.50006 0,-3.58987 -2.910152,-6.50002 -6.499933,-6.50002 -3.589913,0 -6.500067,2.91015 -6.500067,6.50002 0,3.58984 2.910154,6.50006 6.500067,6.50006"
        inkscape:connector-curvature="0"
        inkscape:export-xdpi="96"
@@ -2878,7 +2882,7 @@
        inkscape:export-ydpi="96" />
     <path
        id="path4096"
-       style="fill:#ff007a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.01265625"
+       style="fill:#ec006e;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.01265625"
        d="m 29.947677,246.47153 c 3.589781,0 6.499933,-2.91022 6.499933,-6.50006 0,-3.58987 -2.910152,-6.50002 -6.499933,-6.50002 -3.589913,0 -6.500067,2.91015 -6.500067,6.50002 0,3.58984 2.910154,6.50006 6.500067,6.50006"
        inkscape:connector-curvature="0"
        inkscape:export-xdpi="96"
@@ -2897,7 +2901,7 @@
        inkscape:export-ydpi="96" />
     <path
        id="path4096-5"
-       style="display:inline;fill:#ff007a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.01265625;enable-background:new"
+       style="display:inline;fill:#ec006e;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.01265625;enable-background:new"
        d="m 29.956677,216.44942 c 3.589781,0 6.499933,-2.91022 6.499933,-6.50006 0,-3.58987 -2.910152,-6.50002 -6.499933,-6.50002 -3.589913,0 -6.500067,2.91015 -6.500067,6.50002 0,3.58984 2.910154,6.50006 6.500067,6.50006"
        inkscape:connector-curvature="0"
        inkscape:export-xdpi="96"
@@ -2930,7 +2934,7 @@
        inkscape:export-ydpi="96" />
     <path
        id="path4096-5-1"
-       style="display:inline;fill:#ff007a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.01265625;enable-background:new"
+       style="display:inline;fill:#ec006e;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.01265625;enable-background:new"
        d="m 29.947677,156.47153 c 3.589781,0 6.499933,-2.91022 6.499933,-6.50006 0,-3.58987 -2.910152,-6.50002 -6.499933,-6.50002 -3.589913,0 -6.500067,2.91015 -6.500067,6.50002 0,3.58984 2.910154,6.50006 6.500067,6.50006"
        inkscape:connector-curvature="0"
        inkscape:export-xdpi="96"
@@ -2949,7 +2953,7 @@
        inkscape:export-ydpi="96" />
     <path
        id="path4096-5-0"
-       style="display:inline;fill:#ff007a;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.01265625;enable-background:new"
+       style="display:inline;fill:#ec006e;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.01265625;enable-background:new"
        d="m 29.970677,126.40953 c 3.589781,0 6.499933,-2.91022 6.499933,-6.50006 0,-3.58987 -2.910152,-6.50002 -6.499933,-6.50002 -3.589913,0 -6.500067,2.91015 -6.500067,6.50002 0,3.58984 2.910154,6.50006 6.500067,6.50006"
        inkscape:connector-curvature="0"
        inkscape:export-xdpi="96"

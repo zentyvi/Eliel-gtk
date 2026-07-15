@@ -13,12 +13,12 @@
     -gtk-icon-source: if(
       $variant == "light",
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/checkbox#{$un}.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/checkbox#{$un}@2.png")
+          url("assets/checkbox#{$un}.png"),
+          url("assets/checkbox#{$un}@2.png")
         ),
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/checkbox#{$un}-dark.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/checkbox#{$un}@2.png")
+          url("assets/checkbox#{$un}-dark.png"),
+          url("assets/checkbox#{$un}@2.png")
         )
     );
     -gtk-icon-shadow: none;
@@ -27,12 +27,12 @@
     -gtk-icon-source: if(
       $variant == "light",
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/radio#{$un}.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/radio#{$un}@2.png")
+          url("assets/radio#{$un}.png"),
+          url("assets/radio#{$un}@2.png")
         ),
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/radio#{$un}-dark.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/radio#{$un}@2.png")
+          url("assets/radio#{$un}-dark.png"),
+          url("assets/radio#{$un}@2.png")
         )
     );
     -gtk-icon-shadow: none;
@@ -50,12 +50,12 @@
     -gtk-icon-source: if(
       $variant == "light",
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/checkbox#{$ch}.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/checkbox#{$ch}@2.png")
+          url("assets/checkbox#{$ch}.png"),
+          url("assets/checkbox#{$ch}@2.png")
         ),
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/checkbox#{$ch}-dark.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/checkbox#{$ch}@2.png")
+          url("assets/checkbox#{$ch}-dark.png"),
+          url("assets/checkbox#{$ch}@2.png")
         )
     );
     -gtk-icon-shadow: none;
@@ -64,12 +64,12 @@
     -gtk-icon-source: if(
       $variant == "light",
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/radio#{$ch}.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/radio#{$ch}@2.png")
+          url("assets/radio#{$ch}.png"),
+          url("assets/radio#{$ch}@2.png")
         ),
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/radio#{$ch}-dark.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/radio#{$ch}@2.png")
+          url("assets/radio#{$ch}-dark.png"),
+          url("assets/radio#{$ch}@2.png")
         )
     );
     -gtk-icon-shadow: none;
@@ -89,12 +89,12 @@
     -gtk-icon-source: if(
       $variant == "light",
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/checkbox#{$mx}.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/checkbox#{$mx}@2.png")
+          url("assets/checkbox#{$mx}.png"),
+          url("assets/checkbox#{$mx}@2.png")
         ),
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/checkbox#{$mx}.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/checkbox#{$mx}@2.png")
+          url("assets/checkbox#{$mx}.png"),
+          url("assets/checkbox#{$mx}@2.png")
         )
     );
     -gtk-icon-shadow: none;
@@ -103,12 +103,12 @@
     -gtk-icon-source: if(
       $variant == "light",
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/radio#{$mx}.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/radio#{$mx}@2.png")
+          url("assets/radio#{$mx}.png"),
+          url("assets/radio#{$mx}@2.png")
         ),
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/radio#{$mx}.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/radio#{$mx}@2.png")
+          url("assets/radio#{$mx}.png"),
+          url("assets/radio#{$mx}@2.png")
         )
     );
     -gtk-icon-shadow: none;
@@ -125,12 +125,12 @@
     -gtk-icon-source: if(
       $variant == "light",
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/checkbox#{$un}.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/checkbox#{$un}@2.png")
+          url("assets/checkbox#{$un}.png"),
+          url("assets/checkbox#{$un}@2.png")
         ),
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/checkbox#{$un}-dark.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/checkbox#{$un}@2.png")
+          url("assets/checkbox#{$un}-dark.png"),
+          url("assets/checkbox#{$un}@2.png")
         )
     );
     -gtk-icon-shadow: none;
@@ -139,12 +139,12 @@
     -gtk-icon-source: if(
       $variant == "light",
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/selected-radio#{$un}.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/selected-radio#{$un}@2.png")
+          url("assets/selected-radio#{$un}.png"),
+          url("assets/selected-radio#{$un}@2.png")
         ),
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/selected-radio#{$un}-dark.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/selected-radio#{$un}@2.png")
+          url("assets/selected-radio#{$un}-dark.png"),
+          url("assets/selected-radio#{$un}@2.png")
         )
     );
     -gtk-icon-shadow: none;
@@ -163,12 +163,12 @@
     -gtk-icon-source: if(
       $variant == "light",
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/checkbox#{$ch}.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/checkbox#{$ch}@2.png")
+          url("assets/checkbox#{$ch}.png"),
+          url("assets/checkbox#{$ch}@2.png")
         ),
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/checkbox#{$ch}-dark.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/checkbox#{$ch}@2.png")
+          url("assets/checkbox#{$ch}-dark.png"),
+          url("assets/checkbox#{$ch}@2.png")
         )
     );
     -gtk-icon-shadow: none;
@@ -177,12 +177,12 @@
     -gtk-icon-source: if(
       $variant == "light",
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/selected-radio#{$ch}.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/selected-radio#{$ch}@2.png")
+          url("assets/selected-radio#{$ch}.png"),
+          url("assets/selected-radio#{$ch}@2.png")
         ),
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/selected-radio#{$ch}-dark.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/selected-radio#{$ch}@2.png")
+          url("assets/selected-radio#{$ch}-dark.png"),
+          url("assets/selected-radio#{$ch}@2.png")
         )
     );
     -gtk-icon-shadow: none;
@@ -201,12 +201,12 @@
     -gtk-icon-source: if(
       $variant == "light",
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/selected-checkbox#{$mx}.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/selected-checkbox#{$mx}@2.png")
+          url("assets/selected-checkbox#{$mx}.png"),
+          url("assets/selected-checkbox#{$mx}@2.png")
         ),
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/selected-checkbox#{$mx}.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/selected-checkbox#{$mx}@2.png")
+          url("assets/selected-checkbox#{$mx}.png"),
+          url("assets/selected-checkbox#{$mx}@2.png")
         )
     );
     -gtk-icon-shadow: none;
@@ -215,12 +215,12 @@
     -gtk-icon-source: if(
       $variant == "light",
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/selected-radio#{$mx}.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/selected-radio#{$mx}@2.png")
+          url("assets/selected-radio#{$mx}.png"),
+          url("assets/selected-radio#{$mx}@2.png")
         ),
       -gtk-scaled(
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/selected-radio#{$mx}.png"),
-          url("file:///home/artem-g/.themes/Andromeda-gtk/assets/selected-radio#{$mx}@2.png")
+          url("assets/selected-radio#{$mx}.png"),
+          url("assets/selected-radio#{$mx}@2.png")
         )
     );
     -gtk-icon-shadow: none;
@@ -236,16 +236,16 @@
   .view.content-view check#{$s},
   .view.content-view.check#{$s} {
     -gtk-icon-source: -gtk-scaled(
-      url("file:///home/artem-g/.themes/Andromeda-gtk/assets/selection-mode-checkbox#{$un}.png"),
-      url("file:///home/artem-g/.themes/Andromeda-gtk/assets/checkbox#{$un}@2.png")
+      url("assets/selection-mode-checkbox#{$un}.png"),
+      url("assets/checkbox#{$un}@2.png")
     );
     -gtk-icon-shadow: none;
   }
   .view.content-view radio#{$s},
   .view.content-view.radio#{$s} {
     -gtk-icon-source: -gtk-scaled(
-      url("file:///home/artem-g/.themes/Andromeda-gtk/assets/selection-mode-radio#{$un}.png"),
-      url("file:///home/artem-g/.themes/Andromeda-gtk/assets/radio#{$un}@2.png")
+      url("assets/selection-mode-radio#{$un}.png"),
+      url("assets/radio#{$un}@2.png")
     );
     -gtk-icon-shadow: none;
   }
