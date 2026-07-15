@@ -6,15 +6,6 @@ messagedialog,
 .dialog {
   // Message Dialog styling
   transition: all 0.3s;
-  @if $window-border {
-    box-shadow:
-      $window-glowing,
-      0 0 0 1px $selected_borders_color;
-  } @else {
-    box-shadow:
-      $window-backdrop-shadow,
-      0 0 0 1px lighten($borders_color, 10%);
-  }
 
   &:backdrop {
     @if $window-border {
@@ -43,7 +34,7 @@ messagedialog,
   }
 
   &.csd {
-    &.dialog {
+    &.background {
       background-color: transparentize($bg_color, 0.05);
       color: $fg_color;
       border-bottom-left-radius: 6px;

@@ -70,7 +70,6 @@ decoration {
   } //just doing borders, wm draws actual shadows
 
   .csd.popup & {
-    border-radius: 2px;
     @if $window-border {
       box-shadow:
         $popup-glowing,
@@ -79,6 +78,7 @@ decoration {
       box-shadow: 0 6px 12px #0f070a;
       border: 1px solid lighten($borders_color, 13%);
     }
+    border-radius: 2px;
   }
 
   tooltip.csd & {
