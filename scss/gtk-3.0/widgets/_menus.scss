@@ -1,6 +1,7 @@
 /*********
  * Menus *
  *********/
+
 menubar,
 .menubar {
   background-color: $headerbar_color;
@@ -22,6 +23,7 @@ menubar,
   background-color: $headerbar_color;
 }
 
+.shifticonmenu,
 menu,
 .menu,
 .context-menu {

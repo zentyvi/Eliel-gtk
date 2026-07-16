@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generator: Gravit.io -->
+
+<svg
+   style="isolation:isolate"
+   viewBox="0 0 48 48"
+   width="48pt"
+   height="48pt"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="folder-templates.svg"
+   inkscape:version="1.4.4 (unknown)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview8"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="0.25"
+     inkscape:showpageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:deskcolor="#d1d1d1"
+     inkscape:document-units="pt"
+     inkscape:zoom="12.34375"
+     inkscape:cx="31.959494"
+     inkscape:cy="32"
+     inkscape:window-width="1920"
+     inkscape:window-height="1010"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" />
+  <linearGradient
+     id="_lgradient_53"
+     x1="0"
+     y1="0.5"
+     x2="1"
+     y2="0.5"
+     gradientTransform="matrix(44.982,0,0,10,1.247,10.208)"
+     gradientUnits="userSpaceOnUse">
+    <stop
+       offset="0"
+       stop-opacity="1"
+       style="stop-color:#ec006e;stop-opacity:1;"
+       id="stop1" />
+    <stop
+       offset="0.99479169"
+       stop-opacity="1"
+       style="stop-color:#3b82f6;stop-opacity:1;"
+       id="stop2" />
+  </linearGradient>
+  <path
+     d=" M 1.247 13.3 L 1.247 20.208 L 46.229 20.208 L 46.229 17.465 C 46.229 15.809 44.885 14.464 43.229 14.463 L 21.116 14.446 C 20.564 14.445 19.799 14.128 19.409 13.737 L 17.299 11.623 C 16.519 10.842 14.99 10.214 13.886 10.221 L 4.247 10.281 C 2.591 10.292 1.247 11.644 1.247 13.3 Z "
+     fill="url(#_lgradient_53)"
+     id="path2" />
+  <path
+     d=" M 1.738 13.715 L 1.738 40.791 C 1.738 42.404 3.048 43.714 4.662 43.714 L 42.814 43.714 C 44.428 43.714 45.738 42.404 45.738 40.791 L 45.738 17.759 C 45.738 16.145 44.428 14.834 42.814 14.833 L 21.17 14.817 C 20.632 14.816 19.885 14.508 19.504 14.129 L 17.44 12.076 C 16.677 11.318 15.184 10.708 14.108 10.714 L 4.662 10.773 C 3.048 10.783 1.738 12.101 1.738 13.715 Z "
+     fill="rgb(26,29,35)"
+     id="path3" />
+  <path
+     d=" M 6.5 16 L 41.5 16 C 42.604 16 43.5 16.896 43.5 18 L 43.5 28 C 43.5 29.104 42.604 30 41.5 30 L 6.5 30 C 5.396 30 4.5 29.104 4.5 28 L 4.5 18 C 4.5 16.896 5.396 16 6.5 16 Z "
+     fill="rgb(168,168,168)"
+     id="path4" />
+  <path
+     d=" M 1.247 19.465 L 1.247 43.208 C 1.247 44.864 2.591 46.208 4.247 46.208 L 43.229 46.208 C 44.885 46.208 46.229 44.864 46.229 43.208 L 46.229 19.465 L 21.116 19.446 C 20.564 19.445 19.668 19.445 19.116 19.446 L 1.247 19.465 Z "
+     fill="rgb(26,29,35)"
+     id="path5" />
+  <defs
+     id="defs5">
+    <filter
+       id="5mWqhqudrF6IyRHZXRIxbqd0Be6dJCkN"
+       x="-1.3292041"
+       y="-1.0152876"
+       width="3.4895084"
+       height="3.1783658"
+       filterUnits="objectBoundingBox"
+       color-interpolation-filters="sRGB">
+      <feGaussianBlur
+         in="SourceGraphic"
+         stdDeviation="8.587218125678056"
+         id="feGaussianBlur5" />
+      <feOffset
+         dx="-3"
+         dy="3"
+         result="pf_100_offsetBlur"
+         id="feOffset5" />
+      <feFlood
+         flood-color="#000000"
+         flood-opacity="0.65"
+         id="feFlood5" />
+      <feComposite
+         in2="pf_100_offsetBlur"
+         operator="in"
+         result="pf_100_dropShadow"
+         id="feComposite5" />
+      <feBlend
+         in="SourceGraphic"
+         in2="pf_100_dropShadow"
+         mode="normal"
+         id="feBlend5" />
+    </filter>
+  </defs>
+  <g
+     filter="url(#5mWqhqudrF6IyRHZXRIxbqd0Be6dJCkN)"
+     id="g6">
+    <path
+       d=" M 17.119 22.177 L 27.563 22.177 L 32.881 27.812 L 32.881 40.476 C 32.881 41.58 31.985 42.476 30.881 42.476 L 17.119 42.476 C 16.015 42.476 15.119 41.58 15.119 40.476 L 15.119 24.177 C 15.119 23.073 16.015 22.177 17.119 22.177 Z "
+       fill="rgb(103,106,115)"
+       id="path6" />
+  </g>
+  <linearGradient
+     id="_lgradient_54"
+     x1="0.0484539054073202"
+     y1="0.978586981367024"
+     x2="0.9123854598403957"
+     y2="0.09467854761536354"
+     gradientTransform="matrix(10.9,0,0,11.631,17.1,29)"
+     gradientUnits="userSpaceOnUse">
+    <stop
+       offset="0"
+       stop-opacity="1"
+       style="stop-color:#3b82f6;stop-opacity:1;"
+       id="stop6" />
+    <stop
+       offset="0.98260868"
+       stop-opacity="1"
+       style="stop-color:#ec006e;stop-opacity:1;"
+       id="stop7" />
+  </linearGradient>
+  <path
+     d=" M 28 40.631 L 17.1 40.631 L 17.1 29 L 28 40.631 Z  M 23.38 38.63 L 19.1 38.63 L 19.1 34.06 L 23.38 38.63 Z "
+     fill-rule="evenodd"
+     fill="url(#_lgradient_54)"
+     fill-opacity="0.5"
+     id="path7" />
+  <path
+     d=" M 27.563 22.177 L 27.563 27.813 L 32.881 27.813"
+     fill="rgb(80,82,89)"
+     id="path8" />
+</svg>
