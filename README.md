@@ -61,6 +61,10 @@ Then select the theme in GNOME Tweaks or Change via distribution specific tool.
 sudo flatpak override --filesystem=xdg-config/gtk-3.0 && sudo flatpak override --filesystem=xdg-config/gtk-4.0
 ```
 
+## Visual Studio Code theme
+
+I also created a [vs code theme](https://github.com/zentyvi/Eliel-vscode-theme) that matches the colors that are used in this theme! 🌈
+
 ---
 
 ### I hope you enjoy! :3
