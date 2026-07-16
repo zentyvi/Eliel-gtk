@@ -1,11 +1,11 @@
 [Desktop Entry]
 Type=X-GNOME-Metatheme
-Name=Andromeda  
+Name=Eliel  
 Comment=An elegant dark theme for gnome
 Encoding=UTF-8
 
 [X-GNOME-Metatheme]
-GtkTheme=Andromeda
-MetacityTheme=Andromeda
+GtkTheme=Eliel
+MetacityTheme=Eliel
 IconTheme=Zafiro-icons
 ButtonLayout=:minimize,maximize,close

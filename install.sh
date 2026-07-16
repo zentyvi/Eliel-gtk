@@ -2,7 +2,7 @@
 
 set -e
 
-THEME_NAME="Andromeda-custom"
+THEME_NAME="Eliel-gtk"
 DEST_DIR="$HOME/.themes/$THEME_NAME"
 SRC_DIR="scss"
 DIST_DIR="dist"
@@ -17,11 +17,11 @@ show_help() {
     echo "Usage: ./install.sh [options]"
     echo ""
     echo "Options:"
-    echo "  -sb --shell-border    Disable border for GNOME Shell panel"
-    echo "  -wb --window-border   Disable border for GTK3/GTK4 windows"
-    echo "  -l, --libadwaita   Link GTK4 theme directly to ~/.config/gtk-4.0"
-    echo "  -i, --icons        Install custom icon pack"
-    echo "  -h, --help        Show this help message"
+    echo "  -sb --shell-border    Enable border for GNOME Shell panel"
+    echo "  -wb --window-border   Enable border for GTK3/GTK4 windows"
+    echo "  -l, --libadwaita      Link GTK4 theme directly to ~/.config/gtk-4.0"
+    echo "  -i, --icons           Install custom icon pack"
+    echo "  -h, --help            Show this help message"
 }
 
 while [[ "$#" -gt 0 ]]; do
@@ -89,7 +89,7 @@ if [ "$LINK_GTK4" = "true" ]; then
     
     if [ -d "$HOME/.config/gtk-4.0" ] && [ ! -L "$HOME/.config/gtk-4.0" ]; then
         echo "Backing up existing gtk-4.0 config folder..."
-        mv "$HOME/.config/gtk-4.0" "$HOME/.config/gtk-4.0.bak"
+        mv "$HOME/.config/gtk-4.0" "$HOME/.config/gtk-4.0.backup"
     fi
     
     cp -r "$DEST_DIR/gtk-4.0" "$HOME/.config/gtk-4.0"
