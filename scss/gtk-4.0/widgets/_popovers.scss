@@ -27,8 +27,9 @@ popover.background {
         $popup-glowing,
         0 0 0 1px $selected_borders_color;
     } @else {
-      box-shadow: 0 6px 12px #0f070a;
-      border: 1px solid lighten($borders_color, 13%);
+      box-shadow:
+        0 6px 12px #0f070a,
+        0 0 0 1px lighten($borders_color, 10%);
     }
 
     list,
